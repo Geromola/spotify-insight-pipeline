@@ -1,0 +1,182 @@
+{
+  "version": "t2",
+  "note": "Approved by Gero on 2026-10-16 from run dev-10k-t0 with two edits (see that run's taxonomy_proposal.json); t2 moves recommendations-autoplay from usability to catalog, where the grading contract puts recommendations.",
+  "topics": {
+    "access": [
+      {
+        "id": "general",
+        "name": "General access problems",
+        "definition": "Complaints that the user cannot get into the app or account with no clearer cause; not phone-number, password or launch errors."
+      },
+      {
+        "id": "phone-number-login",
+        "name": "Phone number login errors",
+        "definition": "Login rejected with check-your-number or cannot-connect messages when using a phone number; not password or social login."
+      },
+      {
+        "id": "password-social-login",
+        "name": "Password and social login failures",
+        "definition": "Password, email or Facebook login that is rejected or errors; not phone-number login."
+      },
+      {
+        "id": "account-session-signup",
+        "name": "Logouts and signup blocks",
+        "definition": "Being logged out unexpectedly, losing an account, or being unable to create or finish signing up; not repeated login errors."
+      },
+      {
+        "id": "app-wont-open",
+        "name": "App fails to open or connect",
+        "definition": "App stuck on the splash screen or showing connection or no-internet errors at launch; not playback errors after login."
+      }
+    ],
+    "usability": [
+      {
+        "id": "general",
+        "name": "General usability problems",
+        "definition": "Complaints about how the app works or feels that fit no other usability subtopic."
+      },
+      {
+        "id": "ads-interruptions",
+        "name": "Ad frequency and placement",
+        "definition": "Too many ads, ads that play after an ad-free window, or ads interrupting listening; not paywall pricing."
+      },
+      {
+        "id": "shuffle-playback-control",
+        "name": "Shuffle, order and seeking",
+        "definition": "Forced shuffle, inability to play songs in order, repeat or seek to a part of a track, when not caused by free-tier limits; controls locked to premium go to billing."
+      },
+      {
+        "id": "interface-layout-changes",
+        "name": "Interface and layout changes",
+        "definition": "Redesigned screens, removed icons, or features moved or hidden after an update; not missing features locked by premium."
+      }
+    ],
+    "playback": [
+      {
+        "id": "general",
+        "name": "General playback problems",
+        "definition": "Complaints that audio does not play properly with no clearer pattern, including bad quality."
+      },
+      {
+        "id": "playback-stops-crashes",
+        "name": "Playback stops or app crashes",
+        "definition": "Music stops mid-track or after one song, or the app crashes while playing; not slow loading."
+      },
+      {
+        "id": "buffering-slow-loading",
+        "name": "Buffering and slow loading",
+        "definition": "Long waits to load lists or start tracks, and buffering or glitching during playback."
+      },
+      {
+        "id": "offline-false-errors",
+        "name": "False offline or no-internet errors",
+        "definition": "App reports no connection or offline status even though the internet works; not launch failures."
+      },
+      {
+        "id": "bluetooth-device-control",
+        "name": "Bluetooth, car and watch control",
+        "definition": "Problems controlling or connecting playback through Bluetooth, car systems or smartwatches."
+      }
+    ],
+    "downloads": [
+      {
+        "id": "general",
+        "name": "General download problems",
+        "definition": "Download complaints that fit no other downloads subtopic."
+      },
+      {
+        "id": "downloads-fail-to-save",
+        "name": "Downloads fail to start or save",
+        "definition": "Songs or podcasts cannot be downloaded at all or stall during download; not deleted after saving."
+      },
+      {
+        "id": "downloads-deleted",
+        "name": "Downloads disappear or re-download",
+        "definition": "Saved downloads are deleted, lost after updates, or downloaded again repeatedly."
+      },
+      {
+        "id": "offline-playback-needs-network",
+        "name": "Offline playback needs network",
+        "definition": "Downloaded content will not play offline or still needs a connection to start; not failure to download."
+      }
+    ],
+    "catalog": [
+      {
+        "id": "general",
+        "name": "General catalog gaps",
+        "definition": "Complaints about the music library or content that fit no other catalog subtopic."
+      },
+      {
+        "id": "recommendations-autoplay",
+        "name": "Recommended and suggested content",
+        "definition": "Recommended songs, suggested clips or autoplay replacing what the user chose to play; not songs added to the user's own playlists."
+      },
+      {
+        "id": "lyrics-missing",
+        "name": "Lyrics missing or not loading",
+        "definition": "Lyrics not shown, failing to load, or lyric features missing; not lyrics locked behind premium."
+      },
+      {
+        "id": "songs-missing-removed",
+        "name": "Songs or podcasts missing or removed",
+        "definition": "Specific songs, artists, shows or episodes are absent, unavailable or removed from the catalog."
+      },
+      {
+        "id": "unwanted-songs-added",
+        "name": "Unwanted songs added to playlists",
+        "definition": "The app adds songs to the user's own playlists without consent; not recommendations shown separately."
+      },
+      {
+        "id": "content-bias-policy",
+        "name": "Content bias and policy complaints",
+        "definition": "Complaints about artist favoritism, controversial hosts, or removal of content for political or policy reasons."
+      }
+    ],
+    "billing": [
+      {
+        "id": "general",
+        "name": "General billing complaints",
+        "definition": "Complaints about premium or payment that fit no other billing subtopic."
+      },
+      {
+        "id": "premium-paywall-features",
+        "name": "Basic features locked behind premium",
+        "definition": "Features users expected for free, such as lyrics, skipping, choosing songs, queue, seeking or downloading, are locked to premium; not the subscription price itself."
+      },
+      {
+        "id": "subscription-price",
+        "name": "Premium price too high",
+        "definition": "Complaints that the premium subscription costs too much for the value; not feature locks."
+      },
+      {
+        "id": "charges-cancellation",
+        "name": "Charges, purchases and cancellation",
+        "definition": "Unexpected charges, cancellation not working, or purchase and region errors when buying premium."
+      }
+    ],
+    "support": [
+      {
+        "id": "general",
+        "name": "General support complaints",
+        "definition": "Complaints about customer support that fit no other support subtopic."
+      },
+      {
+        "id": "support-response-quality",
+        "name": "Unhelpful or rude support replies",
+        "definition": "Support agents or replies that are unhelpful, scripted, rude or absent."
+      },
+      {
+        "id": "support-channels-broken",
+        "name": "Support channels not working",
+        "definition": "Email, forms or support pages that glitch or cannot be found; not the quality of replies."
+      }
+    ],
+    "other": [
+      {
+        "id": "general",
+        "name": "Other",
+        "definition": "General criticism with no supported specific topic"
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+claim_id,issue_id,metric,value
+C1,other.general,priority_score,167110
+C2,playback.playback-stops-crashes,priority_score,35999

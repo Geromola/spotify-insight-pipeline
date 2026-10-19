@@ -1,0 +1,50 @@
+^D== 2026-10-17T23:22:29Z part 1: backlog before enrichment ==
+{
+  "run": "full-660k-s2",
+  "label_config": null,
+  "invocations": 0,
+  "backlog": {
+    "pending": 484189
+  },
+  "reviews": 660622,
+  "calls": 0,
+  "failed_calls": 0,
+  "batches_running": 0,
+  "spent_usd": 0,
+  "reserved_usd": 0
+}
+== 2026-10-17T23:22:30Z start enrichment ==
+{
+  "step": "primary",
+  "invocation": 1,
+  "ended": "interrupted",
+  "requests": 4911,
+  "stale_leases_released": 0,
+  "fallback_cap": null,
+  "backlog": {
+    "completed": 73908,
+    "fallback_pending": 25537,
+    "leased": 145450,
+    "pending": 239294
+  },
+  "spent_usd": 0.617402,
+  "checkpoint": "runs/full-660k-s2/checkpoints/inv1.json"
+}
+== 2026-10-17T23:32:11Z enrichment exited with code 130 ==
+{
+  "run": "full-660k-s2",
+  "label_config": "anthropic:claude-haiku-5-5|disabled/low>adaptive/low|prompt=61e388fc59|tax=t2|schema=s2",
+  "invocations": 1,
+  "backlog": {
+    "completed": 73908,
+    "fallback_pending": 25537,
+    "leased": 145450,
+    "pending": 239294
+  },
+  "reviews": 660622,
+  "calls": 2001,
+  "failed_calls": 1,
+  "batches_running": 2,
+  "spent_usd": 0.617402,
+  "reserved_usd": 1.530463
+}

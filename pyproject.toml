@@ -1,0 +1,17 @@
+[project]
+name = "spotify-insight-pipeline"
+version = "0.1.0"
+description = "Multi-agent pipeline that turns 660,622 Spotify reviews into a traceable product recommendation"
+requires-python = ">=3.12"
+# The offline core (prepare, backlog, validation, ranking, export, cost replay) is standard library only.
+# These two SDKs are used only by the provider adapters.
+dependencies = [
+    "anthropic",
+    "typesafe-sdk",
+]
+
+[dependency-groups]
+# Only the model-comparison probe (evals/classifier_probe.py) uses OpenAI's Decisions API.
+probes = ["openai"]
+# Only dashboard/db/load.py uses psycopg, to COPY the dashboard bundle into Postgres.
+dashboard = ["psycopg[binary]"]

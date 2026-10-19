@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Labeller</title>
+<link rel="icon" href="data:,">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f5f4ef;
+  --surface: #ffffff;
+  --surface-2: #f0eee8;
+  --text: #1c1e1d;
+  --muted: #676c69;
+  --faint: #8d928f;
+  --border: #e1dfd7;
+  --border-strong: #cfccc2;
+  --accent: #1f7a55;
+  --accent-soft: #e2f1e9;
+  --accent-ink: #ffffff;
+  --warn: #9a5a00;
+  --warn-soft: #fbeedb;
+  --danger: #b3261e;
+  --danger-soft: #fbe6e4;
+  --mark: #ffeaa1;
+  --focus: #2f6fb5;
+  --shadow: 0 1px 2px rgba(20, 25, 22, .05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131514;
+    --surface: #1b1e1d;
+    --surface-2: #232725;
+    --text: #e6e8e6;
+    --muted: #9ba29e;
+    --faint: #7b827e;
+    --border: #2e3330;
+    --border-strong: #3c423e;
+    --accent: #55c493;
+    --accent-soft: #1d3a2d;
+    --accent-ink: #0c1f16;
+    --warn: #f0b45a;
+    --warn-soft: #3a2c15;
+    --danger: #ff8f86;
+    --danger-soft: #3d201e;
+    --mark: #5c4b12;
+    --focus: #7fb2ee;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding-bottom: 58px;
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+kbd {
+  display: inline-block; min-width: 1.6em; padding: 0 .35em; border: 1px solid var(--border-strong);
+  border-bottom-width: 2px; border-radius: 4px; background: var(--surface-2); color: var(--muted);
+  font: 600 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; text-align: center;
+}
+.muted { color: var(--muted); }
+
+/* header */
+.top {
+  position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 18px;
+  padding: 7px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 650; letter-spacing: .01em; white-space: nowrap; }
+.brand span { color: var(--muted); font-weight: 400; }
+.progress { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+#pos { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar { flex: 1; max-width: 320px; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+#bar-fill { height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+#done, #plan-done { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.nav { display: flex; gap: 6px; }
+.btn {
+  border: 1px solid var(--border-strong); background: var(--surface); border-radius: 7px;
+  padding: 5px 11px; white-space: nowrap;
+}
+.btn:hover { background: var(--surface-2); }
+.btn:disabled { opacity: .45; cursor: default; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn.quiet { border-color: transparent; background: transparent; color: var(--muted); }
+.btn.quiet:hover { background: var(--surface-2); color: var(--text); }
+
+/* jump list */
+.jump { display: flex; flex-wrap: wrap; gap: 3px; padding: 8px 20px 2px; }
+.chip {
+  width: 24px; height: 20px; padding: 0; border-radius: 5px; border: 1px solid var(--border-strong);
+  background: var(--surface); color: var(--muted); font: 600 10.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  position: relative;
+}
+.chip.done { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.chip.invalid { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+.chip.current { outline: 2px solid var(--text); outline-offset: 1px; color: var(--text); }
+.chip.planmiss::before {
+  content: ""; position: absolute; left: 6px; right: 6px; bottom: -4px; height: 2px; border-radius: 1px;
+  background: var(--focus);
+}
+.chip.flag::after {
+  content: ""; position: absolute; top: -3px; right: -3px; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--warn); border: 1px solid var(--surface);
+}
+
+/* layout */
+main {
+  display: grid; gap: 12px; padding: 8px 20px 12px; align-items: start;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "review topic sev";
+}
+.col { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.col-review { grid-area: review; position: sticky; top: 56px; }
+.col-topic { grid-area: topic; }
+.col-sev { grid-area: sev; }
+@media (max-width: 1180px) {
+  main { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); grid-template-areas: "review topic" "review sev"; }
+}
+@media (max-width: 760px) {
+  main { grid-template-columns: minmax(0, 1fr); grid-template-areas: "review" "topic" "sev"; padding: 8px 16px 16px; }
+  .col-review { position: static; }
+  .top { flex-wrap: wrap; padding: 8px 16px; gap: 10px; }
+  .jump { padding: 8px 16px 2px; }
+  .brand span { display: none; }
+}
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px;
+  box-shadow: var(--shadow); margin: 0; min-width: 0;
+}
+fieldset.card { min-inline-size: 0; }
+.card-title, fieldset.card > legend {
+  width: 100%; padding: 0; margin: 0 0 6px; display: flex; align-items: baseline; gap: 8px;
+  font-size: 12px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+}
+fieldset.card > legend { float: left; }
+fieldset.card > legend + * { clear: both; }
+.card-title .aside, legend .aside { margin-left: auto; text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--faint); }
+
+/* review */
+.review-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.rid { font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pill { margin-left: auto; font-size: 12px; padding: 2px 9px; border-radius: 999px; background: var(--surface-2); color: var(--muted); white-space: nowrap; }
+.pill.done { background: var(--accent-soft); color: var(--accent); }
+.pill.invalid { background: var(--warn-soft); color: var(--warn); }
+.review-text {
+  font-size: 19px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere;
+  max-height: 46vh; overflow: auto; padding: 2px 2px 4px; cursor: text;
+}
+.review-text mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1px; }
+.review-text::selection, .review-text *::selection { background: color-mix(in srgb, var(--focus) 35%, transparent); }
+.meta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); }
+.linkbtn { border: 0; background: none; padding: 0; color: var(--accent); font-weight: 600; }
+.linkbtn:hover { text-decoration: underline; }
+.note { color: var(--muted); font-size: 12.5px; }
+.meta { display: grid; grid-template-columns: auto 1fr; gap: 3px 14px; margin: 10px 0 0; font-size: 13px; }
+.meta dt { color: var(--muted); }
+.meta dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+/* evidence */
+textarea, input[type="text"], select {
+  width: 100%; border: 1px solid var(--border-strong); border-radius: 8px; background: var(--surface);
+  padding: 7px 9px;
+}
+textarea { resize: vertical; line-height: 1.45; }
+#quote { font-size: 15px; min-height: 64px; }
+.row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.hint { color: var(--faint); font-size: 12px; }
+.check { font-size: 12px; font-weight: 600; }
+.check.ok { color: var(--accent); }
+.check.bad { color: var(--danger); }
+.err { color: var(--danger); font-size: 12.5px; min-height: 0; }
+.err:not(:empty) { margin-top: 6px; }
+
+/* options */
+.opts { display: flex; flex-direction: column; gap: 3px; }
+.opt {
+  display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: baseline; gap: 6px;
+  width: 100%; text-align: left; padding: 2px 8px; border: 1px solid var(--border); border-radius: 7px;
+  background: var(--surface); user-select: none; line-height: 1.28; min-height: 26px;
+}
+.opt:hover { border-color: var(--border-strong); background: var(--surface-2); }
+.opt b { font-weight: 650; margin-right: 6px; }
+.opt .def { color: var(--muted); font-size: 11.5px; }
+.opt[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); }
+.opt[aria-pressed="true"] .def { color: var(--text); }
+.opt[aria-pressed="true"] kbd { border-color: var(--accent); color: var(--accent); }
+.opts.sev .opt kbd { font-size: 12px; }
+.precedence { text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 11.5px; color: var(--muted); margin-left: auto; white-space: nowrap; }
+.precedence b { color: var(--text); font-weight: 600; }
+
+/* free vs premium */
+.plan-q + .plan-q { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
+.plan-q .lbl { font-size: 12.5px; font-weight: 600; }
+.plan-q .def { display: block; color: var(--muted); font-size: 11.5px; line-height: 1.35; margin: 2px 0 5px; }
+.opts.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.opts.row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.opts.row2 .opt, .opts.row3 .opt { grid-template-columns: auto minmax(0, 1fr); }
+
+/* sentiment */
+.sent-btns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.sent-btns button {
+  border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 4px 0 3px;
+  font-variant-numeric: tabular-nums; font-weight: 600; user-select: none;
+}
+.sent-btns button small { display: block; font-weight: 400; font-size: 10.5px; color: var(--faint); }
+.sent-btns button:hover { background: var(--surface-2); }
+.sent-btns button.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.slider { display: flex; align-items: center; gap: 10px; margin-top: 5px; }
+.slider input { flex: 1; accent-color: var(--accent); }
+.slider input.unset { opacity: .35; }
+#sent-val { min-width: 58px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+#sent-val.unset { color: var(--faint); font-weight: 400; }
+
+/* extras */
+.field + .field { margin-top: 8px; }
+.field .lbl { display: flex; align-items: baseline; gap: 6px; font-size: 12.5px; font-weight: 600; margin-bottom: 4px; }
+.field .lbl .aside { font-weight: 400; color: var(--faint); }
+.preview { margin-left: auto; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 45%; }
+input[type="text"] { padding: 5px 9px; }
+.flags { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.flag-box { display: flex; gap: 8px; align-items: flex-start; }
+.flag-box input { margin-top: 3px; accent-color: var(--accent); }
+.flag-box b { font-weight: 600; }
+.flag-box small { display: block; color: var(--faint); font-size: 11.5px; line-height: 1.35; }
+.alts { display: grid; grid-template-columns: 1.2fr 1.2fr .8fr; gap: 6px; }
+.alts select { padding: 4px 6px; font-size: 13px; }
+#notes { min-height: 34px; font-size: 13.5px; padding: 5px 9px; }
+
+/* bottom bar */
+.bottombar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; align-items: center; gap: 14px;
+  padding: 9px 20px; background: var(--surface); border-top: 1px solid var(--border);
+}
+.legend { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; gap: 3px 12px; font-size: 11.5px; color: var(--muted); }
+.legend span { white-space: nowrap; }
+.save-area { display: flex; align-items: center; gap: 8px; }
+#msg { font-size: 12.5px; color: var(--muted); max-width: 300px; text-align: right; }
+#msg.error { color: var(--danger); }
+#msg.ok { color: var(--accent); }
+#msg.dirty { color: var(--warn); }
+@media (max-width: 980px) { .legend { display: none; } .bottombar { justify-content: flex-end; } }
+@media (max-width: 760px) { .bottombar { padding: 8px 16px; } #msg { max-width: 150px; } }
+
+/* guide */
+.overlay {
+  position: fixed; inset: 0; z-index: 20; background: rgba(10, 12, 11, .45); display: flex;
+  align-items: flex-start; justify-content: center; padding: 40px 16px; overflow: auto;
+}
+.overlay[hidden] { display: none; }
+.guide {
+  width: min(860px, 100%); background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 20px 24px; box-shadow: 0 12px 40px rgba(0, 0, 0, .25);
+}
+.guide h2 { margin: 0 0 4px; font-size: 18px; }
+.guide h3 { margin: 18px 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.guide table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.guide td { padding: 4px 8px 4px 0; vertical-align: top; border-top: 1px solid var(--border); }
+.guide td:first-child { white-space: nowrap; font-weight: 600; width: 1%; }
+.guide ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; }
+.guide li + li { margin-top: 3px; }
+.guide .head { display: flex; align-items: center; gap: 10px; }
+.guide .head .btn { margin-left: auto; }
+.guide .keys { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 4px 16px; font-size: 13px; }
+#loading { padding: 40px; text-align: center; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">Golden 50 <span>· human labels</span></div>
+  <div class="progress">
+    <span id="pos">Review – / –</span>
+    <div class="bar" aria-hidden="true"><div id="bar-fill"></div></div>
+    <span id="done">– labelled</span>
+    <span id="plan-done" title="Reviews with both free-vs-premium fields filled">plan fields: – / –</span>
+  </div>
+  <div class="nav">
+    <button class="btn" id="prev" type="button" title="Previous review (←)">← Prev</button>
+    <button class="btn" id="next" type="button" title="Next review (→)">Next →</button>
+    <button class="btn quiet" id="guide-btn" type="button" title="Label guide (G)">Guide</button>
+  </div>
+</header>
+
+<nav class="jump" id="jump" aria-label="Jump to review"></nav>
+
+<div id="loading">Loading reviews…</div>
+
+<main id="app" hidden>
+  <section class="col col-review">
+    <div class="card">
+      <div class="review-head">
+        <span class="rid" id="rid"></span>
+        <span class="pill" id="pill"></span>
+      </div>
+      <div class="review-text" id="review-text" dir="auto"></div>
+      <div class="meta-row">
+        <button class="linkbtn" id="meta-btn" type="button" aria-expanded="false" aria-controls="meta">Show metadata</button>
+        <span class="note">Label from the text; stars are not severity.</span>
+      </div>
+      <dl class="meta" id="meta" hidden></dl>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><label for="quote">Evidence quote</label><span class="aside check" id="quote-check"></span></div>
+      <textarea id="quote" rows="3" dir="auto" spellcheck="false" placeholder="Select words in the review, then Use selection"></textarea>
+      <div class="row">
+        <button class="btn" id="use-sel" type="button">Use selection <kbd>E</kbd></button>
+        <button class="btn quiet" id="use-all" type="button">Whole text</button>
+        <span class="hint" id="quote-hint">Must be an exact substring of the review.</span>
+      </div>
+      <div class="err" data-err="evidence_quote"></div>
+    </div>
+  </section>
+
+  <section class="col col-topic">
+    <fieldset class="card">
+      <legend>Topic <span class="aside">one only</span></legend>
+      <div class="opts" id="topic-opts"></div>
+      <div class="err" data-err="topic"></div>
+    </fieldset>
+    <fieldset class="card">
+      <legend>Intent <span class="precedence" title="First match wins, in this order"><b>cancellation</b> → <b>complaint</b> → <b>request</b> → <b>praise</b> → <b>unclear</b></span></legend>
+      <div class="opts" id="intent-opts"></div>
+      <div class="err" data-err="intent"></div>
+    </fieldset>
+    <fieldset class="card" id="plan-card">
+      <legend>Free vs premium <span class="aside">optional until filled; blank = not labelled</span></legend>
+      <div class="plan-q">
+        <div class="lbl">Free-tier limit</div>
+        <span class="def" id="ftl-def"></span>
+        <div class="opts row2" id="ftl-opts"></div>
+        <div class="err" data-err="free_tier_limit"></div>
+      </div>
+      <div class="plan-q">
+        <div class="lbl">Plan</div>
+        <span class="def" id="plan-def"></span>
+        <div class="opts row3" id="plan-opts"></div>
+        <div class="err" data-err="plan"></div>
+      </div>
+    </fieldset>
+  </section>
+
+  <section class="col col-sev">
+    <fieldset class="card">
+      <legend>Severity <span class="aside">reported impact, not stars or anger</span></legend>
+      <div class="opts sev" id="sev-opts"></div>
+      <div class="err" data-err="severity"></div>
+    </fieldset>
+    <fieldset class="card">
+      <legend>Sentiment <span class="aside">−1 to +1</span></legend>
+      <div class="sent-btns" id="sent-btns"></div>
+      <div class="slider">
+        <input type="range" id="sent-range" min="-1" max="1" step="0.1" value="0" aria-label="Sentiment, fine adjustment">
+        <output id="sent-val" for="sent-range">not set</output>
+      </div>
+      <div class="err" data-err="sentiment"></div>
+    </fieldset>
+    <div class="card">
+      <div class="field">
+        <label class="lbl" for="entities">Entities <span class="aside">optional, comma separated</span><span class="preview" id="entities-preview">[]</span></label>
+        <input type="text" id="entities" autocomplete="off" spellcheck="false" placeholder="short product terms, e.g. ads, shuffle">
+        <div class="err" data-err="entities"></div>
+      </div>
+      <div class="field flags">
+        <label class="flag-box"><input type="checkbox" id="needs_review">
+          <span><b>Needs review</b> <kbd>N</kbd><small>Missing context, or you do not understand the language.</small></span></label>
+        <label class="flag-box"><input type="checkbox" id="ambiguous">
+          <span><b>Ambiguous</b> <kbd>⇧A</kbd><small>Another label is also defensible; add it below.</small></span></label>
+      </div>
+      <div class="err" data-err="needs_review ambiguous"></div>
+      <div class="field">
+        <div class="lbl">Alternative acceptable label <span class="aside">optional</span></div>
+        <div class="alts">
+          <select id="alt_topic" aria-label="Alternative topic"></select>
+          <select id="alt_intent" aria-label="Alternative intent"></select>
+          <select id="alt_severity" aria-label="Alternative severity"></select>
+        </div>
+        <div class="err" data-err="alt_topic alt_intent alt_severity"></div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="notes">Notes <span class="aside">optional</span></label>
+        <textarea id="notes" rows="1" placeholder="Why this label, doubts, language…"></textarea>
+        <div class="err" data-err="notes"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bottombar">
+  <div class="legend" id="legend"></div>
+  <div class="save-area">
+    <span id="msg" role="status" aria-live="polite"></span>
+    <button class="btn quiet" id="clear-btn" type="button" title="Remove the saved label for this review">Clear label</button>
+    <button class="btn" id="save-btn" type="button" title="Save (⌘S / Ctrl+S)">Save</button>
+    <button class="btn primary" id="save-next-btn" type="button" title="Save and go to the next review (Enter)">Save &amp; next ⏎</button>
+  </div>
+</footer>
+
+<div class="overlay" id="guide" hidden>
+  <div class="guide" role="dialog" aria-modal="true" aria-labelledby="guide-title">
+    <div class="head"><h2 id="guide-title">Label guide</h2><span class="muted">From the grading contract and labels.md</span>
+      <button class="btn" id="guide-close" type="button">Close <kbd>Esc</kbd></button></div>
+    <div id="guide-body"></div>
+  </div>
+</div>
+
+<script>
+'use strict';
+const $ = (s, root = document) => root.querySelector(s);
+const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+
+const TOPIC_KEYS = { a: 'access', u: 'usability', p: 'playback', d: 'downloads', c: 'catalog', b: 'billing', s: 'support', o: 'other' };
+const INTENT_KEYS = { x: 'cancellation', c: 'complaint', r: 'request', p: 'praise', u: 'unclear' };
+const FTL_KEYS = [['L', 'true', 'yes, a free-tier limit'], ['⇧L', 'false', 'no']];
+const PLAN_KEYS = { 7: 'paid', 8: 'free', 9: 'unstated' };
+const SENT_STEPS = [[-1, 'very neg'], [-0.5, 'neg'], [0, 'neutral'], [0.5, 'pos'], [1, 'very pos']];
+const LEGEND = [
+  ['← →', 'prev / next'], ['1–5', 'severity'], ['A U P D C B S O', 'topic'], ['⇧X ⇧C ⇧R ⇧P ⇧U', 'intent'],
+  ['⇧1–⇧5', 'sentiment −1…+1'], ['[ ]', 'sentiment ±0.1'], ['E', 'use selection'], ['N', 'needs review'],
+  ['⇧A', 'ambiguous'], ['L / ⇧L', 'free-tier limit true / false'], ['7 8 9', 'plan paid / free / unstated'],
+  ['M', 'metadata'], ['⏎', 'save & next'], ['⌘S', 'save'], ['G', 'guide'], ['Esc', 'leave field'],
+];
+const SHORT_LEGEND = [
+  ['← →', 'prev / next'], ['1–5', 'severity'], ['A…O', 'topic'], ['⇧X…⇧U', 'intent'], ['⇧1–⇧5', 'sentiment'],
+  ['E', 'use selection'], ['L ⇧L', 'free-tier limit'], ['7 8 9', 'plan'], ['⏎', 'save & next'], ['G', 'all shortcuts'],
+];
+const S = { reviews: [], schema: null, idx: 0, form: null, initial: '', done: 0, planDone: 0, total: 0, saving: false };
+const keyFor = (map, value) => Object.keys(map).find(k => map[k] === value);
+
+function h(tag, attrs = {}, ...children) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') n.className = v;
+    else if (k === 'text') n.textContent = v;
+    else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
+    else if (v === true) n.setAttribute(k, '');
+    else if (v !== false && v != null) n.setAttribute(k, v);
+  }
+  for (const c of children) if (c != null) n.append(c);
+  return n;
+}
+const cur = () => S.reviews[S.idx];
+const fmtSent = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1);
+const round1 = v => Math.round(v * 10) / 10;
+
+function splitEntities(text) {
+  const seen = new Set(), out = [];
+  for (const raw of String(text).split(',')) {
+    const t = raw.trim().replace(/\s+/g, ' ');
+    if (t && !seen.has(t.toLowerCase())) { seen.add(t.toLowerCase()); out.push(t); }
+  }
+  return out;
+}
+
+// ------------------------------------------------------------ static parts
+function buildStatic() {
+  const sch = S.schema;
+  const topicBox = $('#topic-opts');
+  for (const t of sch.topics) {
+    topicBox.append(h('button', { type: 'button', class: 'opt', 'data-group': 'topic', 'data-value': t.value,
+      'aria-pressed': 'false', onclick: () => setField('topic', t.value) },
+      h('kbd', { text: keyFor(TOPIC_KEYS, t.value).toUpperCase() }),
+      h('span', {}, h('b', { text: t.value }), h('span', { class: 'def', text: t.definition }))));
+  }
+  const intentBox = $('#intent-opts');
+  for (const t of sch.intents) {
+    intentBox.append(h('button', { type: 'button', class: 'opt', 'data-group': 'intent', 'data-value': t.value,
+      'aria-pressed': 'false', onclick: () => setField('intent', t.value) },
+      h('kbd', { text: '⇧' + keyFor(INTENT_KEYS, t.value).toUpperCase() }),
+      h('span', {}, h('b', { text: t.value }), h('span', { class: 'def', text: t.definition }))));
+  }
+  const sevBox = $('#sev-opts');
+  for (const t of sch.severities) {
+    sevBox.append(h('button', { type: 'button', class: 'opt', 'data-group': 'severity', 'data-value': String(t.value),
+      'aria-pressed': 'false', 'aria-label': `Severity ${t.value}: ${t.definition}`, onclick: () => setField('severity', t.value) },
+      h('kbd', { text: String(t.value) }), h('span', { class: 'def', text: t.definition })));
+  }
+  // Free vs premium: pressing the chosen value again clears it back to blank.
+  $('#ftl-def').textContent = sch.free_tier_limit;
+  const ftlBox = $('#ftl-opts');
+  for (const [k, v, word] of FTL_KEYS) {
+    ftlBox.append(h('button', { type: 'button', class: 'opt', 'data-group': 'free_tier_limit', 'data-value': v,
+      'aria-pressed': 'false', onclick: () => togglePlanField('free_tier_limit', v === 'true') },
+      h('kbd', { text: k }), h('span', {}, h('b', { text: v }), h('span', { class: 'def', text: word }))));
+  }
+  $('#plan-def').textContent = sch.plan_definition;
+  const planBox = $('#plan-opts');
+  for (const t of sch.plans) {
+    planBox.append(h('button', { type: 'button', class: 'opt', 'data-group': 'plan', 'data-value': t.value,
+      'aria-pressed': 'false', title: t.definition, onclick: () => togglePlanField('plan', t.value) },
+      h('kbd', { text: keyFor(PLAN_KEYS, t.value) }), h('span', {}, h('b', { text: t.value }))));
+  }
+  const sentBox = $('#sent-btns');
+  SENT_STEPS.forEach(([v, word], i) => {
+    sentBox.append(h('button', { type: 'button', 'data-sent': String(v), title: `Sentiment ${fmtSent(v)} (⇧${i + 1})`,
+      onclick: () => setField('sentiment', v) }, fmtSent(v), h('small', { text: word })));
+  });
+  const fillSelect = (sel, placeholder, values) => {
+    sel.append(h('option', { value: '', text: placeholder }));
+    for (const v of values) sel.append(h('option', { value: String(v), text: String(v) }));
+  };
+  fillSelect($('#alt_topic'), 'alt topic —', sch.topics.map(t => t.value));
+  fillSelect($('#alt_intent'), 'alt intent —', sch.intents.map(t => t.value));
+  fillSelect($('#alt_severity'), 'alt sev —', sch.severities.map(t => t.value));
+
+  const legend = $('#legend');
+  for (const [k, what] of SHORT_LEGEND) legend.append(h('span', {}, h('kbd', { text: k }), ' ' + what));
+
+  buildGuide();
+  const jump = $('#jump');
+  S.reviews.forEach((r, i) => jump.append(h('button', { type: 'button', class: 'chip', text: String(i + 1), onclick: () => go(i) })));
+}
+
+function buildGuide() {
+  const sch = S.schema, R = sch.rules, body = $('#guide-body');
+  const table = rows => h('table', {}, h('tbody', {}, ...rows.map(([a, b]) => h('tr', {}, h('td', { text: a }), h('td', { text: b })))));
+  const list = items => h('ul', {}, ...items.map(t => h('li', { text: t })));
+  body.append(
+    h('h3', { text: 'Topic (exactly one)' }), table(sch.topics.map(t => [t.value, t.definition])), list(R.topic),
+    h('h3', { text: 'Intent (first match wins)' }), table(sch.intents.map(t => [t.value, t.definition])), list(R.intent),
+    h('h3', { text: 'Severity (1–5)' }), table(sch.severities.map(t => [String(t.value), t.definition])), list(R.severity),
+    h('h3', { text: 'Severity examples' }), table(R.severity_examples.map(([text, sev]) => [String(sev), '“' + text + '”'])),
+    h('h3', { text: 'Free vs premium (blank = not labelled yet)' }),
+    table([['free_tier_limit', sch.free_tier_limit], ['plan', sch.plan_definition]]),
+    table(sch.plans.map(t => [t.value, t.definition])),
+    h('h3', { text: 'Needs review and metadata' }), list([R.needs_review, R.metadata]),
+    h('h3', { text: 'Evidence quote' }),
+    list(['An exact substring of the review text (checked on save). Select words in the review and press Use selection.',
+      `Reviews up to ${sch.short_review_chars} characters start with the whole stripped text; narrow it if a shorter phrase carries the label.`]),
+    h('h3', { text: 'Keyboard' }),
+    h('div', { class: 'keys' }, ...LEGEND.map(([k, what]) => h('span', {}, h('kbd', { text: k }), ' ' + what))),
+  );
+}
+
+// ------------------------------------------------------------ form state
+function blankForm(r) {
+  const stripped = r.review_text.trim();
+  return {
+    topic: '', intent: '', sentiment: null, severity: null, entities: '',
+    evidence_quote: stripped.length <= S.schema.short_review_chars ? stripped : '',
+    needs_review: false, ambiguous: false, alt_topic: '', alt_intent: '', alt_severity: '', notes: '',
+    free_tier_limit: '', plan: '',
+  };
+}
+function formFromLabel(l) {
+  const num = v => (v === '' || v == null ? null : (typeof v === 'number' ? v : (Number.isFinite(Number(v)) ? Number(v) : v)));
+  return {
+    topic: l.topic || '', intent: l.intent || '', sentiment: num(l.sentiment), severity: num(l.severity),
+    entities: Array.isArray(l.entities) ? l.entities.join(', ') : String(l.entities || ''),
+    evidence_quote: l.evidence_quote || '', needs_review: l.needs_review === true, ambiguous: l.ambiguous === true,
+    alt_topic: l.alt_topic || '', alt_intent: l.alt_intent || '',
+    alt_severity: l.alt_severity === '' || l.alt_severity == null ? '' : String(l.alt_severity), notes: l.notes || '',
+    free_tier_limit: l.free_tier_limit === true || l.free_tier_limit === false ? l.free_tier_limit : '',
+    plan: l.plan || '',
+  };
+}
+const isDirty = () => S.form && JSON.stringify(S.form) !== S.initial;
+
+function setField(name, value) {
+  S.form[name] = value;
+  if (name.startsWith('alt_') && value !== '') S.form.ambiguous = true;
+  clearError(name);
+  renderChoices();
+  renderStatus();
+}
+
+function togglePlanField(name, value) {
+  setField(name, S.form[name] === value ? '' : value);
+}
+
+// ------------------------------------------------------------ rendering
+function show(i) {
+  S.idx = i;
+  const r = cur();
+  S.form = r.label ? formFromLabel(r.label) : blankForm(r);
+  S.initial = JSON.stringify(S.form);
+  $('#rid').textContent = r.review_id;
+  $('#rid').title = r.review_id;
+  const m = r.metadata, meta = $('#meta');
+  meta.replaceChildren(...[
+    ['Stars', m.review_rating ? m.review_rating + ' ★' : '—'], ['Likes', m.review_likes || '—'],
+    ['App version', m.app_version || '—'], ['Posted', m.review_timestamp || '—'],
+  ].flatMap(([k, v]) => [h('dt', { text: k }), h('dd', { text: v })]));
+  $('#quote').value = S.form.evidence_quote;
+  $('#entities').value = S.form.entities;
+  $('#notes').value = S.form.notes;
+  const short = r.review_text.trim().length <= S.schema.short_review_chars;
+  $('#quote-hint').textContent = !r.label && short
+    ? 'Short review: starts as the whole text. Narrow it if a phrase carries the label.'
+    : 'Must be an exact substring of the review.';
+  clearErrors();
+  if (r.status === 'invalid') showFieldErrors(r.errors);
+  renderReviewText();
+  renderQuoteCheck();
+  renderEntities();
+  renderChoices();
+  renderHeader();
+  renderJump();
+  setMsg('');
+  renderStatus();
+  history.replaceState(null, '', '#' + (i + 1));
+  $('#review-text').scrollTop = 0;
+}
+
+function renderReviewText() {
+  const box = $('#review-text'), text = cur().review_text, q = S.form.evidence_quote;
+  const at = q ? text.indexOf(q) : -1;
+  if (at < 0) { box.replaceChildren(text); return; }
+  box.replaceChildren(text.slice(0, at), h('mark', { text: q }), text.slice(at + q.length));
+}
+function renderQuoteCheck() {
+  const el = $('#quote-check'), q = S.form.evidence_quote;
+  if (!q.trim()) { el.textContent = 'required'; el.className = 'aside check'; }
+  else if (cur().review_text.includes(q)) { el.textContent = '✓ exact substring'; el.className = 'aside check ok'; }
+  else { el.textContent = '✗ not in the review text'; el.className = 'aside check bad'; }
+}
+function renderEntities() { $('#entities-preview').textContent = JSON.stringify(splitEntities(S.form.entities)); }
+
+function renderChoices() {
+  const f = S.form;
+  for (const b of $$('.opt')) b.setAttribute('aria-pressed', String(String(f[b.dataset.group]) === b.dataset.value));
+  for (const b of $$('#sent-btns button')) b.classList.toggle('on', f.sentiment !== null && Math.abs(f.sentiment - Number(b.dataset.sent)) < 1e-9);
+  const range = $('#sent-range'), out = $('#sent-val'), unset = typeof f.sentiment !== 'number';
+  range.value = unset ? '0' : String(f.sentiment);
+  range.classList.toggle('unset', unset);
+  out.textContent = unset ? 'not set' : fmtSent(f.sentiment);
+  out.classList.toggle('unset', unset);
+  $('#needs_review').checked = f.needs_review;
+  $('#ambiguous').checked = f.ambiguous;
+  $('#alt_topic').value = f.alt_topic;
+  $('#alt_intent').value = f.alt_intent;
+  $('#alt_severity').value = f.alt_severity;
+}
+
+function renderHeader() {
+  $('#pos').textContent = `Review ${S.idx + 1} / ${S.total}`;
+  $('#done').textContent = `${S.done} / ${S.total} labelled`;
+  $('#plan-done').textContent = `plan fields: ${S.planDone}/${S.total}`;
+  $('#bar-fill').style.width = (S.total ? (100 * S.done / S.total) : 0) + '%';
+  $('#prev').disabled = S.idx === 0;
+  $('#next').disabled = S.idx === S.total - 1;
+  const r = cur(), pill = $('#pill');
+  const when = r.labeled_at ? ' · ' + r.labeled_at.replace('T', ' ').slice(0, 16) : '';
+  pill.textContent = { done: 'Labelled' + when, invalid: 'Saved label needs fixing', todo: 'Not labelled' }[r.status];
+  pill.className = 'pill ' + r.status;
+  $('#clear-btn').disabled = !r.label;
+}
+
+function renderJump() {
+  $$('#jump .chip').forEach((b, i) => {
+    const r = S.reviews[i];
+    b.className = 'chip ' + r.status + (i === S.idx ? ' current' : '') + (r.label && r.label.needs_review === true ? ' flag' : '')
+      + (r.plan_done ? '' : ' planmiss');
+    b.setAttribute('aria-current', i === S.idx ? 'true' : 'false');
+    const snippet = r.review_text.trim().replace(/\s+/g, ' ');
+    b.title = `#${i + 1} · ${{ done: 'labelled', invalid: 'needs fixing', todo: 'not labelled' }[r.status]}`
+      + (r.label && r.label.needs_review === true ? ' · needs review' : '')
+      + (r.plan_done ? '' : ' · plan fields missing') + '\n' + (snippet.length > 70 ? snippet.slice(0, 70) + '…' : snippet);
+  });
+}
+
+function setMsg(text, kind = '') { const m = $('#msg'); m.textContent = text; m.className = kind; }
+function renderStatus() {
+  if (S.saving) return;
+  const m = $('#msg');
+  if (m.className === 'error') return;
+  if (isDirty()) setMsg('Unsaved changes', 'dirty');
+  else if (m.className === 'dirty') setMsg('');
+}
+function clearErrors() { for (const e of $$('[data-err]')) e.textContent = ''; }
+function clearError(name) {
+  const slot = $(`[data-err~="${name}"]`);
+  if (slot) slot.textContent = '';
+  if ($('#msg').className === 'error' && !$$('[data-err]').some(e => e.textContent)) setMsg('');
+}
+function showFieldErrors(errors) {
+  for (const [k, msg] of Object.entries(errors || {})) {
+    const slot = $(`[data-err~="${k}"]`);
+    if (slot) slot.textContent = slot.textContent ? slot.textContent + ' · ' + msg : msg;
+  }
+}
+
+// ------------------------------------------------------------ actions
+function go(i) {
+  if (i < 0 || i >= S.total || i === S.idx) return;
+  if (isDirty() && !confirm('You have unsaved changes on this review. Discard them?')) return;
+  show(i);
+}
+
+function payload() {
+  const f = S.form;
+  return {
+    review_id: cur().review_id, topic: f.topic, intent: f.intent, sentiment: f.sentiment, severity: f.severity,
+    entities: splitEntities(f.entities), evidence_quote: f.evidence_quote, needs_review: f.needs_review,
+    ambiguous: f.ambiguous, alt_topic: f.alt_topic, alt_intent: f.alt_intent,
+    alt_severity: f.alt_severity === '' ? '' : Number(f.alt_severity), notes: f.notes,
+    free_tier_limit: f.free_tier_limit, plan: f.plan,
+  };
+}
+
+async function post(path, body) {
+  const res = await fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  return res.json();
+}
+
+async function save(advance) {
+  if (S.saving) return;
+  S.saving = true;
+  clearErrors();
+  setMsg('Saving…');
+  const r = cur();
+  let data;
+  try { data = await post('/api/label', payload()); }
+  catch (err) { S.saving = false; setMsg('Could not reach the local server. Is golden_ui.py still running?', 'error'); return; }
+  S.saving = false;
+  if (!data.ok) {
+    showFieldErrors(data.errors);
+    const n = Object.keys(data.errors || {}).length;
+    setMsg(data.errors && data.errors._ ? 'Not saved: ' + data.errors._ : `Not saved: fix ${n} field${n === 1 ? '' : 's'}`, 'error');
+    return;
+  }
+  r.label = data.label; r.status = 'done'; r.errors = {}; r.labeled_at = data.labeled_at; S.done = data.done;
+  r.plan_done = data.review_plan_done === true; S.planDone = data.plan_done;
+  if (advance && S.idx < S.total - 1) {
+    show(S.idx + 1);
+    setMsg(`Saved #${S.idx}`, 'ok');
+    window.scrollTo({ top: 0 });
+  } else {
+    show(S.idx);
+    setMsg(S.done === S.total ? `Saved. All ${S.total} labelled.` : (advance ? 'Saved. That was the last review.' : 'Saved'), 'ok');
+  }
+}
+
+async function clearLabel() {
+  const r = cur();
+  if (!r.label || !confirm('Remove the saved label for this review? It will be written back as blank.')) return;
+  let data;
+  try { data = await post('/api/clear', { review_id: r.review_id }); }
+  catch (err) { setMsg('Could not reach the local server. Is golden_ui.py still running?', 'error'); return; }
+  if (!data.ok) { setMsg('Not cleared: ' + ((data.errors && data.errors._) || 'error'), 'error'); return; }
+  r.label = null; r.status = 'todo'; r.errors = {}; r.labeled_at = ''; S.done = data.done;
+  r.plan_done = false; S.planDone = data.plan_done;
+  show(S.idx);
+  setMsg('Label cleared', 'ok');
+}
+
+function selectionRange() {
+  const sel = window.getSelection();
+  if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return null;
+  const box = $('#review-text'), range = sel.getRangeAt(0), text = cur().review_text;
+  const whole = document.createRange();
+  whole.selectNodeContents(box);
+  let a, b;
+  try {
+    a = whole.comparePoint(range.startContainer, range.startOffset);
+    b = whole.comparePoint(range.endContainer, range.endOffset);
+  } catch (err) { return null; }
+  if (a > 0 || b < 0) return null;
+  const offset = (node, off) => { const pre = document.createRange(); pre.setStart(box, 0); pre.setEnd(node, off); return pre.toString().length; };
+  let start = a < 0 ? 0 : offset(range.startContainer, range.startOffset);
+  let end = b > 0 ? text.length : offset(range.endContainer, range.endOffset);
+  while (start < end && /\s/.test(text[start])) start++;
+  while (end > start && /\s/.test(text[end - 1])) end--;
+  return end > start ? [start, end] : null;
+}
+
+function setQuote(q) {
+  S.form.evidence_quote = q;
+  $('#quote').value = q;
+  clearError('evidence_quote');
+  renderReviewText();
+  renderQuoteCheck();
+  renderStatus();
+}
+function useSelection() {
+  const span = selectionRange();
+  if (!span) { setMsg('Select part of the review text first.', 'error'); setTimeout(() => { if ($('#msg').textContent.startsWith('Select part')) setMsg(''); renderStatus(); }, 2500); return; }
+  setQuote(cur().review_text.slice(span[0], span[1]));
+  window.getSelection().removeAllRanges();
+}
+
+function setSentiment(v) { setField('sentiment', Math.max(-1, Math.min(1, round1(v)))); }
+function toggleMeta(force) {
+  const meta = $('#meta'), btn = $('#meta-btn');
+  const open = force !== undefined ? force : meta.hidden;
+  meta.hidden = !open;
+  btn.textContent = open ? 'Hide metadata' : 'Show metadata';
+  btn.setAttribute('aria-expanded', String(open));
+}
+function toggleGuide(force) {
+  const g = $('#guide');
+  const open = force !== undefined ? force : g.hidden;
+  g.hidden = !open;
+  if (open) $('#guide-close').focus();
+}
+
+// ------------------------------------------------------------ events
+function wire() {
+  $('#prev').addEventListener('click', () => go(S.idx - 1));
+  $('#next').addEventListener('click', () => go(S.idx + 1));
+  $('#guide-btn').addEventListener('click', () => toggleGuide(true));
+  $('#guide-close').addEventListener('click', () => toggleGuide(false));
+  $('#guide').addEventListener('click', e => { if (e.target.id === 'guide') toggleGuide(false); });
+  $('#meta-btn').addEventListener('click', () => toggleMeta());
+  $('#save-btn').addEventListener('click', () => save(false));
+  $('#save-next-btn').addEventListener('click', () => save(true));
+  $('#clear-btn').addEventListener('click', clearLabel);
+  // keep the text selection when the button is pressed
+  $('#use-sel').addEventListener('mousedown', e => e.preventDefault());
+  $('#use-sel').addEventListener('click', useSelection);
+  $('#use-all').addEventListener('click', () => setQuote(cur().review_text.trim()));
+  $('#quote').addEventListener('input', e => { S.form.evidence_quote = e.target.value; clearError('evidence_quote'); renderReviewText(); renderQuoteCheck(); renderStatus(); });
+  $('#entities').addEventListener('input', e => { S.form.entities = e.target.value; clearError('entities'); renderEntities(); renderStatus(); });
+  $('#notes').addEventListener('input', e => { S.form.notes = e.target.value; clearError('notes'); renderStatus(); });
+  $('#needs_review').addEventListener('change', e => setField('needs_review', e.target.checked));
+  $('#ambiguous').addEventListener('change', e => setField('ambiguous', e.target.checked));
+  for (const id of ['alt_topic', 'alt_intent', 'alt_severity']) $('#' + id).addEventListener('change', e => setField(id, e.target.value));
+  const range = $('#sent-range');
+  range.addEventListener('input', () => setSentiment(parseFloat(range.value)));
+  range.addEventListener('pointerup', () => setSentiment(parseFloat(range.value)));
+  window.addEventListener('beforeunload', e => { if (isDirty()) { e.preventDefault(); e.returnValue = ''; } });
+  document.addEventListener('keydown', onKey);
+}
+
+function onKey(e) {
+  const t = e.target;
+  const isRange = t.tagName === 'INPUT' && t.type === 'range';
+  const typing = t.isContentEditable || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT'
+    || (t.tagName === 'INPUT' && !['checkbox', 'radio', 'button', 'range'].includes(t.type));
+  const mod = e.metaKey || e.ctrlKey;
+  if (mod && e.key === 'Enter') { e.preventDefault(); save(true); return; }
+  if (mod && (e.key === 's' || e.key === 'S')) { e.preventDefault(); save(false); return; }
+  if (e.key === 'Escape') {
+    if (!$('#guide').hidden) toggleGuide(false);
+    else if (typing) t.blur();
+    return;
+  }
+  if (!$('#guide').hidden) return;
+  if (e.key === 'Enter' && !mod && !e.isComposing && t.tagName === 'INPUT' && t.type === 'text') { e.preventDefault(); save(true); return; }
+  if (typing || mod || e.altKey || e.isComposing) return;
+  if (e.key === ' ') return;
+  if (e.key === 'Enter') {
+    if (t.tagName === 'BUTTON' && !t.classList.contains('opt')) return; // let focused buttons act normally
+    e.preventDefault(); save(true); return;
+  }
+  if (isRange && e.key.startsWith('Arrow')) return; // arrows adjust the focused slider
+  if (e.key === 'ArrowLeft') { e.preventDefault(); go(S.idx - 1); return; }
+  if (e.key === 'ArrowRight') { e.preventDefault(); go(S.idx + 1); return; }
+  const planDigit = /^(?:Digit|Numpad)([7-9])$/.exec(e.code);
+  if (planDigit && !e.shiftKey) { e.preventDefault(); togglePlanField('plan', PLAN_KEYS[planDigit[1]]); return; }
+  const digit = /^(?:Digit|Numpad)([1-5])$/.exec(e.code);
+  if (digit) {
+    e.preventDefault();
+    const n = Number(digit[1]);
+    if (e.shiftKey) setSentiment(SENT_STEPS[n - 1][0]); else setField('severity', n);
+    return;
+  }
+  if (e.key === '[' || e.key === ']' || e.key === '{' || e.key === '}') {
+    e.preventDefault();
+    const step = (e.key === '[' || e.key === '{') ? -0.1 : 0.1;
+    setSentiment((typeof S.form.sentiment === 'number' ? S.form.sentiment : 0) + (S.form.sentiment === null ? 0 : step));
+    return;
+  }
+  if (e.key === '?') { e.preventDefault(); toggleGuide(true); return; }
+  const k = e.key.length === 1 ? e.key.toLowerCase() : '';
+  if (!k) return;
+  if (e.shiftKey) {
+    if (INTENT_KEYS[k]) { e.preventDefault(); setField('intent', INTENT_KEYS[k]); }
+    else if (k === 'a') { e.preventDefault(); setField('ambiguous', !S.form.ambiguous); }
+    else if (k === 'l') { e.preventDefault(); togglePlanField('free_tier_limit', false); }
+    return;
+  }
+  if (TOPIC_KEYS[k]) { e.preventDefault(); setField('topic', TOPIC_KEYS[k]); return; }
+  if (k === 'e') { e.preventDefault(); useSelection(); return; }
+  if (k === 'l') { e.preventDefault(); togglePlanField('free_tier_limit', true); return; }
+  if (k === 'n') { e.preventDefault(); setField('needs_review', !S.form.needs_review); return; }
+  if (k === 'm') { e.preventDefault(); toggleMeta(); return; }
+  if (k === 'g') { e.preventDefault(); toggleGuide(true); return; }
+}
+
+// ------------------------------------------------------------ start
+async function start() {
+  let data;
+  try {
+    const res = await fetch('/api/reviews', { cache: 'no-store' });
+    data = await res.json();
+  } catch (err) {
+    $('#loading').textContent = 'Could not load reviews from the local server. Is golden_ui.py running?';
+    return;
+  }
+  Object.assign(S, { reviews: data.reviews, schema: data.schema, done: data.done, planDone: data.plan_done, total: data.total });
+  buildStatic();
+  wire();
+  $('#loading').hidden = true;
+  $('#app').hidden = false;
+  const fromHash = parseInt(location.hash.slice(1), 10);
+  const firstTodo = S.reviews.findIndex(r => r.status !== 'done' || !r.plan_done);
+  show(fromHash >= 1 && fromHash <= S.total ? fromHash - 1 : (firstTodo >= 0 ? firstTodo : 0));
+}
+start();
+</script>
+</body>
+</html>

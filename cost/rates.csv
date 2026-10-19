@@ -1,0 +1,21 @@
+provider,model,tier,item,unit,price_usd,source_url,checked_date,note
+anthropic,claude-haiku-5-5,standard,input,per_1M_tokens,0.10,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,prompts up to 100K tokens (every request here is far below)
+anthropic,claude-haiku-5-5,standard,cache_write,per_1M_tokens,0.125,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,5-minute cache write (1.25x input)
+anthropic,claude-haiku-5-5,standard,cached_input,per_1M_tokens,0.01,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,cache hits and refreshes (0.1x input)
+anthropic,claude-haiku-5-5,standard,output,per_1M_tokens,0.50,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,thinking tokens are billed inside output
+anthropic,claude-haiku-5-5,batch,input,per_1M_tokens,0.05,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,Message Batches: 50% of standard
+anthropic,claude-haiku-5-5,batch,cache_write,per_1M_tokens,0.0625,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,batch and caching multipliers combine; cache hits inside batches are best-effort
+anthropic,claude-haiku-5-5,batch,cached_input,per_1M_tokens,0.005,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,batch and caching multipliers combine
+anthropic,claude-haiku-5-5,batch,output,per_1M_tokens,0.25,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-16,Message Batches: 50% of standard
+typesafe,jev-1.13.0,standard,input,per_1M_tokens,0.042,https://docs.typesafe.ai/models,2026-10-07,
+typesafe,jev-1.13.0,standard,cache_write,per_1M_tokens,0.042,https://docs.typesafe.ai/models,2026-10-07,no prompt caching documented; billed as input
+typesafe,jev-1.13.0,standard,cached_input,per_1M_tokens,0.042,https://docs.typesafe.ai/models,2026-10-07,no prompt caching documented; billed as input
+typesafe,jev-1.13.0,standard,output,per_1M_tokens,0,https://docs.typesafe.ai/models,2026-10-07,output tokens are free
+fake,fake-rules-v0,synthetic,input,per_1M_tokens,0,,2026-10-07,offline plumbing tests only; never a measured result
+fake,fake-rules-v0,synthetic,cache_write,per_1M_tokens,0,,2026-10-07,offline plumbing tests only; never a measured result
+fake,fake-rules-v0,synthetic,cached_input,per_1M_tokens,0,,2026-10-07,offline plumbing tests only; never a measured result
+fake,fake-rules-v0,synthetic,output,per_1M_tokens,0,,2026-10-07,offline plumbing tests only; never a measured result
+openai,gpt-6-luna,decisions,input,per_1M_tokens,0.10,https://developers.openai.com/api/docs/guides/decisions,2026-10-16,Decisions API: you pay only for input tokens
+openai,gpt-6-luna,decisions,cache_write,per_1M_tokens,0.10,https://developers.openai.com/api/docs/guides/decisions,2026-10-16,no separate cache-write charge; counted as ordinary input here (conservative reading)
+openai,gpt-6-luna,decisions,cached_input,per_1M_tokens,0.10,https://developers.openai.com/api/docs/guides/decisions,2026-10-16,no separate cache-read charge; counted as ordinary input here (conservative reading)
+openai,gpt-6-luna,decisions,output,per_1M_tokens,0,https://developers.openai.com/api/docs/guides/decisions,2026-10-16,no output-token charge

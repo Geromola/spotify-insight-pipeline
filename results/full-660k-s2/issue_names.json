@@ -1,0 +1,293 @@
+{
+  "issues": {
+    "other.general": {
+      "title": "Vague general dissatisfaction without specifics",
+      "description": "Reviewers express broad frustration with the app, often tied to free-tier limits, feature access, or wanting parity with other platforms.",
+      "example_review_ids": [
+        "a18d813c-0185-4a52-988f-18dd99fca123",
+        "8ead8dfb-78bc-45e8-82d2-953ea2870b87",
+        "cbd8dc85-1ed2-46f8-9b5c-900a9ef82646"
+      ]
+    },
+    "usability.ads-interruptions": {
+      "title": "Excessive irrelevant ads for free users",
+      "description": "Free users say ads are frequent, annoying and irrelevant, and feel forced to listen to them because they cannot afford premium.",
+      "example_review_ids": [
+        "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+        "f7ccd28b-4083-4d9b-9833-d6899fe9244e",
+        "4ba8c8db-3245-404a-9bc1-91a00da579ba"
+      ]
+    },
+    "billing.premium-paywall-features": {
+      "title": "Basic features moved behind premium paywall",
+      "description": "Users say core features such as lyrics, loop, previous track, and queue are now locked behind a premium subscription, which they see as unfair.",
+      "example_review_ids": [
+        "9857dc61-331a-4e0d-b6d7-8e2445097170",
+        "918c5abb-97c8-4e8a-bc1d-db6d319b33ee",
+        "042f3475-35ef-4e18-8bf8-1cdbe439b854"
+      ]
+    },
+    "usability.shuffle-playback-control": {
+      "title": "Shuffle, skip and rewind removed",
+      "description": "Customers report that shuffle, loop, unlimited skips, rewinding and playing specific parts of songs were removed or restricted after an update.",
+      "example_review_ids": [
+        "3933cbb2-6ce4-484e-90f2-812176124e09",
+        "8ca87c05-7172-4ae2-bae4-762cadd2430a",
+        "22712ace-11d1-4343-a389-ba04564b158f"
+      ]
+    },
+    "playback.general": {
+      "title": "Audio glitches, hangs and quality drops",
+      "description": "Users describe songs skipping or dropping in quality, the app hanging, and offline or downloaded playback behaving unreliably.",
+      "example_review_ids": [
+        "205e4cbe-a19e-41ae-bff4-ef9a3804e2a4",
+        "d7db39c7-6d47-4cdc-9659-85782d0ac56e",
+        "f9cd83c9-1208-406f-9471-b522d192f95a"
+      ]
+    },
+    "usability.general": {
+      "title": "Updates make app hard to navigate",
+      "description": "Reviewers say recent updates made it harder to select songs, sort lists, and move around, and that each update seems to worsen navigation.",
+      "example_review_ids": [
+        "1fdec127-9ebc-4cc1-87ab-f23c8e8c0624",
+        "e85607c3-a8b4-4a61-a548-a58b17b0eae1",
+        "7c0c98af-c3d1-4adf-80e0-81f50333ab17"
+      ]
+    },
+    "playback.playback-stops-crashes": {
+      "title": "Songs stop playing and app crashes",
+      "description": "Customers report that songs stop unexpectedly and cannot be replayed, playlists fail to load, and the app goes dead or crashes after updates.",
+      "example_review_ids": [
+        "d3dcc154-712b-4b06-8612-c1bdb90f2eed",
+        "24b23f3e-9521-4820-9393-c91405561288",
+        "a840c71c-974c-4edd-8c65-b8b529555ace"
+      ]
+    },
+    "usability.interface-layout-changes": {
+      "title": "Redesigned layout removes familiar features",
+      "description": "Users say redesigns removed quick links, playlist visibility, recently played access, and queue or sorting options they relied on.",
+      "example_review_ids": [
+        "9e22a4cc-0827-4a3b-8155-1a40094c0d09",
+        "99e403b0-3a69-4a4a-a381-7a13f3f5a167",
+        "80833d57-a076-4ac5-9051-80a97e2d9452"
+      ]
+    },
+    "access.general": {
+      "title": "Playback errors and crashes after updates",
+      "description": "Users report playback failure errors, random crashes, and content not loading, saying the app worked well before recent updates.",
+      "example_review_ids": [
+        "0427f624-5485-45ba-9e8c-c8d34548a782",
+        "0b6bd420-d267-47e0-afe5-b26c6dc5e1d3",
+        "96bfa861-e104-4e1b-a813-301c89aa7dec"
+      ]
+    },
+    "billing.charges-cancellation": {
+      "title": "Charged without warning, features unusable",
+      "description": "Subscribers say they are charged without reminders, and that paid accounts cannot use downloaded music offline or get the benefits they paid for.",
+      "example_review_ids": [
+        "1be24878-5115-490a-bb7f-dad95d0630ab",
+        "27eb2920-d0a7-4d39-b082-1aa70af9c778",
+        "02ab45da-773e-42fd-93b5-6bc77ed11944"
+      ]
+    },
+    "catalog.songs-missing-removed": {
+      "title": "Songs unavailable or removed from catalog",
+      "description": "Users report that favorite songs, albums, and regional music such as Bollywood tracks disappear or show as unavailable, even after reinstalling.",
+      "example_review_ids": [
+        "85d052b5-9fa5-491c-bce4-a86ec2d5b44d",
+        "fca2d804-baf5-4a4e-a160-957da5a006f2",
+        "6230c8a7-6068-4018-965e-ddf1c7335be8"
+      ]
+    },
+    "billing.general": {
+      "title": "Paid tier lacks value",
+      "description": "Users feel the paid plan is not worth it, citing paywalled basics, missing songs, and ads even for paying members.",
+      "example_review_ids": [
+        "231fc21a-a5ba-42b6-9b7a-6092184390cf",
+        "a7008f6d-47b2-42f9-906b-7ccf24afd385",
+        "48788e57-d0da-4c1a-8451-28af551033e3"
+      ]
+    },
+    "catalog.lyrics-missing": {
+      "title": "Lyrics missing or fail to load",
+      "description": "Users say lyrics are never shown, show a couldn't load message, or are incorrect or absent for most songs, despite updates.",
+      "example_review_ids": [
+        "e184d1fd-1126-469b-bdf2-91c30e164093",
+        "f818da89-0a34-49e8-81ec-397d23ac6461",
+        "4923c55b-1c99-4b11-884a-9ec967819ce9"
+      ]
+    },
+    "catalog.general": {
+      "title": "Songs greyed out, albums fail to load",
+      "description": "Users report songs greyed out and unplayable, liked songs and artist albums not loading, and general dissatisfaction with recent updates.",
+      "example_review_ids": [
+        "767652ec-68df-435e-a7de-3d3161cc765b",
+        "ebc90858-1ade-4bbb-b089-dd2dbe442c11",
+        "64166a42-bfd1-4a13-b045-c6ad036ef57a"
+      ]
+    },
+    "catalog.recommendations-autoplay": {
+      "title": "Shuffle and recommendations feel stale",
+      "description": "Users say recommendations and autoplay repeat the same songs, do not match their taste, and that smart shuffle adds tracks they cannot track.",
+      "example_review_ids": [
+        "b4cfaa8b-d9fc-4921-8c19-1776a6d47562",
+        "0ff00dda-51e5-49e0-b764-60b46fefd379",
+        "992ab95d-2360-4c45-9886-13ebf4a41473"
+      ]
+    },
+    "access.phone-number-login": {
+      "title": "Login fails and app logs out",
+      "description": "Users report the app repeatedly logs them out and rejects login details, making account changes difficult and blocking phone-based access.",
+      "example_review_ids": [
+        "00991520-102d-4cbd-bacf-5a85dfd9a749",
+        "346eaeaf-fc43-45d1-9a65-5d1798b08f49",
+        "d4961772-f9bf-4dc6-9db7-1cb302bc5708"
+      ]
+    },
+    "access.password-social-login": {
+      "title": "Google and phone login failures",
+      "description": "Users report that single sign-on through Google fails, phone-number login stops working, and songs gray out with a false no-connection message.",
+      "example_review_ids": [
+        "51742e41-639c-42b7-9b36-cca77585c5ce",
+        "52ea5789-9617-4966-ac14-294f528a48f3",
+        "9063ea55-aae5-4ce7-879a-6e12179fc78a"
+      ]
+    },
+    "billing.subscription-price": {
+      "title": "Premium price too high",
+      "description": "Users find the premium subscription too expensive for their budget, especially in regions without a free ad-supported tier, and feel ads remain intrusive.",
+      "example_review_ids": [
+        "7d43b2a3-d076-4364-92e3-341baf716513",
+        "cd237fba-9a2f-4894-b188-7401a5873aaf",
+        "97e23042-6f9b-46b4-ac25-5c9be7558807"
+      ]
+    },
+    "playback.offline-false-errors": {
+      "title": "False no-internet errors despite connection",
+      "description": "Users say the app shows a no internet connection error while they are connected, and that now-playing controls or rewinding disappear.",
+      "example_review_ids": [
+        "406bdcfe-89b7-438d-8400-7af03ec6767e",
+        "a37ecc47-47d2-45b5-862f-d751874723a8",
+        "6afb3b57-3d4d-453c-847f-4a13f4ea08d7"
+      ]
+    },
+    "catalog.unwanted-songs-added": {
+      "title": "Random songs added to playlists",
+      "description": "Users find unwanted tracks appearing in their own playlists, including other people's songs, and playback jumping to songs they do not want to hear.",
+      "example_review_ids": [
+        "939e1a96-61b6-4136-943e-ca2487de5aca",
+        "f0598533-7f80-497c-b844-33c7fc0e3117",
+        "dcff4ee1-f714-48cd-bf95-700e5d382539"
+      ]
+    },
+    "access.account-session-signup": {
+      "title": "Session and playlist access failures",
+      "description": "Users report being logged out and losing downloads, being unable to add songs to playlists, and restrictions on choosing or liking particular songs.",
+      "example_review_ids": [
+        "e64ff095-83f3-4b7b-8ff7-74261ef85fad",
+        "37e98e7c-67f8-4f6a-a013-8ed4a65604d3",
+        "69a5ca0a-4528-4682-911b-4ac6f94f4c67"
+      ]
+    },
+    "playback.bluetooth-device-control": {
+      "title": "Bluetooth connection and queue control issues",
+      "description": "Users report Bluetooth headsets and car connections drop or behave oddly, and they cannot control track selection or queues from connected devices.",
+      "example_review_ids": [
+        "c0a82187-5578-4a4c-a90f-e679caaccbb5",
+        "19c16e7e-32e1-4b97-bf53-c4b4d25a4e29",
+        "b6d81a95-5302-4dea-9e39-5714632edbcc"
+      ]
+    },
+    "access.app-wont-open": {
+      "title": "App fails to open or log in",
+      "description": "Users say the app won't open, shows nothing loading, or claims there is no internet even when connected, even after reinstalling.",
+      "example_review_ids": [
+        "0dedd631-36a1-45cc-99b6-bb297e7da5b2",
+        "1e451504-cbd5-4857-b82a-2123dcdac002",
+        "18802f98-dbe5-4624-88d6-0ccfaf1e7ea1"
+      ]
+    },
+    "playback.buffering-slow-loading": {
+      "title": "Laggy app and slow loading",
+      "description": "Users describe the app as very laggy and slow, with music pausing for seconds and network-related loading problems not seen in other apps.",
+      "example_review_ids": [
+        "0d9188db-5937-4e16-a0eb-2f885d1f49d1",
+        "3c0c9ace-3007-4aaa-b7b2-6c3822e4ffa1",
+        "062445a2-d743-461b-8cdf-463d0b777451"
+      ]
+    },
+    "downloads.downloads-deleted": {
+      "title": "Downloads removed unexpectedly after logout",
+      "description": "Users say downloaded songs and playlists are deleted automatically, often after logout or over time, forcing them to re-download music.",
+      "example_review_ids": [
+        "c9359580-3795-4cf8-9f63-cb666a982916",
+        "c39c8d6a-22fa-4717-a6f3-5ee98fc7249f",
+        "0f86bfe9-bace-4142-9ab9-f3c37c9ce010"
+      ]
+    },
+    "downloads.downloads-fail-to-save": {
+      "title": "Downloads fail to save or sync",
+      "description": "Users report that songs only download when clicked, that SD card transfers fail, and that reinstalling does not fix repeated download failures.",
+      "example_review_ids": [
+        "b97dde8f-c725-4e9e-a700-2fc038878990",
+        "b2e4bfa0-c59f-4a93-91af-9c006ab4c0e5"
+      ]
+    },
+    "downloads.offline-playback-needs-network": {
+      "title": "Offline playback fails without network",
+      "description": "Users say downloaded playlists and songs won't play offline, and the app hangs searching for them, which is frustrating on long drives or without signal.",
+      "example_review_ids": [
+        "8b85f264-c5c5-471b-9a9a-d926d62b05f0",
+        "75fc819d-0960-4bf2-a99c-8fde037ad3dc",
+        "dd7e059a-cb5f-40cb-88a0-a2b6893e0cd9"
+      ]
+    },
+    "downloads.general": {
+      "title": "Downloaded and liked songs fail to load",
+      "description": "Users report downloaded songs loading slowly, liked songs disappearing, and playlists stuck syncing before going offline.",
+      "example_review_ids": [
+        "ddb2bf63-ecb6-42e4-a31a-fd0b68d2c34b",
+        "e5ac1564-b080-4037-a1bb-fb82466eb626",
+        "17dc4eb2-1c82-471d-9122-6e86daa69c78"
+      ]
+    },
+    "catalog.content-bias-policy": {
+      "title": "Music removals over political content",
+      "description": "Users object to Spotify removing music or artists, and accuse it of political censorship, which leads some to say they will leave the service.",
+      "example_review_ids": [
+        "df36f201-ee96-4ca6-88a5-b5a3744be154",
+        "e5f9ccbe-c88a-4c11-9fba-67568a1f6cf8",
+        "be7c9f8a-9f78-4277-94ec-ce961383eb97"
+      ]
+    },
+    "support.support-response-quality": {
+      "title": "Support gives unhelpful, slow responses",
+      "description": "Users say support emails go unanswered, and that suggested fixes like reinstalling fail to solve persistent bugs reported long ago.",
+      "example_review_ids": [
+        "c01f01a7-61c8-4c6b-aeee-7c3e9ebf823f",
+        "45a9dbf9-2fdc-4e6f-b367-01040ed53ca4",
+        "4acddef7-3e90-4bdf-a0bf-30c7b58af0fb"
+      ]
+    },
+    "support.general": {
+      "title": "Vague frustration with company and pricing",
+      "description": "Users express general discontent with the company, its pricing, and its artist payouts, and say they will stop using or subscribing to the service.",
+      "example_review_ids": [
+        "f55cba46-9674-4461-adf9-c45a3ab844ae",
+        "0aa0e4c6-3480-4e12-8244-2e42229509ff",
+        "c9a05d85-e34c-40ce-aad9-a74863ebad68"
+      ]
+    },
+    "support.support-channels-broken": {
+      "title": "Support contact channels unavailable or broken",
+      "description": "Users report customer service has no phone line, limits help to text or chat, and that in-app support website links are broken.",
+      "example_review_ids": [
+        "4269d3e3-5de2-4ec5-b5e7-58f292ab254a",
+        "4ee06cab-44bf-4738-be41-1889152ba3d4",
+        "3528d714-4ba8-4cb0-b238-54bd7a0725fa"
+      ]
+    }
+  },
+  "problems": [],
+  "from_cache": false
+}

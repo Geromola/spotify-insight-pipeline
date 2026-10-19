@@ -1,0 +1,12 @@
+2026-10-17T23:32:08Z saved work exists and a batch is in flight; sending SIGINT to pid 29566
+status            n     
+----------------  ------
+completed         73908 
+fallback_pending  25537 
+leased            145460
+pending           239284
+provider_batch                     status       n_requests
+---------------------------------  -----------  ----------
+msgbatch_017RzgvdxcFK7toRJGQHkMqH  completed    2000      
+msgbatch_01J1pZxKDoqhvMcRvhY3cq3B  in_progress  2000      
+msgbatch_01EnCG1qvXJEELsbRtXxSAie  in_progress  909       

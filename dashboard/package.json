@@ -1,0 +1,13 @@
+{
+  "name": "spotify-insight-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install:all": "npm --prefix api install --no-audit --no-fund && npm --prefix web install --no-audit --no-fund",
+    "dev:api": "npm --prefix api run dev",
+    "dev:web": "npm --prefix web run dev",
+    "build": "npm --prefix api run build && npm --prefix web run build",
+    "typecheck": "npm --prefix api run typecheck && npm --prefix web run typecheck",
+    "test": "npm --prefix api test"
+  }
+}

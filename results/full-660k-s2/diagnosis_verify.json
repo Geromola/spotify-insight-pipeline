@@ -1,0 +1,1038 @@
+{
+  "n": 300,
+  "agreement": {
+    "symptom": 0.7933,
+    "context": 0.99
+  },
+  "by_area": {
+    "access": {
+      "n": 36,
+      "symptom": 0.8611,
+      "context": 1.0
+    },
+    "billing/support": {
+      "n": 44,
+      "symptom": 0.75,
+      "context": 1.0
+    },
+    "playback": {
+      "n": 107,
+      "symptom": 0.7757,
+      "context": 0.9813
+    },
+    "usability": {
+      "n": 113,
+      "symptom": 0.8053,
+      "context": 0.9912
+    }
+  },
+  "disagreements_total": 65,
+  "disagreements": [
+    {
+      "review_id": "08f5cc63-13f6-408c-8056-58f74b1f2b1d",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "chosen-song-not-played",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.37,
+        "context": 0.74
+      },
+      "text": "Worst not Playing songs automatically comes out of app"
+    },
+    {
+      "review_id": "094e1880-6eab-4925-a4c3-7e860b714924",
+      "area": "access",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "login-credentials-rejected",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.52,
+        "context": 0.98
+      },
+      "text": "Bad noboption to log in"
+    },
+    {
+      "review_id": "105c5dc6-fb4a-4cb2-8d87-e10353ae40ea",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "screens-hard-to-navigate",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.46,
+        "context": 1.0
+      },
+      "text": "Awfully designed new UI. We don't need another TikTok alike music app!!"
+    },
+    {
+      "review_id": "1652ad4e-7d9b-4b4e-bc25-cf1c7ba17c4f",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "playback-wont-start",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "songs-or-playlists-wont-load",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.94,
+        "context": 0.99
+      },
+      "text": "nothing works:( every time i open the app, it loads for a long time. when i try to look into my library nothing appears and my account doesn't show either. music will not play, neither will playlists. i cannot view, edit, or search for playlists."
+    },
+    {
+      "review_id": "184f7e66-2f88-4419-8e29-d93633736d59",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.55,
+        "context": 1.0
+      },
+      "text": "The android app itself is ugly, annoying to use and just underwhelming. No swipe gesture just buttons"
+    },
+    {
+      "review_id": "1af1ada5-96a9-4592-8801-c9f65b19554c",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "playlists-songs-wont-open",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.48,
+        "context": 0.99
+      },
+      "text": "Recent upgrades have been annoying. 1. Can't access my liked songs playlist when offline. 2. Removed scroll bar in playlists. 3. Let the search bar be visible by default, I know you can pull down to reveal the search bar. Remove the extra step. 4. Find an artist with 2 liked songs, add the first son"
+    },
+    {
+      "review_id": "1cd83f5e-204a-4bba-8cfa-40231ef998e9",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "basic-features-locked-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.49,
+        "context": 1.0
+      },
+      "text": "Pay to listen cleanly 😭😭😣😣"
+    },
+    {
+      "review_id": "2822f3dd-a447-4d04-9699-7ee74e770b0a",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "controls-stop-responding",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "skips-or-replays-wrong-track",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.94,
+        "context": 1.0
+      },
+      "text": "I love using this app when it works. Lately there's been glitches when skipping tracks surprisingly on both android and ios."
+    },
+    {
+      "review_id": "2cf0a5aa-8164-43a9-bbd3-75d9a4c1f613",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "audio-glitches-or-drops",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "pauses-stops-mid-song",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.51,
+        "context": 0.99
+      },
+      "text": "Super annoying VERY VERY VERY VERY VERY VERY VERY Very glitchy DROPS OUT EVERY 10 SECONDS EVEN ON WIFI AND 5G.... FIX YOUR PROGRAMMING CANCEL OUR SUBSCRIPTION and keeps asking permission to run in the background....while its running in the background 🤷‍♂️🤦‍♂️"
+    },
+    {
+      "review_id": "2fba76b1-85e6-4cdb-8e19-267381462c14",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "playback-wont-start",
+        "context": "wearable"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "wearable"
+      },
+      "verifier_confidence": {
+        "symptom": 0.69,
+        "context": 0.99
+      },
+      "text": "It won't allow you to play music on your watch , you need to connect to a Bluetooth device it was very disappointing"
+    },
+    {
+      "review_id": "337f3f6f-af64-4d09-afbb-fafc72341805",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "audio-glitches-or-drops",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.87,
+        "context": 1.0
+      },
+      "text": "Poor quality"
+    },
+    {
+      "review_id": "36171aef-36bc-434d-ab2a-f787ea6f81e4",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.44,
+        "context": 1.0
+      },
+      "text": "A new update renderd Spotify unusable, every update they take away useful features."
+    },
+    {
+      "review_id": "39edcd84-a6c2-4974-a01e-910ce90ac6c0",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "ads-play-too-often",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "suggestions-mixed-in",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.4,
+        "context": 1.0
+      },
+      "text": "The recent updated versions are becoming worse day by day.. Just playing adds. Also nowadays songs are just popping out from anywhere where as when I'm playing it from my play list. It's not in order the way I put/saved in the play list."
+    },
+    {
+      "review_id": "3d8182b6-84b7-4953-af0f-19149e538795",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "ads-play-too-often",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.43,
+        "context": 1.0
+      },
+      "text": "It's not pausing the podcast when there's an ad so I hear both at the same time. Super annoying."
+    },
+    {
+      "review_id": "3ff30689-7a87-47fe-8d12-bb3501ea116c",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "app-crashes-or-freezes",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "songs-or-playlists-wont-load",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.69,
+        "context": 0.99
+      },
+      "text": "It won't even open it's just kept loading and loading"
+    },
+    {
+      "review_id": "42e33038-f711-4346-b432-7811b6d04271",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.74,
+        "context": 0.9
+      },
+      "text": "Can't Access canvas anymore"
+    },
+    {
+      "review_id": "4828a404-b4a6-4903-802a-6642217cb322",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "paid-member-cannot-use-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.31,
+        "context": 1.0
+      },
+      "text": "Worst application in My life steal my premium membership don't waste your money"
+    },
+    {
+      "review_id": "4aa5188f-447e-4b0a-9c84-35d25e2f81d6",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "skips-or-replays-wrong-track",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "playback-wont-start",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.4,
+        "context": 1.0
+      },
+      "text": "My liked song are not playing in a serial... I don't know what is the problem... Plss solve as soon as possible"
+    },
+    {
+      "review_id": "4b496481-0a3f-4add-9f8b-11f3f7b2b933",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "basic-features-locked-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.85,
+        "context": 1.0
+      },
+      "text": "Very bad app . Begs for premiuim"
+    },
+    {
+      "review_id": "4da14ef2-9642-4b05-b1e6-45a0b37c05e3",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "audio-glitches-or-drops",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "skips-or-replays-wrong-track",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.76,
+        "context": 0.94
+      },
+      "text": "Skipping like a CD"
+    },
+    {
+      "review_id": "56c558d6-c59e-4c27-b96e-2c7b85484f70",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "app-crashes-or-freezes",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.56,
+        "context": 1.0
+      },
+      "text": "Doesn't work with Samsung S20FE. Latest updates on phone and app and all I get is the Spotify logo."
+    },
+    {
+      "review_id": "57cd3a5c-1ba2-4ff7-9542-b487b2fc9c9b",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "paid-member-cannot-use-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.43,
+        "context": 1.0
+      },
+      "text": "Wow worst app for everything they're charging money can't even change song's duration. Thankyou now I'm uninstalling it"
+    },
+    {
+      "review_id": "5db59cbb-0d0c-4f0e-b650-6bf5bcdc6157",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "premium-price-too-high",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.75,
+        "context": 1.0
+      },
+      "text": "It is good and more if you pay for it.But you have to pay for it because it has very good benefits and at the same time it is a bit unfair to pay but it is worth it if you enjoy music since it has very good audio quality. Yes, the application is very heavy, I think that is what I do not like that it"
+    },
+    {
+      "review_id": "62281f03-ccad-4909-8d49-6df66b3660b9",
+      "area": "access",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "login-credentials-rejected",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "phone-login-code-fails",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.63,
+        "context": 1.0
+      },
+      "text": "I want to give 5 star but after the update I am trying to login my account but it shows check your phone number even i have premium subscription how can i fix this please let me know asap"
+    },
+    {
+      "review_id": "64867ab1-e970-48b5-a1f5-aa6af76d0158",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "chosen-song-not-played",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.79,
+        "context": 1.0
+      },
+      "text": "At first when iam using this app it was so good and It was always shows best playlist of my favorite song at early 06s and 16s but due to recent update it was totally changed we unable to forward the song it was a major disappoint to me . And the secondary thing is we can't play backward songs"
+    },
+    {
+      "review_id": "6487e8e6-d7b8-4619-adfc-df46a7486431",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "basic-features-locked-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.97,
+        "context": 0.98
+      },
+      "text": "If you decide to cut the basic features and put it behind a paywall, people will just move to another platform instead of paying you."
+    },
+    {
+      "review_id": "6510add1-2f1c-4666-9f95-14ef2be51fa6",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "library-edits-fail",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "screens-hard-to-navigate",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.76,
+        "context": 1.0
+      },
+      "text": "I can't scroll through my genres anymore I have 2050 liked songs and I can't listen to just one genre because it's broken"
+    },
+    {
+      "review_id": "68281bca-5e62-4036-9db1-74b5f12721e4",
+      "area": "playback",
+      "fields": [
+        "context"
+      ],
+      "diagnoser": {
+        "symptom_id": "playback-wont-start",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "playback-wont-start",
+        "context": "desktop-web"
+      },
+      "verifier_confidence": {
+        "symptom": 0.42,
+        "context": 0.92
+      },
+      "text": "Best music streaming platform there is. Hands down. I've tried youtube music and apple music, and neither of them have come close to my experience with this app. Edit: Of late, this has been a terrible experience. My songs keep freezing for no reason, and then a pop-up window says, \"Cannot play curr"
+    },
+    {
+      "review_id": "6b9499b8-fb64-4cec-b996-66df35bcbd96",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "suggestions-mixed-in",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.61,
+        "context": 1.0
+      },
+      "text": "It's an essential part of my life. In spite of that, I would very much love it if there was a way for Spotify to stop trying to get me to watch/listen to a podcast. It will literally never happen. Turn it off until the end of time. I accidentally clicked a podcast once, and now they won't stop tryin"
+    },
+    {
+      "review_id": "6fb09590-9da1-42c8-be3d-839d82dabe76",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "playback-wont-start",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "songs-or-playlists-wont-load",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.63,
+        "context": 1.0
+      },
+      "text": "Recent update broken With this last update I have been unable to access any music. It won't play anything. It doesn't allow me to even play downloaded, or even show my music or podcasts. Fabulous, back to not sleeping well. Upset because it's been fine for years. And now that I rely on the stories a"
+    },
+    {
+      "review_id": "728a9bda-8fdb-4e3c-a2c5-932aa46ad046",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.71,
+        "context": 1.0
+      },
+      "text": "Literally, the recent update is going to make your app a trash🗑 because in recent update there is no basic music app features which a music app should have. So Disappointed😞 to you Spotify team."
+    },
+    {
+      "review_id": "75449ef3-5257-4eff-bf4a-987b95ef874c",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "basic-features-locked-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.86,
+        "context": 1.0
+      },
+      "text": "became a paid app basically"
+    },
+    {
+      "review_id": "7661f544-af11-41fd-8b07-c541bff632bd",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "notification-controls-missing",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.47,
+        "context": 0.99
+      },
+      "text": "Rewind, pause, fast forward bar just disappears. Stops playing whatever I'm listening to every 10 minutes"
+    },
+    {
+      "review_id": "7c385b56-efec-4c90-8d6e-cd892cdf6316",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "screens-hard-to-navigate",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.49,
+        "context": 1.0
+      },
+      "text": "The new UI is a nightmare. Used Spotify from day one but are considering to change. Please bring back the pre-update one and have a serious talk with the ones making such stupid decisions. This is Spotify and not TikTok"
+    },
+    {
+      "review_id": "81b7f274-0950-4292-bd03-9102708d252f",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "songs-or-playlists-wont-load",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "playback-wont-start",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.49,
+        "context": 1.0
+      },
+      "text": "Doesn't let me listen to my liked music"
+    },
+    {
+      "review_id": "8311b642-460e-4ef3-b710-bc80010db7d5",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "songs-or-playlists-wont-load",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.48,
+        "context": 1.0
+      },
+      "text": "App quite working after last Samsung update on 5-13-22. Not happy had all my music with you and have nothing yet. Before this I have been very happy andno thinking of upgrading. But if I can't depend on you I will have to look elsewhere."
+    },
+    {
+      "review_id": "8b13fc59-c440-4af7-aadf-f3dea030f736",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "screens-hard-to-navigate",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.68,
+        "context": 1.0
+      },
+      "text": "When this app is working, it's great. I gave it two stars because the app that I enjoyed using suddenly got changed into a nauseating video only version which is like flipping through TV channels. It is unusable and there is no option to revert back to the older version that worked just fine in my d"
+    },
+    {
+      "review_id": "8f4bf08d-ecba-4eab-a295-c5c8754fac2b",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "songs-or-playlists-wont-load",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "playback-wont-start",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.87,
+        "context": 1.0
+      },
+      "text": "App appears to have a number of bugs currently. Won't load podcasts, songs will quite frequently just be unable to play which requires restarting the app to get music playing again. This is pretty dissapointing having paid for premium."
+    },
+    {
+      "review_id": "92d0696d-76a8-4baa-9f3a-71ba388e6a44",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "pauses-stops-mid-song",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "app-crashes-or-freezes",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.99,
+        "context": 1.0
+      },
+      "text": "Love this app, and I pay for premium individual use. However... Over the past few days my playback will just stops. As if the app closes itself or something. I've made sure I'm using the most recent update and that my data/wifi are working. It is frustrating and a real mood killer. The song that was"
+    },
+    {
+      "review_id": "987785ab-b6ab-46fc-94bd-d48f0630c48d",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "notification-controls-missing",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.53,
+        "context": 1.0
+      },
+      "text": "Impossible to use on lock screen anymore. Tried everything I could find Samsung Galaxy S20 FE Android 12"
+    },
+    {
+      "review_id": "9f2ff2d5-29cf-419c-bf41-046eb9b6908c",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "familiar-option-removed",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "chosen-song-not-played",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.6,
+        "context": 0.95
+      },
+      "text": "Years later and the below still applies. Plus little features keep disappearing like auto naming album playlists, long press menu inconsistencies. Wish a 'play next' option would appear one day. --- General instability. Moving to and from mobile often breaks my queue, or suddenly plays something I w"
+    },
+    {
+      "review_id": "a6c2d190-08b6-4860-b646-238ebecfff29",
+      "area": "usability",
+      "fields": [
+        "context"
+      ],
+      "diagnoser": {
+        "symptom_id": "chosen-song-not-played",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "chosen-song-not-played",
+        "context": "tv-cast"
+      },
+      "verifier_confidence": {
+        "symptom": 0.55,
+        "context": 0.9
+      },
+      "text": "Everytime there is an update this app goes jinky! I use Spotify all the time and won't stop but it's annoying. The new smart shuffle keeps turning itself on after I've turned it off! It also keeps not continuing to play after a song finishes! Also if i am listening through Alexa i cant put the sleep"
+    },
+    {
+      "review_id": "a7a0e4ca-b1b5-4bc8-8525-794f28967cc1",
+      "area": "access",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "login-credentials-rejected",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.47,
+        "context": 1.0
+      },
+      "text": "Couldn’t even loged in. So sad uninstalled after 5 min. Disappointed"
+    },
+    {
+      "review_id": "a88f1e75-4cc7-4da0-9d4b-c929b94903f9",
+      "area": "usability",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "screens-hard-to-navigate",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.45,
+        "context": 0.99
+      },
+      "text": "Everytime I load it up, it takes me to the home screen. It's been a chore having to go playlists when switching apps."
+    },
+    {
+      "review_id": "b34e4fdb-80ba-461d-b24d-9b1f20673cad",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "controls-stop-responding",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.91,
+        "context": 1.0
+      },
+      "text": "Since yesterday I am unable to slide through different time stamps in my song, I have to wait for my favourite part, please fix it. Otherwise the app is amazing!"
+    },
+    {
+      "review_id": "b6e81fe6-7b2f-4097-952e-2544408e1886",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "skips-or-replays-wrong-track",
+        "context": "car"
+      },
+      "verifier": {
+        "symptom_id": "starts-playing-unprompted",
+        "context": "car"
+      },
+      "verifier_confidence": {
+        "symptom": 0.57,
+        "context": 0.92
+      },
+      "text": "The only time I use this app is to listen to podcasts on long drives in the car. I don't know if it's the app, my phone or my car. I never know where or if a Podcast will start. Sometimes where it left off. Sometimes randomly with a different episode. (not even the latest) Sometimes it's backed up t"
+    },
+    {
+      "review_id": "baa60f12-fa1a-4b1f-8a75-623767686ce9",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "basic-features-locked-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.66,
+        "context": 1.0
+      },
+      "text": "Guys ur doing very wrong by changing free service"
+    },
+    {
+      "review_id": "bbb52a47-f400-4968-a817-81332d9bd824",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "basic-features-locked-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.86,
+        "context": 1.0
+      },
+      "text": "It was one of my favourite app. But now they made changes to take premium version, and it is worst thing they did ever. I will never use this app from now on."
+    },
+    {
+      "review_id": "bd49190e-463e-42fc-b2a8-e9fd5dc5f79b",
+      "area": "playback",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "pauses-stops-mid-song",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "skips-or-replays-wrong-track",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.41,
+        "context": 1.0
+      },
+      "text": "Good until it starts randomly only playing 9 seconds of all your library songs for no reason #trash"
+    },
+    {
+      "review_id": "c0dfa2a5-dd99-4d93-8a94-765f8397124a",
+      "area": "billing/support",
+      "fields": [
+        "symptom"
+      ],
+      "diagnoser": {
+        "symptom_id": "other",
+        "context": "none"
+      },
+      "verifier": {
+        "symptom_id": "basic-features-locked-premium",
+        "context": "none"
+      },
+      "verifier_confidence": {
+        "symptom": 0.91,
+        "context": 1.0
+      },
+      "text": "Everywhere asking for premium"
+    }
+  ],
+  "method": "lowest SHA-256(seed + ':' + review_id) among completed diagnoses; one blind call per text: the area's symptom names (+ other) and the context meanings",
+  "seed": "diagnose-verify-v1",
+  "sample": 300,
+  "calls_this_run": 300,
+  "stopped": null,
+  "verifier": "typesafe:jev-1.13.0|jev-d1"
+}

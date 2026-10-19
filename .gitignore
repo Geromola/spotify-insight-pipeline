@@ -1,0 +1,20 @@
+# Secrets: only the blank example is ever committed
+.env
+.env.*
+!.env.example
+
+# Raw corpus (97.4 MB): download from the course link, see README
+data/spotify_reviews_18months.csv
+
+# Working state and large derived files
+runs/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+local-reference.json
+/self-check.json
+
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

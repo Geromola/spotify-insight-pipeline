@@ -1,0 +1,31 @@
+area,free_tier_limit,plan,complaints,severity_sum
+access,0,free,60,214
+access,0,paid,1015,3894
+access,0,unstated,10557,40277
+access,1,free,27,93
+access,1,paid,2,6
+access,1,unstated,109,373
+billing/support,0,free,688,1504
+billing/support,0,paid,2489,6747
+billing/support,0,unstated,11212,26266
+billing/support,1,free,5406,13024
+billing/support,1,paid,836,2031
+billing/support,1,unstated,20345,50671
+outside the question,0,free,334,708
+outside the question,0,paid,1945,5148
+outside the question,0,unstated,110464,223818
+outside the question,1,free,478,1106
+outside the question,1,paid,56,140
+outside the question,1,unstated,1774,4185
+playback,0,free,149,429
+playback,0,paid,3287,10298
+playback,0,unstated,29450,88080
+playback,1,free,147,426
+playback,1,paid,33,100
+playback,1,unstated,600,1731
+usability,0,free,272,590
+usability,0,paid,2115,4788
+usability,0,unstated,33915,75445
+usability,1,free,10185,23145
+usability,1,paid,1245,2877
+usability,1,unstated,49358,112841

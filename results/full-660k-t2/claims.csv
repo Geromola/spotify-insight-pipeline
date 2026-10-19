@@ -1,0 +1,10 @@
+claim_id,issue_id,metric,value
+C1,usability.ads-interruptions,complaint_count,36883
+C2,usability.ads-interruptions,severity_sum,76209
+C3,usability.ads-interruptions,priority_score,76209
+C4,usability.shuffle-playback-control,complaint_count,20684
+C5,usability.shuffle-playback-control,severity_sum,55711
+C6,usability.shuffle-playback-control,priority_score,55711
+C7,billing.premium-paywall-features,priority_score,89058
+C8,playback.playback-stops-crashes,priority_score,35317
+C9,access.general,priority_score,15383

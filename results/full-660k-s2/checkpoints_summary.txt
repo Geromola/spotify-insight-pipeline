@@ -1,0 +1,3 @@
+runs/full-660k-s2/checkpoints/inv1.json interrupted 228532
+runs/full-660k-s2/checkpoints/inv2.json finished 585939
+runs/full-660k-s2/checkpoints/inv3.json budget: fallback cap: 2.5002 > 2.50 USD 660567

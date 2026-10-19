@@ -1,0 +1,19 @@
+# Claude Haiku 5.5 as the enricher. Primary pass: thinking off, effort low, 50 reviews per request.
+# Fallback step: one doubted review per request with adaptive thinking.
+provider = "anthropic"
+model = "claude-haiku-5-5"
+thinking = "disabled"
+effort = "low"
+fallback_thinking = "adaptive"
+fallback_effort = "low"
+batch_size = 50
+budget_usd = 15.0
+enrich_cap_usd = 8.0
+fallback_cap_usd = 2.5   # raised 2026-10-16: the measured pilot projects ~$1.84 for the 2% fallback
+# Independent verifier: Jev, a different model family, on a declared 20% sample (at most 1,000).
+verifier = "jev"
+verify_fraction = 0.2
+verify_max = 1000
+# Diagnosis (symptom, context, trigger): adaptive thinking, effort low (evals/diagnose_probe/). The cap covers
+# the worst-case reservation of every request in flight (10,000 output tokens each), not the expected ~$2.40.
+diagnose_cap_usd = 7.0

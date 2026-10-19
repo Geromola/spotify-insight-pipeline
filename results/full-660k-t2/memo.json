@@ -1,0 +1,753 @@
+{
+  "facts": {
+    "question": "At the end of this historical review window, where should the next quarter of product effort go: access, usability, playback, or billing/support?",
+    "scope": {
+      "source_rows": 660622,
+      "completed_classifications": 660591,
+      "quarantined_or_unclassified": 31,
+      "unique_texts": 484189,
+      "rows_reusing_an_exact_text_result": 176420,
+      "complaint_or_cancellation_reviews": 296015,
+      "needs_review_texts": 67504,
+      "first_review": "2022-05-17 00:01:07",
+      "last_review": "2023-11-15 23:16:10",
+      "quarantine_reasons": {
+        "empty_review_text": 13,
+        "invalid_output:duplicate_line": 2,
+        "invalid_output:field_count": 1,
+        "invalid_output:max_tokens": 3,
+        "invalid_output:unknown_topic": 6,
+        "refusal:bio": 6
+      }
+    },
+    "ranking_rule": "priority_score = complaint_count x mean_severity = severity_sum; complaint and cancellation reviews only; ties by issue id",
+    "ranking": [
+      {
+        "rank": "1",
+        "issue_id": "other.general",
+        "complaint_count": "83925",
+        "severity_sum": "161974",
+        "mean_severity": "1.929985",
+        "priority_score": "161974"
+      },
+      {
+        "rank": "2",
+        "issue_id": "billing.premium-paywall-features",
+        "complaint_count": "33825",
+        "severity_sum": "89058",
+        "mean_severity": "2.632905",
+        "priority_score": "89058"
+      },
+      {
+        "rank": "3",
+        "issue_id": "usability.ads-interruptions",
+        "complaint_count": "36883",
+        "severity_sum": "76209",
+        "mean_severity": "2.066236",
+        "priority_score": "76209"
+      },
+      {
+        "rank": "4",
+        "issue_id": "usability.shuffle-playback-control",
+        "complaint_count": "20684",
+        "severity_sum": "55711",
+        "mean_severity": "2.693435",
+        "priority_score": "55711"
+      },
+      {
+        "rank": "5",
+        "issue_id": "playback.general",
+        "complaint_count": "16010",
+        "severity_sum": "45961",
+        "mean_severity": "2.870768",
+        "priority_score": "45961"
+      },
+      {
+        "rank": "6",
+        "issue_id": "usability.interface-layout-changes",
+        "complaint_count": "17631",
+        "severity_sum": "40127",
+        "mean_severity": "2.275934",
+        "priority_score": "40127"
+      },
+      {
+        "rank": "7",
+        "issue_id": "playback.playback-stops-crashes",
+        "complaint_count": "10730",
+        "severity_sum": "35317",
+        "mean_severity": "3.291426",
+        "priority_score": "35317"
+      },
+      {
+        "rank": "8",
+        "issue_id": "usability.general",
+        "complaint_count": "14864",
+        "severity_sum": "34808",
+        "mean_severity": "2.341765",
+        "priority_score": "34808"
+      },
+      {
+        "rank": "9",
+        "issue_id": "access.general",
+        "complaint_count": "4173",
+        "severity_sum": "15383",
+        "mean_severity": "3.686317",
+        "priority_score": "15383"
+      },
+      {
+        "rank": "10",
+        "issue_id": "billing.general",
+        "complaint_count": "6087",
+        "severity_sum": "13134",
+        "mean_severity": "2.157713",
+        "priority_score": "13134"
+      },
+      {
+        "rank": "11",
+        "issue_id": "billing.charges-cancellation",
+        "complaint_count": "3940",
+        "severity_sum": "12575",
+        "mean_severity": "3.191624",
+        "priority_score": "12575"
+      },
+      {
+        "rank": "12",
+        "issue_id": "catalog.songs-missing-removed",
+        "complaint_count": "4486",
+        "severity_sum": "11139",
+        "mean_severity": "2.483058",
+        "priority_score": "11139"
+      },
+      {
+        "rank": "13",
+        "issue_id": "catalog.lyrics-missing",
+        "complaint_count": "4628",
+        "severity_sum": "10866",
+        "mean_severity": "2.347882",
+        "priority_score": "10866"
+      },
+      {
+        "rank": "14",
+        "issue_id": "billing.subscription-price",
+        "complaint_count": "4798",
+        "severity_sum": "9845",
+        "mean_severity": "2.051897",
+        "priority_score": "9845"
+      },
+      {
+        "rank": "15",
+        "issue_id": "catalog.recommendations-autoplay",
+        "complaint_count": "4538",
+        "severity_sum": "9789",
+        "mean_severity": "2.157118",
+        "priority_score": "9789"
+      },
+      {
+        "rank": "16",
+        "issue_id": "catalog.general",
+        "complaint_count": "4335",
+        "severity_sum": "9620",
+        "mean_severity": "2.219146",
+        "priority_score": "9620"
+      },
+      {
+        "rank": "17",
+        "issue_id": "access.phone-number-login",
+        "complaint_count": "2319",
+        "severity_sum": "9200",
+        "mean_severity": "3.967227",
+        "priority_score": "9200"
+      },
+      {
+        "rank": "18",
+        "issue_id": "playback.offline-false-errors",
+        "complaint_count": "2217",
+        "severity_sum": "7515",
+        "mean_severity": "3.389716",
+        "priority_score": "7515"
+      },
+      {
+        "rank": "19",
+        "issue_id": "access.password-social-login",
+        "complaint_count": "1916",
+        "severity_sum": "7445",
+        "mean_severity": "3.885699",
+        "priority_score": "7445"
+      },
+      {
+        "rank": "20",
+        "issue_id": "playback.buffering-slow-loading",
+        "complaint_count": "2345",
+        "severity_sum": "6632",
+        "mean_severity": "2.828145",
+        "priority_score": "6632"
+      },
+      {
+        "rank": "21",
+        "issue_id": "access.app-wont-open",
+        "complaint_count": "1640",
+        "severity_sum": "6468",
+        "mean_severity": "3.943902",
+        "priority_score": "6468"
+      },
+      {
+        "rank": "22",
+        "issue_id": "catalog.unwanted-songs-added",
+        "complaint_count": "2670",
+        "severity_sum": "6074",
+        "mean_severity": "2.274906",
+        "priority_score": "6074"
+      },
+      {
+        "rank": "23",
+        "issue_id": "access.account-session-signup",
+        "complaint_count": "1606",
+        "severity_sum": "6003",
+        "mean_severity": "3.737858",
+        "priority_score": "6003"
+      },
+      {
+        "rank": "24",
+        "issue_id": "playback.bluetooth-device-control",
+        "complaint_count": "1987",
+        "severity_sum": "5727",
+        "mean_severity": "2.882235",
+        "priority_score": "5727"
+      },
+      {
+        "rank": "25",
+        "issue_id": "downloads.downloads-deleted",
+        "complaint_count": "1730",
+        "severity_sum": "5205",
+        "mean_severity": "3.008671",
+        "priority_score": "5205"
+      },
+      {
+        "rank": "26",
+        "issue_id": "downloads.offline-playback-needs-network",
+        "complaint_count": "1536",
+        "severity_sum": "4553",
+        "mean_severity": "2.964193",
+        "priority_score": "4553"
+      },
+      {
+        "rank": "27",
+        "issue_id": "downloads.downloads-fail-to-save",
+        "complaint_count": "1437",
+        "severity_sum": "4352",
+        "mean_severity": "3.028532",
+        "priority_score": "4352"
+      },
+      {
+        "rank": "28",
+        "issue_id": "downloads.general",
+        "complaint_count": "1185",
+        "severity_sum": "3022",
+        "mean_severity": "2.550211",
+        "priority_score": "3022"
+      },
+      {
+        "rank": "29",
+        "issue_id": "catalog.content-bias-policy",
+        "complaint_count": "1073",
+        "severity_sum": "2266",
+        "mean_severity": "2.111836",
+        "priority_score": "2266"
+      },
+      {
+        "rank": "30",
+        "issue_id": "support.support-response-quality",
+        "complaint_count": "466",
+        "severity_sum": "1043",
+        "mean_severity": "2.238197",
+        "priority_score": "1043"
+      },
+      {
+        "rank": "31",
+        "issue_id": "support.general",
+        "complaint_count": "300",
+        "severity_sum": "657",
+        "mean_severity": "2.190000",
+        "priority_score": "657"
+      },
+      {
+        "rank": "32",
+        "issue_id": "support.support-channels-broken",
+        "complaint_count": "51",
+        "severity_sum": "112",
+        "mean_severity": "2.196078",
+        "priority_score": "112"
+      }
+    ],
+    "top_issues": [
+      {
+        "rank": 1,
+        "issue_id": "other.general",
+        "title": "Vague negative feedback about updates",
+        "description": "Users leave generic complaints about the app and recent updates, often without naming a specific feature or problem.",
+        "complaint_count": 83925,
+        "severity_sum": 161974,
+        "mean_severity": "1.929985",
+        "priority_score": 161974,
+        "share_of_all_complaints_pct": "28.4",
+        "cancellation_intent_reviews": 9101,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "3.0",
+          "share_of_completed_reviews_last_pct": "20.9"
+        },
+        "quotes": [
+          {
+            "review_id": "a8fedaa1-b9ec-47e5-82a2-6c6cecc57b46",
+            "quote": "Good for now 👍, wish it was more similar to the computer version though"
+          },
+          {
+            "review_id": "74a66637-a405-42e4-a053-895b19048665",
+            "quote": "ONE OF THE BEST APPS EVER MADE FOR LISTENING TO ADS."
+          },
+          {
+            "review_id": "8ead8dfb-78bc-45e8-82d2-953ea2870b87",
+            "quote": "You only brought the new features to ios first?"
+          },
+          {
+            "review_id": "7c2234cb-5fcc-4143-a4a5-209eb7b8bdcd",
+            "quote": "Inconvenient as hell. One of the worst updates in the history of apps. All about money fr"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "issue_id": "billing.premium-paywall-features",
+        "title": "Core features moved behind premium paywall",
+        "description": "Customers say skipping, song choice, and lyrics were moved behind Premium, making the free experience feel downgraded.",
+        "complaint_count": 33825,
+        "severity_sum": 89058,
+        "mean_severity": "2.632905",
+        "priority_score": 89058,
+        "share_of_all_complaints_pct": "11.4",
+        "cancellation_intent_reviews": 5377,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "1.2",
+          "share_of_completed_reviews_last_pct": "19.4"
+        },
+        "quotes": [
+          {
+            "review_id": "f524e032-145f-4584-9d86-cab4b1c97a7e",
+            "quote": "Moreover, we can only CHOOSE to play songs upto a certain limit per day."
+          },
+          {
+            "review_id": "9857dc61-331a-4e0d-b6d7-8e2445097170",
+            "quote": "Even the lyrics...why the hell do we have to pay for premium just to read the lyrics?!"
+          },
+          {
+            "review_id": "a12f4ef8-77ae-4e86-82f4-0bc9ed2b8b0b",
+            "quote": "You are literally forcing people to buy premium subscription, like why would anyone make lyrics a premium features, Spotify thinks they are apple music, this is the worst app you can think of, never using this garbage again"
+          },
+          {
+            "review_id": "918c5abb-97c8-4e8a-bc1d-db6d319b33ee",
+            "quote": "So bad. Free music with ads is still tolerable and understandable, but this stunt is so cheap."
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "issue_id": "usability.ads-interruptions",
+        "title": "Frequent ads interrupt listening",
+        "description": "Listeners find ads too frequent and irrelevant, with several ads played between songs, making free listening frustrating.",
+        "complaint_count": 36883,
+        "severity_sum": 76209,
+        "mean_severity": "2.066236",
+        "priority_score": 76209,
+        "share_of_all_complaints_pct": "12.5",
+        "cancellation_intent_reviews": 1801,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "5.3",
+          "share_of_completed_reviews_last_pct": "4.7"
+        },
+        "quotes": [
+          {
+            "review_id": "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+            "quote": "Just that there are now so many irrelevant ads."
+          },
+          {
+            "review_id": "29d5a1bd-a005-44ba-ac45-141f12d73785",
+            "quote": "♥But they could be better if they allowed one specific feature: downloading option should be shown per song(in the options menu along with \"queue\", \"like\" etc)and not a single button for the whole playlist."
+          },
+          {
+            "review_id": "f7ccd28b-4083-4d9b-9833-d6899fe9244e",
+            "quote": "Also Spotify should actually make the songs available even when we're offline."
+          },
+          {
+            "review_id": "502db020-81c2-4102-8e8b-c72063d7b2c1",
+            "quote": "It was still fine. But now, its 3 ads per 2 or 3 songs and it's frustrating."
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "issue_id": "usability.shuffle-playback-control",
+        "title": "Skip and replay limits frustrate listeners",
+        "description": "Users say skip, rewind, repeat, and shuffle controls were limited or removed, often requiring premium, so they cannot choose what plays.",
+        "complaint_count": 20684,
+        "severity_sum": 55711,
+        "mean_severity": "2.693435",
+        "priority_score": 55711,
+        "share_of_all_complaints_pct": "7.0",
+        "cancellation_intent_reviews": 1861,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "2.4",
+          "share_of_completed_reviews_last_pct": "6.1"
+        },
+        "quotes": [
+          {
+            "review_id": "40e7479a-4547-4936-ba92-c2711aa7037e",
+            "quote": "Whoever came up with the idea to limit the skips of songs and to remove the ability to go back to a particular time of the song and also remove the going back to the previous song skip button, I hope you get fired soon 🙂."
+          },
+          {
+            "review_id": "e963a719-857e-4728-ad0e-622b5f589a7a",
+            "quote": "I mean why remove a perfectly fine feature 😕👎 Otherwise I love 💗 it."
+          },
+          {
+            "review_id": "22712ace-11d1-4343-a389-ba04564b158f",
+            "quote": "Before whenever a song was being played, we were able to play any part of the song we wanted to listen but now that option is disabled."
+          },
+          {
+            "review_id": "4df8b195-0efe-4f85-920c-0995442f5da7",
+            "quote": "I cannot put songs on loop, i cannot replay same song, i cannot rewind it, which is frustating."
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "issue_id": "playback.general",
+        "title": "Playback glitches and playlists failing",
+        "description": "Users report songs pausing, queues breaking, audio dropping, and playlists failing to load or save changes.",
+        "complaint_count": 16010,
+        "severity_sum": 45961,
+        "mean_severity": "2.870768",
+        "priority_score": 45961,
+        "share_of_all_complaints_pct": "5.4",
+        "cancellation_intent_reviews": 754,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "3.3",
+          "share_of_completed_reviews_last_pct": "1.5"
+        },
+        "quotes": [
+          {
+            "review_id": "6c69cfac-4d7d-4756-a1b8-f0594a19b793",
+            "quote": "Don't know the reason why it's happening, and i have checked with many Bluetooth devices so not issue with Bluetooth and even if I listened in my phone it's the same thing, either the song will be paused and be at 0:02 or the entire queue i"
+          },
+          {
+            "review_id": "d7db39c7-6d47-4cdc-9659-85782d0ac56e",
+            "quote": "When I play a song, the music drops a beat and starts to fluctuate and the audio quality and sound drops automatically, even on Wi-Fi."
+          },
+          {
+            "review_id": "a840c71c-974c-4edd-8c65-b8b529555ace",
+            "quote": "After the latest update, playlists no longer load."
+          },
+          {
+            "review_id": "ebf85cd9-20f3-4017-be3d-a6f03a81b234",
+            "quote": "I randomly can't edit the queue, the song displayed on the app won't be the one playing currently, pausing/skipping/etc."
+          }
+        ]
+      }
+    ],
+    "product_areas": {
+      "access": {
+        "topics": [
+          "access"
+        ],
+        "complaints": 11654,
+        "severity_sum": 44499,
+        "share_of_all_complaints_pct": "3.9"
+      },
+      "usability": {
+        "topics": [
+          "usability"
+        ],
+        "complaints": 90062,
+        "severity_sum": 206855,
+        "share_of_all_complaints_pct": "30.4"
+      },
+      "playback": {
+        "topics": [
+          "playback"
+        ],
+        "complaints": 33289,
+        "severity_sum": 101152,
+        "share_of_all_complaints_pct": "11.2"
+      },
+      "billing/support": {
+        "topics": [
+          "billing",
+          "support"
+        ],
+        "complaints": 49467,
+        "severity_sum": 126424,
+        "share_of_all_complaints_pct": "16.7"
+      },
+      "outside the question": {
+        "topics": [
+          "downloads",
+          "catalog",
+          "other"
+        ],
+        "complaints": 111543,
+        "severity_sum": 228860,
+        "share_of_all_complaints_pct": "37.7"
+      }
+    },
+    "verification": {
+      "n": 1000,
+      "agreement": {
+        "topic": 0.816,
+        "intent": 0.893,
+        "severity": 0.762
+      },
+      "severity_mae": 0.278
+    }
+  },
+  "draft": {
+    "priority_area": "usability",
+    "headline": "Focus next quarter on usability, the largest product area, starting with ad interruptions and the limited skip and replay controls.",
+    "memo_markdown": "**Recommendation.** Put next quarter's effort into usability. It has the largest product-area totals: 90062 complaints and severity sum 206855. Start with `usability.ads-interruptions` (Frequent ads interrupt listening), which has 36883 complaints and priority score 76209 [C1][C3]. Follow with `usability.shuffle-playback-control` (Skip and replay limits frustrate listeners), with 20684 complaints and priority score 55711 [C4][C6]. Reviews b8533570-ea2e-4d06-b841-a83dda5ea8cc and 502db020-81c2-4102-8e8b-c72063d7b2c1 describe more frequent and irrelevant ads. Reviews 40e7479a-4547-4936-ba92-c2711aa7037e, 4df8b195-0efe-4f85-920c-0995442f5da7 and 22712ace-11d1-4343-a389-ba04564b158f describe being unable to skip, loop, replay or rewind. **Why.** Usability has the most complaints and severity of the four areas in scope. Its two largest issues are both about in-app control and ads. **Alternatives.** Billing/support has 49467 complaints and severity sum 126424. Its top issue, `billing.premium-paywall-features` (Core features moved behind premium paywall), has priority score 89058 [C7], which is the single largest in-scope priority score. Its descriptions overlap with the premium-gated controls above, but it is a pricing and tier question, and a quarter of product effort would not settle it. Playback has 33289 complaints and severity sum 101152. Its top issue, `playback.playback-stops-crashes`, has priority score 35317 [C8] with the highest mean severity among playback issues. Access is smallest, with 11654 complaints and severity sum 44499. Its top issue, `access.general`, has priority score 15383 [C9]. Outside the question are downloads, catalog and other, with 111543 complaints. The largest single issue there, `other.general` (Vague negative feedback about updates), has priority score 161974 [C10], but it is too generic to act on. **Evidence.** Issue numbers come from the code-computed ranking. Area totals are from the product-area summary. **Limitations.** Reviews are self-selected public reviews from one window, 2022-05-17 to 2023-11-15. There is no revenue, plan or churn data, so cancellation language is expressed intent, not observed churn. 31 rows were quarantined or unclassified. 67504 texts need review. On a 1000-review check, verifier agreement was 0.816 for topic, 0.893 for intent and 0.762 for severity, with severity MAE 0.278.",
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "complaint_count",
+        "value": "36883"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "severity_sum",
+        "value": "76209"
+      },
+      {
+        "claim_id": "C3",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "priority_score",
+        "value": "76209"
+      },
+      {
+        "claim_id": "C4",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "complaint_count",
+        "value": "20684"
+      },
+      {
+        "claim_id": "C5",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "severity_sum",
+        "value": "55711"
+      },
+      {
+        "claim_id": "C6",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "priority_score",
+        "value": "55711"
+      },
+      {
+        "claim_id": "C7",
+        "issue_id": "billing.premium-paywall-features",
+        "metric": "priority_score",
+        "value": "89058"
+      },
+      {
+        "claim_id": "C8",
+        "issue_id": "playback.playback-stops-crashes",
+        "metric": "priority_score",
+        "value": "35317"
+      },
+      {
+        "claim_id": "C9",
+        "issue_id": "access.general",
+        "metric": "priority_score",
+        "value": "15383"
+      },
+      {
+        "claim_id": "C10",
+        "issue_id": "other.general",
+        "metric": "priority_score",
+        "value": "161974"
+      }
+    ],
+    "cited_review_ids": [
+      "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+      "502db020-81c2-4102-8e8b-c72063d7b2c1",
+      "40e7479a-4547-4936-ba92-c2711aa7037e",
+      "4df8b195-0efe-4f85-920c-0995442f5da7",
+      "22712ace-11d1-4343-a389-ba04564b158f"
+    ]
+  },
+  "draft_problems": [
+    "C2: listed in claims but never cited in the memo",
+    "C5: listed in claims but never cited in the memo"
+  ],
+  "critique": {
+    "verdict": "revise",
+    "problems": [
+      "Cite C2 (usability.ads-interruptions severity_sum 76209) with its claim ID in the memo, or remove it from claims, since code validation found it listed but never cited.",
+      "Cite C5 (usability.shuffle-playback-control severity_sum 55711) with its claim ID in the memo, or remove it from claims, since code validation found it listed but never cited.",
+      "Correct the claim that playback.playback-stops-crashes has the highest mean severity among playback issues: playback.offline-false-errors has mean severity 3.389716, which is higher than 3.291426.",
+      "Correct the claim that playback.playback-stops-crashes is the top playback issue: playback.general has priority score 45961, higher than its 35317, so state the top playback issue by priority score or rephrase.",
+      "Verify the word count is at most about 350 words by counting it exactly, and trim if needed for a busy executive."
+    ]
+  },
+  "revised": true,
+  "revision": {
+    "priority_area": "usability",
+    "headline": "Focus next quarter on usability, the largest in-scope product area, starting with ad interruptions and the limited skip and replay controls.",
+    "memo_markdown": "**Recommendation.** Put next quarter's effort into usability. It has the largest product-area totals: 90062 complaints and severity sum 206855. Start with `usability.ads-interruptions` (Frequent ads interrupt listening), with 36883 complaints [C1], severity sum 76209 [C2] and priority score 76209 [C3]. Then take `usability.shuffle-playback-control` (Skip and replay limits frustrate listeners), with 20684 complaints [C4], severity sum 55711 [C5] and priority score 55711 [C6]. Reviews b8533570-ea2e-4d06-b841-a83dda5ea8cc and 502db020-81c2-4102-8e8b-c72063d7b2c1 describe ads that are too frequent and irrelevant. Reviews 40e7479a-4547-4936-ba92-c2711aa7037e, 4df8b195-0efe-4f85-920c-0995442f5da7 and 22712ace-11d1-4343-a389-ba04564b158f describe being unable to skip, loop, replay or rewind. **Why.** Usability has the most complaints and severity of the four areas in scope, and its two largest issues are both about ads and in-app control. **Alternatives.** Billing/support has 49467 complaints and severity sum 126424. Its top issue, `billing.premium-paywall-features` (Core features moved behind premium paywall), has priority score 89058 [C7], the largest single in-scope score. It is a pricing and tier question, though, and it overlaps only partly with the premium-gated controls above. Playback has 33289 complaints and severity sum 101152. Its most specific issue, `playback.playback-stops-crashes`, has priority score 35317 [C8]. Access is smallest, with 11654 complaints and severity sum 44499. Its top issue, `access.general`, has priority score 15383 [C9]. **Evidence.** Issue numbers come from the code-computed ranking; area totals come from the product-area summary. Outside the question are downloads, catalog and other, with 111543 complaints. **Limitations.** Reviews are self-selected public reviews from one window, 2022-05-17 to 2023-11-15. There is no revenue, plan or churn data, so cancellation language is expressed intent, not observed churn. 31 rows were quarantined or unclassified, and 67504 texts need review. On a 1000-review check, verifier agreement was 0.816 for topic, 0.893 for intent and 0.762 for severity, with severity MAE 0.278.",
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "complaint_count",
+        "value": "36883"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "severity_sum",
+        "value": "76209"
+      },
+      {
+        "claim_id": "C3",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "priority_score",
+        "value": "76209"
+      },
+      {
+        "claim_id": "C4",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "complaint_count",
+        "value": "20684"
+      },
+      {
+        "claim_id": "C5",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "severity_sum",
+        "value": "55711"
+      },
+      {
+        "claim_id": "C6",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "priority_score",
+        "value": "55711"
+      },
+      {
+        "claim_id": "C7",
+        "issue_id": "billing.premium-paywall-features",
+        "metric": "priority_score",
+        "value": "89058"
+      },
+      {
+        "claim_id": "C8",
+        "issue_id": "playback.playback-stops-crashes",
+        "metric": "priority_score",
+        "value": "35317"
+      },
+      {
+        "claim_id": "C9",
+        "issue_id": "access.general",
+        "metric": "priority_score",
+        "value": "15383"
+      }
+    ],
+    "cited_review_ids": [
+      "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+      "502db020-81c2-4102-8e8b-c72063d7b2c1",
+      "40e7479a-4547-4936-ba92-c2711aa7037e",
+      "4df8b195-0efe-4f85-920c-0995442f5da7",
+      "22712ace-11d1-4343-a389-ba04564b158f"
+    ]
+  },
+  "final": {
+    "priority_area": "usability",
+    "headline": "Focus next quarter on usability, the largest in-scope product area, starting with ad interruptions and the limited skip and replay controls.",
+    "memo_markdown": "**Recommendation.** Put next quarter's effort into usability. It has the largest product-area totals: 90062 complaints and severity sum 206855. Start with `usability.ads-interruptions` (Frequent ads interrupt listening), with 36883 complaints [C1], severity sum 76209 [C2] and priority score 76209 [C3]. Then take `usability.shuffle-playback-control` (Skip and replay limits frustrate listeners), with 20684 complaints [C4], severity sum 55711 [C5] and priority score 55711 [C6]. Reviews b8533570-ea2e-4d06-b841-a83dda5ea8cc and 502db020-81c2-4102-8e8b-c72063d7b2c1 describe ads that are too frequent and irrelevant. Reviews 40e7479a-4547-4936-ba92-c2711aa7037e, 4df8b195-0efe-4f85-920c-0995442f5da7 and 22712ace-11d1-4343-a389-ba04564b158f describe being unable to skip, loop, replay or rewind. **Why.** Usability has the most complaints and severity of the four areas in scope, and its two largest issues are both about ads and in-app control. **Alternatives.** Billing/support has 49467 complaints and severity sum 126424. Its top issue, `billing.premium-paywall-features` (Core features moved behind premium paywall), has priority score 89058 [C7], the largest single in-scope score. It is a pricing and tier question, though, and it overlaps only partly with the premium-gated controls above. Playback has 33289 complaints and severity sum 101152. Its most specific issue, `playback.playback-stops-crashes`, has priority score 35317 [C8]. Access is smallest, with 11654 complaints and severity sum 44499. Its top issue, `access.general`, has priority score 15383 [C9]. **Evidence.** Issue numbers come from the code-computed ranking; area totals come from the product-area summary. Outside the question are downloads, catalog and other, with 111543 complaints. **Limitations.** Reviews are self-selected public reviews from one window, 2022-05-17 to 2023-11-15. There is no revenue, plan or churn data, so cancellation language is expressed intent, not observed churn. 31 rows were quarantined or unclassified, and 67504 texts need review. On a 1000-review check, verifier agreement was 0.816 for topic, 0.893 for intent and 0.762 for severity, with severity MAE 0.278.",
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "complaint_count",
+        "value": "36883"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "severity_sum",
+        "value": "76209"
+      },
+      {
+        "claim_id": "C3",
+        "issue_id": "usability.ads-interruptions",
+        "metric": "priority_score",
+        "value": "76209"
+      },
+      {
+        "claim_id": "C4",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "complaint_count",
+        "value": "20684"
+      },
+      {
+        "claim_id": "C5",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "severity_sum",
+        "value": "55711"
+      },
+      {
+        "claim_id": "C6",
+        "issue_id": "usability.shuffle-playback-control",
+        "metric": "priority_score",
+        "value": "55711"
+      },
+      {
+        "claim_id": "C7",
+        "issue_id": "billing.premium-paywall-features",
+        "metric": "priority_score",
+        "value": "89058"
+      },
+      {
+        "claim_id": "C8",
+        "issue_id": "playback.playback-stops-crashes",
+        "metric": "priority_score",
+        "value": "35317"
+      },
+      {
+        "claim_id": "C9",
+        "issue_id": "access.general",
+        "metric": "priority_score",
+        "value": "15383"
+      }
+    ],
+    "cited_review_ids": [
+      "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+      "502db020-81c2-4102-8e8b-c72063d7b2c1",
+      "40e7479a-4547-4936-ba92-c2711aa7037e",
+      "4df8b195-0efe-4f85-920c-0995442f5da7",
+      "22712ace-11d1-4343-a389-ba04564b158f"
+    ]
+  },
+  "final_problems": [],
+  "final_critique": {
+    "verdict": "revise",
+    "problems": [
+      "In the Alternatives paragraph, state playback.general's priority score (45961, rank 5) alongside or instead of playback.playback-stops-crashes (35317), or explain why it is excluded, since choosing the smaller playback issue understates playback against usability.",
+      "Cite claim IDs or state the source for the area-level totals (billing/support 49467 and 126424, playback 33289 and 101152, access 11654 and 44499, usability 90062 and 206855) so every material number is traceable.",
+      "Trim the memo to comfortably under about 350 words; it is near the limit at roughly 330 to 355 words, and the long review UUIDs add clutter for a busy executive, so consider citing reviews by claim ID or dropping some of them."
+    ]
+  }
+}

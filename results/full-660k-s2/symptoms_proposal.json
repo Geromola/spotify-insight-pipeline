@@ -1,0 +1,302 @@
+{
+  "proposal": {
+    "version": "y1",
+    "areas": {
+      "access": [
+        {
+          "id": "login-credentials-rejected",
+          "name": "Login shows an error and rejects valid details",
+          "definition": "Entering the correct password, email or Facebook login produces an error message or is refused; not a phone-number code problem and not a launch failure.",
+          "example_review_ids": [
+            "078ad217-6ef2-46d5-9d4b-81526d63e0fb",
+            "470b836e-9027-4e6f-9673-c0aad1b03c0b",
+            "f090c70a-fc2f-4468-87be-70719a301e8b"
+          ]
+        },
+        {
+          "id": "phone-login-code-fails",
+          "name": "Phone number login code never arrives",
+          "definition": "A phone-number login sends no verification code, or says to try a different number, so the user cannot sign in by phone; not a password or email login error.",
+          "example_review_ids": [
+            "27ffa4df-ed10-4bf0-a467-c1129933f792",
+            "dc465ac6-a219-4223-8cbf-a04084ae1d24",
+            "1840f851-21d1-49d4-9374-2912bb600551"
+          ]
+        },
+        {
+          "id": "logged-out-cannot-relogin",
+          "name": "Logged out and cannot sign back in",
+          "definition": "The app signs the user out by itself, often repeatedly, and then the user cannot log back in; not a signup or account-missing problem.",
+          "example_review_ids": [
+            "607d5583-4325-48cf-aa57-c1c88f0913c6",
+            "4525c596-1c26-400e-881d-1ce4ec18aaf9",
+            "f75ab7b5-8cc2-419c-8538-8af5ae909f2c"
+          ]
+        },
+        {
+          "id": "stalls-on-splash-screen",
+          "name": "App stalls on logo and never opens",
+          "definition": "After tapping the app, it stays on the Spotify logo or splash screen or hangs with 'not responding' and never reaches the home screen; not an offline message.",
+          "example_review_ids": [
+            "032bcd65-650e-4706-a308-57d85ca1f582",
+            "7101d6e2-affd-47d2-a086-8ccb301c162b",
+            "0dedd631-36a1-45cc-99b6-bb297e7da5b2"
+          ]
+        },
+        {
+          "id": "offline-error-while-connected",
+          "name": "Says offline while internet works",
+          "definition": "The app shows a no-internet or 'You're offline' message even though the device is connected and other apps work; not a login rejection.",
+          "example_review_ids": [
+            "18802f98-dbe5-4624-88d6-0ccfaf1e7ea1",
+            "9a6609d1-647d-4e24-94e0-dea17068cede",
+            "8eb3d415-4416-45f5-9c6d-d9721fe06b8c"
+          ]
+        },
+        {
+          "id": "cannot-create-or-finish-signup",
+          "name": "Cannot create account or finish signup",
+          "definition": "A new user cannot create an account, or cannot complete signup or trial activation, because the sign-up step fails; not an existing account that cannot log in.",
+          "example_review_ids": [
+            "6e5ce423-4669-42bb-8b14-9ee17cdf4478",
+            "d92ae5c9-e7ac-4d31-aad4-ea48af7e4a1d"
+          ]
+        },
+        {
+          "id": "account-missing-or-blocked",
+          "name": "Account deleted, blocked or forced to reset",
+          "definition": "The user's account disappears, is linked to a different account, or is locked and forces a password change for suspicious activity; not an error shown during a normal login attempt.",
+          "example_review_ids": [
+            "e29221ff-167e-4061-96ff-7a1752e9c288",
+            "700ee9df-36ab-430e-9c10-1134e35897c0",
+            "a196bf54-4c52-4e14-815e-cd5283e5dd23"
+          ]
+        }
+      ],
+      "usability": [
+        {
+          "id": "familiar-option-removed",
+          "name": "Familiar option or feature is gone",
+          "definition": "A control, sort, button or feature the user used before no longer appears in the app; not a feature that exists but is locked behind a paid plan.",
+          "example_review_ids": [
+            "e963a719-857e-4728-ad0e-622b5f589a7a",
+            "31131518-ddf7-47cb-a149-05c815352301",
+            "e8cca72a-f3c7-4e2c-b5f5-234410f6bf51"
+          ]
+        },
+        {
+          "id": "screens-hard-to-navigate",
+          "name": "Screens hard to navigate or scan",
+          "definition": "Users cannot find recently played items, things moved to new places, or cannot read a redesigned screen quickly; not a crash or a button that does nothing.",
+          "example_review_ids": [
+            "99e403b0-3a69-4a4a-a381-7a13f3f5a167",
+            "7c0c98af-c3d1-4adf-80e0-81f50333ab17",
+            "67e8d588-acb6-4247-baa7-fb4f6a7b1095"
+          ]
+        },
+        {
+          "id": "playlists-songs-wont-open",
+          "name": "Playlists or songs will not open",
+          "definition": "Tapping a playlist, album, liked-songs view or song does nothing or fails to open its contents; not a search that returns no results.",
+          "example_review_ids": [
+            "6c57fe30-f190-41ce-b281-2f4219edf6af",
+            "84af30dd-a9f8-401e-98f7-d54046589b02",
+            "15dbec49-ba72-4259-8caa-20f0e0c7cad5"
+          ]
+        },
+        {
+          "id": "library-edits-fail",
+          "name": "Cannot edit or save library items",
+          "definition": "Users cannot add podcasts, change a playlist cover, sort or filter their library correctly, or see changes reflected; not playback itself.",
+          "example_review_ids": [
+            "5c3ea41a-374a-4f2c-a928-cf8821b0babd",
+            "30d96eaf-347d-43c3-9a17-59a37020f727",
+            "54bbfb14-4311-42a5-887b-3012237c1534"
+          ]
+        },
+        {
+          "id": "chosen-song-not-played",
+          "name": "Chosen song or position not played",
+          "definition": "The app plays a different track than the one selected, forces shuffle or order, or ignores rewind and seek requests; not a song that stops by itself.",
+          "example_review_ids": [
+            "f94022ec-f457-45bb-9b18-b28ec4a0efc6",
+            "773f2282-90aa-41ed-bd03-3b4a142489a2",
+            "a46248cc-c2ee-45ea-b867-928f5446067d"
+          ]
+        },
+        {
+          "id": "ads-play-too-often",
+          "name": "Ads play too often",
+          "definition": "Users report ads that repeat too frequently or interrupt listening; not complaints about the price of a paid plan.",
+          "example_review_ids": [
+            "46cdc3b5-0f66-4e17-9f49-c0d525006ec9",
+            "6156b4ad-30ad-43e6-855f-d2cf12296f44"
+          ]
+        }
+      ],
+      "playback": [
+        {
+          "id": "pauses-stops-mid-song",
+          "name": "Music pauses or stops on its own",
+          "definition": "Playback halts by itself partway through a track or after seconds, with the app still open; not the app closing, which is a crash.",
+          "example_review_ids": [
+            "65f84535-0b00-46a5-8764-f5b7f9a842e9",
+            "b85e728a-542a-41da-8c6e-25f4bf4cd2ff",
+            "4dbfb935-9e40-45ef-a15f-2af225aeee27"
+          ]
+        },
+        {
+          "id": "app-crashes-or-freezes",
+          "name": "App crashes or freezes",
+          "definition": "The app closes unexpectedly or hangs and stops responding while in use; not music that stops while the app keeps running.",
+          "example_review_ids": [
+            "cbb4854f-d06b-4dfb-a7bd-7e1c0b3fe2af",
+            "99e47df1-77b8-4bec-adc2-deddd4d9a951",
+            "205e4cbe-a19e-41ae-bff4-ef9a3804e2a4"
+          ]
+        },
+        {
+          "id": "playback-wont-start",
+          "name": "Chosen music refuses to start playing",
+          "definition": "Pressing play on a song or playlist does nothing or shows it playing while silent, until the user restarts or switches tracks; not a track that starts and then stops.",
+          "example_review_ids": [
+            "ed611d18-4cdb-4918-ac54-bb4a57111692",
+            "09a5b174-ea0b-4caf-8a0d-7b712ca61817",
+            "0f78176c-c1a7-4ed8-8a22-034f5ea9d9c3"
+          ]
+        },
+        {
+          "id": "skips-or-replays-wrong-track",
+          "name": "Wrong track skips or repeats",
+          "definition": "Playback jumps to another song, restarts the current song, or repeats a track without repeat being on; not a pause or stop.",
+          "example_review_ids": [
+            "922e48f2-f46e-4171-83ce-1999094246af",
+            "5402085c-bea2-4db5-839c-1b2dcc6c9a2f",
+            "bf13f074-6333-4fc9-9669-2d8028041772"
+          ]
+        },
+        {
+          "id": "audio-glitches-or-drops",
+          "name": "Audio glitches, distortion or quality drops",
+          "definition": "Sound stutters, fluctuates, drops out briefly or sounds worse than before while the track keeps playing; not a full stop.",
+          "example_review_ids": [
+            "d7db39c7-6d47-4cdc-9659-85782d0ac56e",
+            "f9cd83c9-1208-406f-9471-b522d192f95a",
+            "1662a3f8-b481-4819-a2c5-8366af2ebbc8"
+          ]
+        },
+        {
+          "id": "controls-stop-responding",
+          "name": "Playback controls stop responding",
+          "definition": "Pause, skip, back or stop buttons in the app fail to act, or audio keeps playing without any working controls.",
+          "example_review_ids": [
+            "304df359-0292-4510-991a-de76d2bfe542",
+            "110662a1-3185-4a93-a27f-c1cbf8826ad5"
+          ]
+        },
+        {
+          "id": "starts-playing-unprompted",
+          "name": "Playback starts without being requested",
+          "definition": "Music or a podcast begins or resumes by itself with no user action, including when the app is not open; not a stop or pause.",
+          "example_review_ids": [
+            "b4d29d71-5762-40d0-a3c8-6a923cb7b67b",
+            "1c3a106b-49a9-4eba-bb0f-222754077ca2"
+          ]
+        },
+        {
+          "id": "songs-or-playlists-wont-load",
+          "name": "Songs or playlists fail to load",
+          "definition": "Playlists, liked songs or tracks never appear or load in the app, or loading hangs indefinitely; not a track that loads and then plays badly.",
+          "example_review_ids": [
+            "a840c71c-974c-4edd-8c65-b8b529555ace",
+            "35ecf2e6-f44d-4d22-99a1-8fd3f5fff061",
+            "87de6e42-8159-4ec1-9550-97693b3174ca"
+          ]
+        },
+        {
+          "id": "false-no-internet-message",
+          "name": "Shows no internet when connected",
+          "definition": "The app displays a no-connection or offline message while the phone has working internet or mobile data.",
+          "example_review_ids": [
+            "71e39b7f-54c0-4830-94a4-e61c764c9c9f",
+            "fae4c8ad-194b-41fe-91a4-2d11049b5661"
+          ]
+        }
+      ],
+      "billing/support": [
+        {
+          "id": "basic-features-locked-premium",
+          "name": "Basic features locked behind premium",
+          "definition": "Free users cannot use features they expect for free, such as skipping, lyrics, choosing songs, queue, seeking or downloads; not the price of premium and not a paying member being locked out.",
+          "example_review_ids": [
+            "91a88efd-9773-4ac7-b8fb-792ff427d788",
+            "373e9249-5703-4986-afe4-2b128923d2d7",
+            "9aa5814d-1208-49c9-a25c-8a8221adb446"
+          ]
+        },
+        {
+          "id": "paid-member-cannot-use-premium",
+          "name": "Paying member cannot use premium features",
+          "definition": "A user with an active premium subscription finds premium features blocked or unavailable, including after account or login problems; not a free user facing a paywall.",
+          "example_review_ids": [
+            "d9a5d72d-2be3-4e79-9502-dff358399781",
+            "efad1c88-44f9-4448-b330-599e0aac4003"
+          ]
+        },
+        {
+          "id": "ads-shown-to-premium",
+          "name": "Ads play for premium subscribers",
+          "definition": "Premium members hear or see ads or sponsored content they paid to remove; not free users seeing ads.",
+          "example_review_ids": [
+            "02ab45da-773e-42fd-93b5-6bc77ed11944",
+            "05aa354f-cfa0-4f53-b11a-31d13a8e7377"
+          ]
+        },
+        {
+          "id": "premium-purchase-fails",
+          "name": "Cannot buy or upgrade premium",
+          "definition": "Attempts to start or upgrade premium fail, freeze, redirect to the wrong screen or are refused as ineligible; not charges taken after a purchase.",
+          "example_review_ids": [
+            "139e6616-abd1-42a8-81a1-a8722d98f088",
+            "bf3dfb70-b6df-4813-9359-0e548c5f02ee",
+            "330f2cc7-924f-483c-830e-8dd25907a208"
+          ]
+        },
+        {
+          "id": "unexpected-charges-renewals",
+          "name": "Charged unexpectedly or after cancelling",
+          "definition": "The user is billed twice, billed after cancelling, or charged or renewed without prior notice; not a purchase that fails to complete.",
+          "example_review_ids": [
+            "ced8517e-c171-470c-8039-4b8e81c056ab",
+            "cff065a1-e826-4ea2-af1d-dd43f7ebcf4f",
+            "cc417579-da9d-4bc2-8fb1-b8603f0b8d27"
+          ]
+        },
+        {
+          "id": "premium-price-too-high",
+          "name": "Premium costs too much",
+          "definition": "The user says the premium subscription price is too high or not worth it, without citing a locked feature or a billing error.",
+          "example_review_ids": [
+            "7d43b2a3-d076-4364-92e3-341baf716513",
+            "97e23042-6f9b-46b4-ac25-5c9be7558807",
+            "8945b683-06d6-4ec7-aff6-24fc79230e8a"
+          ]
+        },
+        {
+          "id": "support-unhelpful-or-silent",
+          "name": "Support gives no reply or scripted advice",
+          "definition": "A support request gets no response, or the reply is generic, repeats useless troubleshooting steps or is unhelpful; not a support page or form that fails to work.",
+          "example_review_ids": [
+            "c01f01a7-61c8-4c6b-aeee-7c3e9ebf823f",
+            "4acddef7-3e90-4bdf-a0bf-30c7b58af0fb"
+          ]
+        }
+      ]
+    }
+  },
+  "problems": [
+    "usability: invalid, reserved or repeated symptom id 'unrequested-suggestions-inserted' dropped",
+    "usability: invalid, reserved or repeated symptom id 'controls-missing-from-notification' dropped"
+  ],
+  "sample_reviews": 240
+}

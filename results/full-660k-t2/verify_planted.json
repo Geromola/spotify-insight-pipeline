@@ -1,0 +1,7 @@
+{
+  "synthetic": true,
+  "planted": 20,
+  "detected": 20,
+  "rate": 1.0,
+  "note": "Wrong labels planted in a copy of verified-agreeing records; no model call, excluded from every business aggregate."
+}

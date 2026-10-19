@@ -1,0 +1,137 @@
+^D== 2026-10-17T06:34:45Z part 2: state after the interruption ==
+{
+  "run": "full-660k-t2",
+  "label_config": "anthropic:claude-haiku-5-5|disabled/low>adaptive/low|prompt=633ed0cccb|tax=t2|schema=s1",
+  "invocations": 1,
+  "backlog": {
+    "completed": 111212,
+    "fallback_pending": 39397,
+    "leased": 117050,
+    "pending": 216530
+  },
+  "reviews": 660622,
+  "calls": 3018,
+  "failed_calls": 0,
+  "batches_running": 2,
+  "spent_usd": 0.805715,
+  "reserved_usd": 1.032059
+}
+checkpoint before: 263100 completed review ids, ended: interrupted
+== 2026-10-17T06:34:46Z resume enrichment ==
+Traceback (most recent call last):
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 98, in map_httpcore_exceptions
+    yield
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 245, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection_pool.py", line 242, in handle_request
+    raise exc from None
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection_pool.py", line 224, in handle_request
+    response = connection.handle_request(pool_request.request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection.py", line 94, in handle_request
+    raise exc
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection.py", line 74, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection.py", line 117, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpcore2/_backends/sync.py", line 203, in connect_tcp
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpcore2/_exceptions.py", line 17, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore2.ConnectError: [Errno 51] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1436, in _attempt_request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 980, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1008, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1043, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1076, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 244, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx2.ConnectError: [Errno 51] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/__main__.py", line 5, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/cli.py", line 243, in main
+    return args.handler(args)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/cli.py", line 144, in cmd_enrich
+    return _work(args, "primary")
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/cli.py", line 75, in _work
+    stopped = enricher.run(step) or "finished"
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/enrich.py", line 331, in run
+    self.run_batch(step)
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/enrich.py", line 321, in run_batch
+    running = self._collect(step)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/enrich.py", line 303, in _collect
+    state = self.provider.poll_batch(provider_batch)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/pipeline/providers/anthropic_haiku.py", line 83, in poll_batch
+    status = self.client.messages.batches.retrieve(provider_batch).processing_status
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 166, in retrieve
+    return self._get(
+           ^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1614, in get
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1227, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1261, in _request
+    response, prepared = self._attempt_request(
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geromolina/Documents/Agentic AI Class/spotify-insight-pipeline/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1450, in _attempt_request
+    raise APIConnectionError(request=request) from err
+anthropic.APIConnectionError: Connection error.
+== 2026-10-17T06:38:42Z enrichment exited with code 1 ==
+{
+  "run": "full-660k-t2",
+  "label_config": "anthropic:claude-haiku-5-5|disabled/low>adaptive/low|prompt=633ed0cccb|tax=t2|schema=s1",
+  "invocations": 2,
+  "backlog": {
+    "completed": 213190,
+    "fallback_pending": 54753,
+    "leased": 100000,
+    "pending": 116239,
+    "quarantined": 7
+  },
+  "reviews": 660622,
+  "calls": 5413,
+  "failed_calls": 0,
+  "batches_running": 1,
+  "spent_usd": 1.468309,
+  "reserved_usd": 0.966524
+}

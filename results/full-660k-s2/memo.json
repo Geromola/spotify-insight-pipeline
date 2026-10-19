@@ -1,0 +1,1950 @@
+{
+  "facts": {
+    "question": "At the end of this historical review window, where should the next quarter of product effort go: access, usability, playback, or billing/support?",
+    "scope": {
+      "source_rows": 660622,
+      "completed_classifications": 660567,
+      "quarantined_or_unclassified": 55,
+      "unique_texts": 484189,
+      "rows_reusing_an_exact_text_result": 176410,
+      "complaint_or_cancellation_reviews": 298553,
+      "needs_review_texts": 58730,
+      "first_review": "2022-05-17 00:01:07",
+      "last_review": "2023-11-15 23:16:10",
+      "quarantine_reasons": {
+        "empty_review_text": 13,
+        "invalid_output:limit_flag": 30,
+        "invalid_output:review_flag": 1,
+        "invalid_output:unknown_topic": 8,
+        "refusal:bio": 3
+      }
+    },
+    "ranking_rule": "priority_score = complaint_count x mean_severity = severity_sum; complaint and cancellation reviews only; ties by issue id",
+    "ranking": [
+      {
+        "rank": "1",
+        "issue_id": "other.general",
+        "complaint_count": "86550",
+        "severity_sum": "167110",
+        "mean_severity": "1.930791",
+        "priority_score": "167110"
+      },
+      {
+        "rank": "2",
+        "issue_id": "usability.ads-interruptions",
+        "complaint_count": "39319",
+        "severity_sum": "81382",
+        "mean_severity": "2.069788",
+        "priority_score": "81382"
+      },
+      {
+        "rank": "3",
+        "issue_id": "billing.premium-paywall-features",
+        "complaint_count": "26846",
+        "severity_sum": "66621",
+        "mean_severity": "2.481599",
+        "priority_score": "66621"
+      },
+      {
+        "rank": "4",
+        "issue_id": "usability.shuffle-playback-control",
+        "complaint_count": "22808",
+        "severity_sum": "59039",
+        "mean_severity": "2.588522",
+        "priority_score": "59039"
+      },
+      {
+        "rank": "5",
+        "issue_id": "playback.general",
+        "complaint_count": "16254",
+        "severity_sum": "45964",
+        "mean_severity": "2.827858",
+        "priority_score": "45964"
+      },
+      {
+        "rank": "6",
+        "issue_id": "usability.general",
+        "complaint_count": "19452",
+        "severity_sum": "45038",
+        "mean_severity": "2.315340",
+        "priority_score": "45038"
+      },
+      {
+        "rank": "7",
+        "issue_id": "playback.playback-stops-crashes",
+        "complaint_count": "11054",
+        "severity_sum": "35999",
+        "mean_severity": "3.256649",
+        "priority_score": "35999"
+      },
+      {
+        "rank": "8",
+        "issue_id": "usability.interface-layout-changes",
+        "complaint_count": "15511",
+        "severity_sum": "34227",
+        "mean_severity": "2.206628",
+        "priority_score": "34227"
+      },
+      {
+        "rank": "9",
+        "issue_id": "access.general",
+        "complaint_count": "4067",
+        "severity_sum": "14945",
+        "mean_severity": "3.674699",
+        "priority_score": "14945"
+      },
+      {
+        "rank": "10",
+        "issue_id": "billing.charges-cancellation",
+        "complaint_count": "3798",
+        "severity_sum": "11912",
+        "mean_severity": "3.136388",
+        "priority_score": "11912"
+      },
+      {
+        "rank": "11",
+        "issue_id": "catalog.songs-missing-removed",
+        "complaint_count": "4884",
+        "severity_sum": "11788",
+        "mean_severity": "2.413595",
+        "priority_score": "11788"
+      },
+      {
+        "rank": "12",
+        "issue_id": "billing.general",
+        "complaint_count": "5551",
+        "severity_sum": "11765",
+        "mean_severity": "2.119438",
+        "priority_score": "11765"
+      },
+      {
+        "rank": "13",
+        "issue_id": "catalog.lyrics-missing",
+        "complaint_count": "4825",
+        "severity_sum": "11174",
+        "mean_severity": "2.315855",
+        "priority_score": "11174"
+      },
+      {
+        "rank": "14",
+        "issue_id": "catalog.general",
+        "complaint_count": "4555",
+        "severity_sum": "10042",
+        "mean_severity": "2.204610",
+        "priority_score": "10042"
+      },
+      {
+        "rank": "15",
+        "issue_id": "catalog.recommendations-autoplay",
+        "complaint_count": "4501",
+        "severity_sum": "9622",
+        "mean_severity": "2.137747",
+        "priority_score": "9622"
+      },
+      {
+        "rank": "16",
+        "issue_id": "access.phone-number-login",
+        "complaint_count": "2354",
+        "severity_sum": "9327",
+        "mean_severity": "3.962192",
+        "priority_score": "9327"
+      },
+      {
+        "rank": "17",
+        "issue_id": "access.password-social-login",
+        "complaint_count": "2237",
+        "severity_sum": "8674",
+        "mean_severity": "3.877515",
+        "priority_score": "8674"
+      },
+      {
+        "rank": "18",
+        "issue_id": "billing.subscription-price",
+        "complaint_count": "3942",
+        "severity_sum": "8057",
+        "mean_severity": "2.043886",
+        "priority_score": "8057"
+      },
+      {
+        "rank": "19",
+        "issue_id": "playback.offline-false-errors",
+        "complaint_count": "2283",
+        "severity_sum": "7590",
+        "mean_severity": "3.324573",
+        "priority_score": "7590"
+      },
+      {
+        "rank": "20",
+        "issue_id": "catalog.unwanted-songs-added",
+        "complaint_count": "2748",
+        "severity_sum": "6211",
+        "mean_severity": "2.260189",
+        "priority_score": "6211"
+      },
+      {
+        "rank": "21",
+        "issue_id": "access.account-session-signup",
+        "complaint_count": "1616",
+        "severity_sum": "5999",
+        "mean_severity": "3.712252",
+        "priority_score": "5999"
+      },
+      {
+        "rank": "22",
+        "issue_id": "playback.bluetooth-device-control",
+        "complaint_count": "2069",
+        "severity_sum": "5928",
+        "mean_severity": "2.865152",
+        "priority_score": "5928"
+      },
+      {
+        "rank": "23",
+        "issue_id": "access.app-wont-open",
+        "complaint_count": "1496",
+        "severity_sum": "5912",
+        "mean_severity": "3.951872",
+        "priority_score": "5912"
+      },
+      {
+        "rank": "24",
+        "issue_id": "playback.buffering-slow-loading",
+        "complaint_count": "2006",
+        "severity_sum": "5583",
+        "mean_severity": "2.783151",
+        "priority_score": "5583"
+      },
+      {
+        "rank": "25",
+        "issue_id": "downloads.downloads-deleted",
+        "complaint_count": "1740",
+        "severity_sum": "5202",
+        "mean_severity": "2.989655",
+        "priority_score": "5202"
+      },
+      {
+        "rank": "26",
+        "issue_id": "downloads.downloads-fail-to-save",
+        "complaint_count": "1553",
+        "severity_sum": "4559",
+        "mean_severity": "2.935608",
+        "priority_score": "4559"
+      },
+      {
+        "rank": "27",
+        "issue_id": "downloads.offline-playback-needs-network",
+        "complaint_count": "1312",
+        "severity_sum": "3855",
+        "mean_severity": "2.938262",
+        "priority_score": "3855"
+      },
+      {
+        "rank": "28",
+        "issue_id": "downloads.general",
+        "complaint_count": "1311",
+        "severity_sum": "3289",
+        "mean_severity": "2.508772",
+        "priority_score": "3289"
+      },
+      {
+        "rank": "29",
+        "issue_id": "catalog.content-bias-policy",
+        "complaint_count": "1072",
+        "severity_sum": "2253",
+        "mean_severity": "2.101679",
+        "priority_score": "2253"
+      },
+      {
+        "rank": "30",
+        "issue_id": "support.support-response-quality",
+        "complaint_count": "435",
+        "severity_sum": "993",
+        "mean_severity": "2.282759",
+        "priority_score": "993"
+      },
+      {
+        "rank": "31",
+        "issue_id": "support.general",
+        "complaint_count": "350",
+        "severity_sum": "766",
+        "mean_severity": "2.188571",
+        "priority_score": "766"
+      },
+      {
+        "rank": "32",
+        "issue_id": "support.support-channels-broken",
+        "complaint_count": "54",
+        "severity_sum": "129",
+        "mean_severity": "2.388889",
+        "priority_score": "129"
+      }
+    ],
+    "top_issues": [
+      {
+        "rank": 1,
+        "issue_id": "other.general",
+        "title": "Vague general dissatisfaction without specifics",
+        "description": "Reviewers express broad frustration with the app, often tied to free-tier limits, feature access, or wanting parity with other platforms.",
+        "complaint_count": 86550,
+        "severity_sum": 167110,
+        "mean_severity": "1.930791",
+        "priority_score": 167110,
+        "share_of_all_complaints_pct": "29.0",
+        "cancellation_intent_reviews": 9795,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "3.2",
+          "share_of_completed_reviews_last_pct": "21.4"
+        },
+        "quotes": [
+          {
+            "review_id": "830060e9-e332-4551-bc50-a92e374a1b78",
+            "quote": "and right around the time of spotify wrapped too."
+          },
+          {
+            "review_id": "a8fedaa1-b9ec-47e5-82a2-6c6cecc57b46",
+            "quote": "Good for now 👍, wish it was more similar to the computer version though"
+          },
+          {
+            "review_id": "a18d813c-0185-4a52-988f-18dd99fca123",
+            "quote": "This app is terrible for free users honestly I can end it all here."
+          },
+          {
+            "review_id": "74a66637-a405-42e4-a053-895b19048665",
+            "quote": "ONE OF THE BEST APPS EVER MADE FOR LISTENING TO ADS."
+          }
+        ],
+        "free_tier_limit_share_pct": "0.4",
+        "paying_reviewer_complaints": 172
+      },
+      {
+        "rank": 2,
+        "issue_id": "usability.ads-interruptions",
+        "title": "Excessive irrelevant ads for free users",
+        "description": "Free users say ads are frequent, annoying and irrelevant, and feel forced to listen to them because they cannot afford premium.",
+        "complaint_count": 39319,
+        "severity_sum": 81382,
+        "mean_severity": "2.069788",
+        "priority_score": 81382,
+        "share_of_all_complaints_pct": "13.2",
+        "cancellation_intent_reviews": 1865,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "5.5",
+          "share_of_completed_reviews_last_pct": "5.3"
+        },
+        "quotes": [
+          {
+            "review_id": "b8533570-ea2e-4d06-b841-a83dda5ea8cc",
+            "quote": "Just that there are now so many irrelevant ads."
+          },
+          {
+            "review_id": "f7ccd28b-4083-4d9b-9833-d6899fe9244e",
+            "quote": "The ads are extremely annoying."
+          },
+          {
+            "review_id": "502db020-81c2-4102-8e8b-c72063d7b2c1",
+            "quote": "Not all can afford or would like to take a premium."
+          },
+          {
+            "review_id": "3b21d043-b0f5-4b80-ad18-d2d358875338",
+            "quote": "Like before, I like listening to songs that are on my queue that I sometimes create."
+          }
+        ],
+        "free_tier_limit_share_pct": "91.3",
+        "paying_reviewer_complaints": 1555
+      },
+      {
+        "rank": 3,
+        "issue_id": "billing.premium-paywall-features",
+        "title": "Basic features moved behind premium paywall",
+        "description": "Users say core features such as lyrics, loop, previous track, and queue are now locked behind a premium subscription, which they see as unfair.",
+        "complaint_count": 26846,
+        "severity_sum": 66621,
+        "mean_severity": "2.481599",
+        "priority_score": 66621,
+        "share_of_all_complaints_pct": "9.0",
+        "cancellation_intent_reviews": 3790,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "0.9",
+          "share_of_completed_reviews_last_pct": "15.9"
+        },
+        "quotes": [
+          {
+            "review_id": "f524e032-145f-4584-9d86-cab4b1c97a7e",
+            "quote": "Moreover, we can only CHOOSE to play songs upto a certain limit per day."
+          },
+          {
+            "review_id": "9857dc61-331a-4e0d-b6d7-8e2445097170",
+            "quote": "Even the lyrics...why the hell do we have to pay for premium just to read the lyrics?!"
+          },
+          {
+            "review_id": "a12f4ef8-77ae-4e86-82f4-0bc9ed2b8b0b",
+            "quote": "You are literally forcing people to buy premium subscription, like why would anyone make lyrics a premium features, Spotify thinks they are apple music, this is the worst app you can think of, never using this garbage again"
+          },
+          {
+            "review_id": "918c5abb-97c8-4e8a-bc1d-db6d319b33ee",
+            "quote": "These are basic features of a music app, but now you have to pay for them."
+          }
+        ],
+        "free_tier_limit_share_pct": "91.6",
+        "paying_reviewer_complaints": 1157
+      },
+      {
+        "rank": 4,
+        "issue_id": "usability.shuffle-playback-control",
+        "title": "Shuffle, skip and rewind removed",
+        "description": "Customers report that shuffle, loop, unlimited skips, rewinding and playing specific parts of songs were removed or restricted after an update.",
+        "complaint_count": 22808,
+        "severity_sum": 59039,
+        "mean_severity": "2.588522",
+        "priority_score": 59039,
+        "share_of_all_complaints_pct": "7.6",
+        "cancellation_intent_reviews": 2058,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "2.5",
+          "share_of_completed_reviews_last_pct": "7.7"
+        },
+        "quotes": [
+          {
+            "review_id": "40e7479a-4547-4936-ba92-c2711aa7037e",
+            "quote": "Whoever came up with the idea to limit the skips of songs and to remove the ability to go back to a particular time of the song and also remove the going back to the previous song skip button, I hope you get fired soon 🙂."
+          },
+          {
+            "review_id": "af42e294-db18-405f-9813-63cdc9a79ee1",
+            "quote": "The recent updates of the app have become very disappointing, can't search for a song and then play it, neither can skip songs anymore, or play a specific part or rewind a song."
+          },
+          {
+            "review_id": "3933cbb2-6ce4-484e-90f2-812176124e09",
+            "quote": "It has removed all the basic features like shuffle mode, loop mode, has locked the lyrics for free users and doesn't allow you to play a particular part of the song, you can only listen from the beginning to the end."
+          },
+          {
+            "review_id": "8ca87c05-7172-4ae2-bae4-762cadd2430a",
+            "quote": "), I can't turn off shuffle anymore(That was one of the best features but it's now only available in premium), can't pause, rewind, loop."
+          }
+        ],
+        "free_tier_limit_share_pct": "80.3",
+        "paying_reviewer_complaints": 618
+      },
+      {
+        "rank": 5,
+        "issue_id": "playback.general",
+        "title": "Audio glitches, hangs and quality drops",
+        "description": "Users describe songs skipping or dropping in quality, the app hanging, and offline or downloaded playback behaving unreliably.",
+        "complaint_count": 16254,
+        "severity_sum": 45964,
+        "mean_severity": "2.827858",
+        "priority_score": 45964,
+        "share_of_all_complaints_pct": "5.4",
+        "cancellation_intent_reviews": 610,
+        "trend": {
+          "first_full_month": "2022-06",
+          "last_full_month": "2023-10",
+          "share_of_completed_reviews_first_pct": "3.3",
+          "share_of_completed_reviews_last_pct": "1.6"
+        },
+        "quotes": [
+          {
+            "review_id": "6c69cfac-4d7d-4756-a1b8-f0594a19b793",
+            "quote": "it is the same issue with downloaded songs and while using offline mode."
+          },
+          {
+            "review_id": "1c3a106b-49a9-4eba-bb0f-222754077ca2",
+            "quote": "Whenever I open the app with a connected Bluetooth, it resumes the last thing that I was listening to, which can be pretty annoying."
+          },
+          {
+            "review_id": "205e4cbe-a19e-41ae-bff4-ef9a3804e2a4",
+            "quote": "The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased."
+          },
+          {
+            "review_id": "d7db39c7-6d47-4cdc-9659-85782d0ac56e",
+            "quote": "When I play a song, the music drops a beat and starts to fluctuate and the audio quality and sound drops automatically, even on Wi-Fi."
+          }
+        ],
+        "free_tier_limit_share_pct": "2.7",
+        "paying_reviewer_complaints": 1417
+      }
+    ],
+    "product_areas": {
+      "access": {
+        "topics": [
+          "access"
+        ],
+        "complaints": 11770,
+        "severity_sum": 44857,
+        "share_of_all_complaints_pct": "3.9"
+      },
+      "usability": {
+        "topics": [
+          "usability"
+        ],
+        "complaints": 97090,
+        "severity_sum": 219686,
+        "share_of_all_complaints_pct": "32.5"
+      },
+      "playback": {
+        "topics": [
+          "playback"
+        ],
+        "complaints": 33666,
+        "severity_sum": 101064,
+        "share_of_all_complaints_pct": "11.3"
+      },
+      "billing/support": {
+        "topics": [
+          "billing",
+          "support"
+        ],
+        "complaints": 40976,
+        "severity_sum": 100243,
+        "share_of_all_complaints_pct": "13.7"
+      },
+      "outside the question": {
+        "topics": [
+          "downloads",
+          "catalog",
+          "other"
+        ],
+        "complaints": 115051,
+        "severity_sum": 235105,
+        "share_of_all_complaints_pct": "38.5"
+      }
+    },
+    "segments": {
+      "definition": "free_tier_limit = the complaint is about something the free version restricts by design (ads between songs, shuffle-only, skip limits, premium-locked features); plan = what the reviewer says about their own plan (paid, free, unstated)",
+      "complaints_by_stated_plan": {
+        "free": 17746,
+        "paid": 13023,
+        "unstated": 267784
+      },
+      "by_area": {
+        "access": {
+          "complaints": 11770,
+          "severity_sum": 44857,
+          "free_tier_limit_complaints": 138,
+          "free_tier_limit_severity_sum": 472,
+          "free_tier_limit_share_pct": "1.2",
+          "other_complaints": 11632,
+          "other_severity_sum": 44385,
+          "paying_reviewer_complaints": 1017,
+          "paying_reviewer_severity_sum": 3900
+        },
+        "usability": {
+          "complaints": 97090,
+          "severity_sum": 219686,
+          "free_tier_limit_complaints": 60788,
+          "free_tier_limit_severity_sum": 138863,
+          "free_tier_limit_share_pct": "62.6",
+          "other_complaints": 36302,
+          "other_severity_sum": 80823,
+          "paying_reviewer_complaints": 3360,
+          "paying_reviewer_severity_sum": 7665
+        },
+        "playback": {
+          "complaints": 33666,
+          "severity_sum": 101064,
+          "free_tier_limit_complaints": 780,
+          "free_tier_limit_severity_sum": 2257,
+          "free_tier_limit_share_pct": "2.3",
+          "other_complaints": 32886,
+          "other_severity_sum": 98807,
+          "paying_reviewer_complaints": 3320,
+          "paying_reviewer_severity_sum": 10398
+        },
+        "billing/support": {
+          "complaints": 40976,
+          "severity_sum": 100243,
+          "free_tier_limit_complaints": 26587,
+          "free_tier_limit_severity_sum": 65726,
+          "free_tier_limit_share_pct": "64.9",
+          "other_complaints": 14389,
+          "other_severity_sum": 34517,
+          "paying_reviewer_complaints": 3325,
+          "paying_reviewer_severity_sum": 8778
+        },
+        "outside the question": {
+          "complaints": 115051,
+          "severity_sum": 235105,
+          "free_tier_limit_complaints": 2308,
+          "free_tier_limit_severity_sum": 5431,
+          "free_tier_limit_share_pct": "2.0",
+          "other_complaints": 112743,
+          "other_severity_sum": 229674,
+          "paying_reviewer_complaints": 2001,
+          "paying_reviewer_severity_sum": 5288
+        }
+      },
+      "lens_rankings": {
+        "without free-tier limits": [
+          {
+            "rank": 1,
+            "issue_id": "other.general",
+            "title": "Vague general dissatisfaction without specifics",
+            "complaint_count": 86197,
+            "severity_sum": 166412,
+            "mean_severity": "1.930601",
+            "quotes": [
+              {
+                "review_id": "830060e9-e332-4551-bc50-a92e374a1b78",
+                "quote": "and right around the time of spotify wrapped too."
+              },
+              {
+                "review_id": "a8fedaa1-b9ec-47e5-82a2-6c6cecc57b46",
+                "quote": "Good for now 👍, wish it was more similar to the computer version though"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "issue_id": "playback.general",
+            "title": "Audio glitches, hangs and quality drops",
+            "complaint_count": 15814,
+            "severity_sum": 44731,
+            "mean_severity": "2.828570",
+            "quotes": [
+              {
+                "review_id": "6c69cfac-4d7d-4756-a1b8-f0594a19b793",
+                "quote": "it is the same issue with downloaded songs and while using offline mode."
+              },
+              {
+                "review_id": "1c3a106b-49a9-4eba-bb0f-222754077ca2",
+                "quote": "Whenever I open the app with a connected Bluetooth, it resumes the last thing that I was listening to, which can be pretty annoying."
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "issue_id": "playback.playback-stops-crashes",
+            "title": "Songs stop playing and app crashes",
+            "complaint_count": 10797,
+            "severity_sum": 35209,
+            "mean_severity": "3.260998",
+            "quotes": [
+              {
+                "review_id": "58af4b3e-a46c-49ef-a177-74786ae9767e",
+                "quote": "I've been using the app since 2018, and it has always worked great."
+              },
+              {
+                "review_id": "a840c71c-974c-4edd-8c65-b8b529555ace",
+                "quote": "After the latest update, playlists no longer load."
+              }
+            ]
+          },
+          {
+            "rank": 4,
+            "issue_id": "usability.interface-layout-changes",
+            "title": "Redesigned layout removes familiar features",
+            "complaint_count": 14607,
+            "severity_sum": 31859,
+            "mean_severity": "2.181078",
+            "quotes": [
+              {
+                "review_id": "67e8d588-acb6-4247-baa7-fb4f6a7b1095",
+                "quote": "It's a crucial feature that enables listeners in navigating."
+              },
+              {
+                "review_id": "ac0a12b4-a871-432b-9fa1-70f468b05dd6",
+                "quote": "Music recommendations are awesome."
+              }
+            ]
+          },
+          {
+            "rank": 5,
+            "issue_id": "usability.general",
+            "title": "Updates make app hard to navigate",
+            "complaint_count": 13774,
+            "severity_sum": 30858,
+            "mean_severity": "2.240308",
+            "quotes": [
+              {
+                "review_id": "e963a719-857e-4728-ad0e-622b5f589a7a",
+                "quote": "Edit: Recent update removed the ability to sort songs from oldest to most recent."
+              },
+              {
+                "review_id": "2dd0985f-25bf-4db8-aa25-f4f904f27080",
+                "quote": "I've updated the app as much as possible, and my Spotify version is listed as version 8."
+              }
+            ]
+          }
+        ],
+        "paying reviewers only": [
+          {
+            "rank": 1,
+            "issue_id": "playback.playback-stops-crashes",
+            "title": "Songs stop playing and app crashes",
+            "complaint_count": 1351,
+            "severity_sum": 4428,
+            "mean_severity": "3.277572",
+            "quotes": [
+              {
+                "review_id": "58af4b3e-a46c-49ef-a177-74786ae9767e",
+                "quote": "I've been using the app since 2018, and it has always worked great."
+              },
+              {
+                "review_id": "24b23f3e-9521-4820-9393-c91405561288",
+                "quote": "Stoppage issues. Since the last update, I've had issue with the song playing and then the app going dead."
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "issue_id": "playback.general",
+            "title": "Audio glitches, hangs and quality drops",
+            "complaint_count": 1417,
+            "severity_sum": 4262,
+            "mean_severity": "3.007763",
+            "quotes": [
+              {
+                "review_id": "d7db39c7-6d47-4cdc-9659-85782d0ac56e",
+                "quote": "When I play a song, the music drops a beat and starts to fluctuate and the audio quality and sound drops automatically, even on Wi-Fi."
+              },
+              {
+                "review_id": "39609af3-8dc2-4dad-b541-82df3d626b24",
+                "quote": "Ever since the new update, I can't play music without the app open, even with the app open, i have to press play to listen to music, which from there, it plays the song and then stops."
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "issue_id": "billing.charges-cancellation",
+            "title": "Charged without warning, features unusable",
+            "complaint_count": 1120,
+            "severity_sum": 3616,
+            "mean_severity": "3.228571",
+            "quotes": [
+              {
+                "review_id": "02ab45da-773e-42fd-93b5-6bc77ed11944",
+                "quote": "Now the payed sponsors for the podcast I listen to because of accidentally clicking a rating, are being changed with spotify's forced ads that I PAYED TO REMOVE WITH MY MEMBERSHIP."
+              },
+              {
+                "review_id": "1b275221-6c43-4d46-9166-08b92d882849",
+                "quote": "I am able to listen to 98kupd, my local, and the best radio rock station out there to listen to."
+              }
+            ]
+          },
+          {
+            "rank": 4,
+            "issue_id": "usability.ads-interruptions",
+            "title": "Excessive irrelevant ads for free users",
+            "complaint_count": 1555,
+            "severity_sum": 3307,
+            "mean_severity": "2.126688",
+            "quotes": [
+              {
+                "review_id": "2217e219-6c45-4c12-a3e5-0c915deadb50",
+                "quote": "However even though I pay for premium I still get \"ads\" of other artists."
+              },
+              {
+                "review_id": "01504e1b-cecc-4a13-a248-a3e733ee3630",
+                "quote": "This app used to be having a non interrupting playback for 30 minutes or so if you saw an ad between."
+              }
+            ]
+          },
+          {
+            "rank": 5,
+            "issue_id": "billing.premium-paywall-features",
+            "title": "Basic features moved behind premium paywall",
+            "complaint_count": 1157,
+            "severity_sum": 2832,
+            "mean_severity": "2.447710",
+            "quotes": [
+              {
+                "review_id": "11408128-df7d-4b67-9979-259599c20980",
+                "quote": "I'm extremely disappointed with the recent changes to this music platform."
+              },
+              {
+                "review_id": "345464d2-5701-4682-95af-2a1aec3d2ff7",
+                "quote": "No doubt it's the best music app I've so far used."
+              }
+            ]
+          }
+        ]
+      },
+      "windows": {
+        "first_six_full_months": {
+          "months": "2022-06 to 2022-11",
+          "completed_reviews": 175696,
+          "areas": {
+            "access": {
+              "complaints": 2914,
+              "severity_sum": 11031,
+              "without_free_tier_limits_complaints": 2894,
+              "without_free_tier_limits_severity_sum": 10964,
+              "paying_reviewer_complaints": 234,
+              "paying_reviewer_severity_sum": 889
+            },
+            "usability": {
+              "complaints": 21495,
+              "severity_sum": 47528,
+              "without_free_tier_limits_complaints": 7250,
+              "without_free_tier_limits_severity_sum": 16565,
+              "paying_reviewer_complaints": 812,
+              "paying_reviewer_severity_sum": 1864
+            },
+            "playback": {
+              "complaints": 11561,
+              "severity_sum": 35228,
+              "without_free_tier_limits_complaints": 11325,
+              "without_free_tier_limits_severity_sum": 34528,
+              "paying_reviewer_complaints": 1135,
+              "paying_reviewer_severity_sum": 3584
+            },
+            "billing/support": {
+              "complaints": 4291,
+              "severity_sum": 10758,
+              "without_free_tier_limits_complaints": 2532,
+              "without_free_tier_limits_severity_sum": 6655,
+              "paying_reviewer_complaints": 765,
+              "paying_reviewer_severity_sum": 2078
+            },
+            "outside the question": {
+              "complaints": 13034,
+              "severity_sum": 28917,
+              "without_free_tier_limits_complaints": 12534,
+              "without_free_tier_limits_severity_sum": 27745,
+              "paying_reviewer_complaints": 494,
+              "paying_reviewer_severity_sum": 1319
+            }
+          }
+        },
+        "last_six_full_months": {
+          "months": "2023-05 to 2023-10",
+          "completed_reviews": 301407,
+          "areas": {
+            "access": {
+              "complaints": 5982,
+              "severity_sum": 22971,
+              "without_free_tier_limits_complaints": 5892,
+              "without_free_tier_limits_severity_sum": 22660,
+              "paying_reviewer_complaints": 536,
+              "paying_reviewer_severity_sum": 2080
+            },
+            "usability": {
+              "complaints": 47730,
+              "severity_sum": 110278,
+              "without_free_tier_limits_complaints": 16852,
+              "without_free_tier_limits_severity_sum": 37386,
+              "paying_reviewer_complaints": 1388,
+              "paying_reviewer_severity_sum": 3174
+            },
+            "playback": {
+              "complaints": 10709,
+              "severity_sum": 31344,
+              "without_free_tier_limits_complaints": 10390,
+              "without_free_tier_limits_severity_sum": 30443,
+              "paying_reviewer_complaints": 1028,
+              "paying_reviewer_severity_sum": 3178
+            },
+            "billing/support": {
+              "complaints": 27363,
+              "severity_sum": 66879,
+              "without_free_tier_limits_complaints": 7919,
+              "without_free_tier_limits_severity_sum": 18258,
+              "paying_reviewer_complaints": 1567,
+              "paying_reviewer_severity_sum": 4033
+            },
+            "outside the question": {
+              "complaints": 80046,
+              "severity_sum": 159664,
+              "without_free_tier_limits_complaints": 78847,
+              "without_free_tier_limits_severity_sum": 156844,
+              "paying_reviewer_complaints": 826,
+              "paying_reviewer_severity_sum": 2177
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "n": 1000,
+      "agreement": {
+        "topic": 0.798,
+        "intent": 0.893,
+        "severity": 0.753
+      },
+      "severity_mae": 0.295,
+      "segment_agreement": {
+        "free_tier_limit": {
+          "n": 1000,
+          "agreement": 0.928,
+          "enricher_true_or_paid": 198,
+          "verifier_true_or_paid": 200
+        },
+        "plan": {
+          "n": 1000,
+          "agreement": 0.944,
+          "enricher_true_or_paid": 41,
+          "verifier_true_or_paid": 48
+        }
+      }
+    },
+    "diagnosis": {
+      "catalog_version": "y1",
+      "coverage": {
+        "diagnosable_texts": 93226,
+        "completed": 93211,
+        "failed": 15,
+        "other_share_pct": 32.55
+      },
+      "verification": {
+        "n": 300,
+        "symptom_agreement": 0.7933,
+        "context_agreement": 0.99
+      },
+      "areas": {
+        "access": {
+          "diagnosed_complaints": 11630,
+          "other_share_pct": "20.1",
+          "customers": {
+            "complaints": 11630,
+            "long_time_users": 447,
+            "family_plan_mentions": 70,
+            "student_plan_mentions": 3,
+            "paid": 1015,
+            "free": 60,
+            "unstated": 10555
+          },
+          "symptoms": [
+            {
+              "symptom_id": "login-credentials-rejected",
+              "name": "Login shows an error and rejects valid details",
+              "definition": "Entering the correct password, email or Facebook login produces an error message or is refused; not a phone-number code problem and not a launch failure.",
+              "complaints": 3938,
+              "severity_sum": 15519,
+              "mean_severity": "3.940833",
+              "first6_complaints": 678,
+              "last6_complaints": 2179,
+              "last6_severity_sum": 8597,
+              "paying_complaints": 295,
+              "likes_sum": 7043,
+              "version": {
+                "app_version": "8.8.4.518",
+                "pct_of_this_versions_reviews": 1.903,
+                "pct_of_all_reviews": 0.585
+              },
+              "quotes": [
+                {
+                  "review_id": "aa536e21-6364-4294-b77e-6acebdb4fef8",
+                  "quote": "Whenever I log-in with my password, It shows that's it's incorrect and I have to log-in through email everytime by choosing the 'log-in without password' option."
+                },
+                {
+                  "review_id": "1e451504-cbd5-4857-b82a-2123dcdac002",
+                  "quote": "I thought uninstalling and reinstalling the app would do good, but unfortunately I'm not able to even log-in, neither through email not with mobile number."
+                }
+              ]
+            },
+            {
+              "symptom_id": "phone-login-code-fails",
+              "name": "Phone number login code never arrives",
+              "definition": "A phone-number login sends no verification code, or says to try a different number, so the user cannot sign in by phone; not a password or email login error.",
+              "complaints": 1591,
+              "severity_sum": 6305,
+              "mean_severity": "3.962916",
+              "first6_complaints": 32,
+              "last6_complaints": 1429,
+              "last6_severity_sum": 5678,
+              "paying_complaints": 193,
+              "likes_sum": 413,
+              "version": {
+                "app_version": "8.8.40.470",
+                "pct_of_this_versions_reviews": 0.92,
+                "pct_of_all_reviews": 0.242
+              },
+              "quotes": [
+                {
+                  "review_id": "52ea5789-9617-4966-ac14-294f528a48f3",
+                  "quote": "After that I was never able to log in through my phone number."
+                },
+                {
+                  "review_id": "6ab64dd9-3894-4fbc-bdb6-9666e9b2fab8",
+                  "quote": "Why so greedy? I reinstalled the app then tried to log in my account with phone number but it shows 'check your phone number or you can also try with another number'."
+                }
+              ]
+            },
+            {
+              "symptom_id": "logged-out-cannot-relogin",
+              "name": "Logged out and cannot sign back in",
+              "definition": "The app signs the user out by itself, often repeatedly, and then the user cannot log back in; not a signup or account-missing problem.",
+              "complaints": 1331,
+              "severity_sum": 5001,
+              "mean_severity": "3.757325",
+              "first6_complaints": 280,
+              "last6_complaints": 698,
+              "last6_severity_sum": 2646,
+              "paying_complaints": 142,
+              "likes_sum": 5822,
+              "version": {
+                "app_version": "8.8.56.538",
+                "pct_of_this_versions_reviews": 0.591,
+                "pct_of_all_reviews": 0.218
+              },
+              "quotes": [
+                {
+                  "review_id": "77f29c25-d52e-4380-997c-77022d5ddcf1",
+                  "quote": "For some inexplicable reason, I was logged out of my account."
+                },
+                {
+                  "review_id": "37e98e7c-67f8-4f6a-a013-8ed4a65604d3",
+                  "quote": "Auto logout ...and remove downloaded songs"
+                }
+              ]
+            },
+            {
+              "symptom_id": "stalls-on-splash-screen",
+              "name": "App stalls on logo and never opens",
+              "definition": "After tapping the app, it stays on the Spotify logo or splash screen or hangs with 'not responding' and never reaches the home screen; not an offline message.",
+              "complaints": 936,
+              "severity_sum": 3710,
+              "mean_severity": "3.963675",
+              "first6_complaints": 635,
+              "last6_complaints": 144,
+              "last6_severity_sum": 566,
+              "paying_complaints": 76,
+              "likes_sum": 1527,
+              "top_trigger": "app-start",
+              "top_trigger_share_pct": 79.2,
+              "version": {
+                "app_version": "8.7.48.1058",
+                "pct_of_this_versions_reviews": 2.643,
+                "pct_of_all_reviews": 0.143
+              },
+              "quotes": [
+                {
+                  "review_id": "0dedd631-36a1-45cc-99b6-bb297e7da5b2",
+                  "quote": "Nothing loads, sometimes the app won't even open for me."
+                },
+                {
+                  "review_id": "d7bf5f3e-1d1d-49cc-aee2-6badbb1fd019",
+                  "quote": "I can't even go past the splash screen, meaning I'm effectively locked out of my session as I can't use the desktop version because I'm on the free version."
+                }
+              ]
+            },
+            {
+              "symptom_id": "offline-error-while-connected",
+              "name": "Says offline while internet works",
+              "definition": "The app shows a no-internet or 'You're offline' message even though the device is connected and other apps work; not a login rejection.",
+              "complaints": 642,
+              "severity_sum": 2509,
+              "mean_severity": "3.908100",
+              "first6_complaints": 261,
+              "last6_complaints": 180,
+              "last6_severity_sum": 700,
+              "paying_complaints": 56,
+              "likes_sum": 2227,
+              "version": {
+                "app_version": "8.7.36.905",
+                "pct_of_this_versions_reviews": 0.246,
+                "pct_of_all_reviews": 0.098
+              },
+              "quotes": [
+                {
+                  "review_id": "58250071-7b88-45b0-93f3-c6cad4e2c67a",
+                  "quote": "A box pops up saying \"no internet connection, try again."
+                },
+                {
+                  "review_id": "9063ea55-aae5-4ce7-879a-6e12179fc78a",
+                  "quote": "When I try to play anything, all songs are grayed-out and I get a message at the bottom saying \"No internet connection."
+                }
+              ]
+            },
+            {
+              "symptom_id": "account-missing-or-blocked",
+              "name": "Account deleted, blocked or forced to reset",
+              "definition": "The user's account disappears, is linked to a different account, or is locked and forces a password change for suspicious activity; not an error shown during a normal login attempt.",
+              "complaints": 518,
+              "severity_sum": 1907,
+              "mean_severity": "3.681467",
+              "first6_complaints": 121,
+              "last6_complaints": 246,
+              "last6_severity_sum": 903,
+              "paying_complaints": 63,
+              "likes_sum": 759,
+              "version": {
+                "app_version": "8.8.42.468",
+                "pct_of_this_versions_reviews": 0.22,
+                "pct_of_all_reviews": 0.083
+              },
+              "quotes": [
+                {
+                  "review_id": "0b6bd420-d267-47e0-afe5-b26c6dc5e1d3",
+                  "quote": "For some reason over the last three months I've been locked out the app random and had to change my password to login."
+                },
+                {
+                  "review_id": "02643e4a-c1aa-4f9c-9c56-882a9955a17c",
+                  "quote": "The family plan of which I did actually share with family kicked me off because i do not dhare their ip address."
+                }
+              ]
+            }
+          ],
+          "concrete": {
+            "complaints": 9289,
+            "severity_sum": 36207,
+            "first6_complaints": 2121,
+            "first6_severity_sum": 8227,
+            "last6_complaints": 4984,
+            "last6_severity_sum": 19500,
+            "paying_complaints": 828,
+            "paying_severity_sum": 3236,
+            "other_complaints": 2341,
+            "other_last6_complaints": 906,
+            "plan_gated_complaints": 0,
+            "plan_gated_paying_complaints": 0,
+            "plan_gated_last6_complaints": 0
+          }
+        },
+        "usability": {
+          "diagnosed_complaints": 36297,
+          "other_share_pct": "44.1",
+          "customers": {
+            "complaints": 36297,
+            "long_time_users": 1693,
+            "family_plan_mentions": 86,
+            "student_plan_mentions": 5,
+            "paid": 2114,
+            "free": 272,
+            "unstated": 33911
+          },
+          "symptoms": [
+            {
+              "symptom_id": "chosen-song-not-played",
+              "name": "Chosen song or position not played",
+              "definition": "The app plays a different track than the one selected, forces shuffle or order, or ignores rewind and seek requests; not a song that stops by itself.",
+              "complaints": 5098,
+              "severity_sum": 12512,
+              "mean_severity": "2.454296",
+              "first6_complaints": 1199,
+              "last6_complaints": 2441,
+              "last6_severity_sum": 6070,
+              "paying_complaints": 229,
+              "likes_sum": 38087,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 25.0,
+              "quotes": [
+                {
+                  "review_id": "18d946c0-4f14-47af-b08b-6eeb7b9e1945",
+                  "quote": "It is the best to listen to your fav things but now when I am playing my own playlist that I created, it doesn't play the songs in my playlist back to back like it used to."
+                },
+                {
+                  "review_id": "ae062a32-f239-4a12-b744-9038a41ba64e",
+                  "quote": "You can't choose what song you want to listen to in a Playlist, you have to skip through till you get to it."
+                }
+              ],
+              "plan_gated": true
+            },
+            {
+              "symptom_id": "familiar-option-removed",
+              "name": "Familiar option or feature is gone",
+              "definition": "A control, sort, button or feature the user used before no longer appears in the app; not a feature that exists but is locked behind a paid plan.",
+              "complaints": 4649,
+              "severity_sum": 10736,
+              "mean_severity": "2.309314",
+              "first6_complaints": 980,
+              "last6_complaints": 2171,
+              "last6_severity_sum": 5131,
+              "paying_complaints": 286,
+              "likes_sum": 41969,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 34.6,
+              "version": {
+                "app_version": "8.8.82.634",
+                "pct_of_this_versions_reviews": 3.613,
+                "pct_of_all_reviews": 0.818
+              },
+              "quotes": [
+                {
+                  "review_id": "2dd0985f-25bf-4db8-aa25-f4f904f27080",
+                  "quote": "I'm trying to access the Canvas feature on Spotify for a while now, but to no avail as the option to access Spotify Canvas doesn't appear under the settings for me."
+                },
+                {
+                  "review_id": "67e8d588-acb6-4247-baa7-fb4f6a7b1095",
+                  "quote": "Spotify is not only one of the best music apps but also an app that provides a unique listening experience but sadly ever since the latest update was done, the song scroller has disappeared (that"
+                }
+              ]
+            },
+            {
+              "symptom_id": "screens-hard-to-navigate",
+              "name": "Screens hard to navigate or scan",
+              "definition": "Users cannot find recently played items, things moved to new places, or cannot read a redesigned screen quickly; not a crash or a button that does nothing.",
+              "complaints": 3980,
+              "severity_sum": 8548,
+              "mean_severity": "2.147739",
+              "first6_complaints": 760,
+              "last6_complaints": 845,
+              "last6_severity_sum": 1791,
+              "paying_complaints": 249,
+              "likes_sum": 52949,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 30.6,
+              "version": {
+                "app_version": "8.8.18.509",
+                "pct_of_this_versions_reviews": 7.497,
+                "pct_of_all_reviews": 0.74
+              },
+              "quotes": [
+                {
+                  "review_id": "21dc46c3-e275-4793-8193-6fbaabe28148",
+                  "quote": "Back arrows at the top are old school and not practical for large phones!"
+                },
+                {
+                  "review_id": "99e403b0-3a69-4a4a-a381-7a13f3f5a167",
+                  "quote": "Now you can't quickly see recently played, recommendations are all over the place, the full screen cards show their \"Canvas\" with a tiny album art and details in the bottom corner, making it difficult"
+                }
+              ]
+            },
+            {
+              "symptom_id": "ads-play-too-often",
+              "name": "Ads play too often",
+              "definition": "Users report ads that repeat too frequently or interrupt listening; not complaints about the price of a paid plan.",
+              "complaints": 2205,
+              "severity_sum": 4608,
+              "mean_severity": "2.089796",
+              "first6_complaints": 615,
+              "last6_complaints": 940,
+              "last6_severity_sum": 1974,
+              "paying_complaints": 592,
+              "likes_sum": 12420,
+              "version": {
+                "app_version": "8.8.70.532",
+                "pct_of_this_versions_reviews": 0.787,
+                "pct_of_all_reviews": 0.371
+              },
+              "quotes": [
+                {
+                  "review_id": "1a6fdd87-be6a-419c-ac56-8c50970ecfcd",
+                  "quote": "My biggest complaint is the pop up ad advertising to try \"DUO\" and there's no dislike / down vote button."
+                },
+                {
+                  "review_id": "46cdc3b5-0f66-4e17-9f49-c0d525006ec9",
+                  "quote": "I mean the ads are so frequent that they have been memorized."
+                }
+              ]
+            },
+            {
+              "symptom_id": "library-edits-fail",
+              "name": "Cannot edit or save library items",
+              "definition": "Users cannot add podcasts, change a playlist cover, sort or filter their library correctly, or see changes reflected; not playback itself.",
+              "complaints": 1386,
+              "severity_sum": 3142,
+              "mean_severity": "2.266955",
+              "first6_complaints": 401,
+              "last6_complaints": 473,
+              "last6_severity_sum": 1061,
+              "paying_complaints": 92,
+              "likes_sum": 19293,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 16.7,
+              "version": {
+                "app_version": "8.8.82.634",
+                "pct_of_this_versions_reviews": 0.884,
+                "pct_of_all_reviews": 0.251
+              },
+              "quotes": [
+                {
+                  "review_id": "e963a719-857e-4728-ad0e-622b5f589a7a",
+                  "quote": "Edit: Recent update removed the ability to sort songs from oldest to most recent."
+                },
+                {
+                  "review_id": "5c3ea41a-374a-4f2c-a928-cf8821b0babd",
+                  "quote": "Uygulamada bir sıkıntı yok ancak büyük bir çalma listem var, o listenin fotoğrafını değiştiremiyorum."
+                }
+              ]
+            },
+            {
+              "symptom_id": "playlists-songs-wont-open",
+              "name": "Playlists or songs will not open",
+              "definition": "Tapping a playlist, album, liked-songs view or song does nothing or fails to open its contents; not a search that returns no results.",
+              "complaints": 1159,
+              "severity_sum": 3139,
+              "mean_severity": "2.708369",
+              "first6_complaints": 568,
+              "last6_complaints": 299,
+              "last6_severity_sum": 798,
+              "paying_complaints": 88,
+              "likes_sum": 10224,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 24.5,
+              "version": {
+                "app_version": "8.7.48.1062",
+                "pct_of_this_versions_reviews": 1.405,
+                "pct_of_all_reviews": 0.201
+              },
+              "quotes": [
+                {
+                  "review_id": "6c57fe30-f190-41ce-b281-2f4219edf6af",
+                  "quote": "I like the app overall. But my playlists have stopped opening."
+                },
+                {
+                  "review_id": "15dbec49-ba72-4259-8caa-20f0e0c7cad5",
+                  "quote": "Dear Developers,I really like your app, I was satisfied with it all the time, but there is something wrong with the \"liked songs\" album, especially on the smartphone, because on the PC it works"
+                }
+              ]
+            },
+            {
+              "symptom_id": "suggestions-mixed-in",
+              "name": "Unwanted suggestions mixed into music",
+              "definition": "Recommended or autoplay tracks are inserted between the songs a user chose in a playlist or album; not paid-app ads.",
+              "complaints": 1372,
+              "severity_sum": 2989,
+              "mean_severity": "2.178571",
+              "first6_complaints": 327,
+              "last6_complaints": 454,
+              "last6_severity_sum": 992,
+              "paying_complaints": 119,
+              "likes_sum": 11131,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 11.0,
+              "version": {
+                "app_version": "8.8.20.544",
+                "pct_of_this_versions_reviews": 1.301,
+                "pct_of_all_reviews": 0.246
+              },
+              "quotes": [
+                {
+                  "review_id": "62e8cbd3-b133-4d33-a926-f4701396bb53",
+                  "quote": "I hate using it though. It constantly scrambles my playlists and/or adds new, somewhat unrelated music to them."
+                },
+                {
+                  "review_id": "fd3004cb-90b6-43fc-8d90-229af72de58a",
+                  "quote": "It will turn off the shuffle and play recommended songs even if I just turned shuffle on."
+                }
+              ]
+            }
+          ],
+          "concrete": {
+            "complaints": 15204,
+            "severity_sum": 34389,
+            "first6_complaints": 3931,
+            "first6_severity_sum": 9145,
+            "last6_complaints": 5254,
+            "last6_severity_sum": 11929,
+            "paying_complaints": 1471,
+            "paying_severity_sum": 3312,
+            "other_complaints": 15995,
+            "other_last6_complaints": 9155,
+            "plan_gated_complaints": 5098,
+            "plan_gated_paying_complaints": 229,
+            "plan_gated_last6_complaints": 2441
+          }
+        },
+        "playback": {
+          "diagnosed_complaints": 32881,
+          "other_share_pct": "24.4",
+          "customers": {
+            "complaints": 32881,
+            "long_time_users": 1400,
+            "family_plan_mentions": 105,
+            "student_plan_mentions": 10,
+            "paid": 3286,
+            "free": 149,
+            "unstated": 29446
+          },
+          "symptoms": [
+            {
+              "symptom_id": "app-crashes-or-freezes",
+              "name": "App crashes or freezes",
+              "definition": "The app closes unexpectedly or hangs and stops responding while in use; not music that stops while the app keeps running.",
+              "complaints": 6052,
+              "severity_sum": 20120,
+              "mean_severity": "3.324521",
+              "first6_complaints": 2103,
+              "last6_complaints": 1769,
+              "last6_severity_sum": 5799,
+              "paying_complaints": 721,
+              "likes_sum": 41600,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 13.7,
+              "version": {
+                "app_version": "8.7.34.1312",
+                "pct_of_this_versions_reviews": 6.99,
+                "pct_of_all_reviews": 1.076
+              },
+              "quotes": [
+                {
+                  "review_id": "205e4cbe-a19e-41ae-bff4-ef9a3804e2a4",
+                  "quote": "The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased."
+                },
+                {
+                  "review_id": "16b56070-d2d6-47b9-92f0-bf4b1310dc44",
+                  "quote": "Even with the screen turned off, it'll just crash and force me to reopen the app and restart the music in the middle of work."
+                }
+              ]
+            },
+            {
+              "symptom_id": "pauses-stops-mid-song",
+              "name": "Music pauses or stops on its own",
+              "definition": "Playback halts by itself partway through a track or after seconds, with the app still open; not the app closing, which is a crash.",
+              "complaints": 6005,
+              "severity_sum": 18444,
+              "mean_severity": "3.071440",
+              "first6_complaints": 1890,
+              "last6_complaints": 1845,
+              "last6_severity_sum": 5600,
+              "paying_complaints": 874,
+              "likes_sum": 80797,
+              "top_trigger": "background",
+              "top_trigger_share_pct": 14.7,
+              "version": {
+                "app_version": "8.7.90.544",
+                "pct_of_this_versions_reviews": 6.127,
+                "pct_of_all_reviews": 1.081
+              },
+              "quotes": [
+                {
+                  "review_id": "6c69cfac-4d7d-4756-a1b8-f0594a19b793",
+                  "quote": "From the past week, the songs have been abruptly cut, and there's no problem in connection."
+                },
+                {
+                  "review_id": "f5f141ad-b86c-4b23-b17c-e87a8ec24fc8",
+                  "quote": "Third:- Sometimes the song stops and doesn't start radio"
+                }
+              ]
+            },
+            {
+              "symptom_id": "playback-wont-start",
+              "name": "Chosen music refuses to start playing",
+              "definition": "Pressing play on a song or playlist does nothing or shows it playing while silent, until the user restarts or switches tracks; not a track that starts and then stops.",
+              "complaints": 3895,
+              "severity_sum": 12949,
+              "mean_severity": "3.324519",
+              "first6_complaints": 1367,
+              "last6_complaints": 1130,
+              "last6_severity_sum": 3706,
+              "paying_complaints": 392,
+              "likes_sum": 23373,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 14.6,
+              "version": {
+                "app_version": "8.7.90.544",
+                "pct_of_this_versions_reviews": 3.306,
+                "pct_of_all_reviews": 0.652
+              },
+              "quotes": [
+                {
+                  "review_id": "0f78176c-c1a7-4ed8-8a22-034f5ea9d9c3",
+                  "quote": "For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play a different track and then return to it."
+                },
+                {
+                  "review_id": "6889f1a2-5749-4830-a1bb-042d58921fd1",
+                  "quote": "Constantly giving me headaches when it comes to playing music from my echo or trying to switch it back to my phone, always seems to be unable to go on offline mode/ straight up refuses to work when"
+                }
+              ]
+            },
+            {
+              "symptom_id": "false-no-internet-message",
+              "name": "Shows no internet when connected",
+              "definition": "The app displays a no-connection or offline message while the phone has working internet or mobile data.",
+              "complaints": 1956,
+              "severity_sum": 6609,
+              "mean_severity": "3.378834",
+              "first6_complaints": 698,
+              "last6_complaints": 600,
+              "last6_severity_sum": 2001,
+              "paying_complaints": 167,
+              "likes_sum": 10218,
+              "version": {
+                "app_version": "8.8.2.434",
+                "pct_of_this_versions_reviews": 0.972,
+                "pct_of_all_reviews": 0.323
+              },
+              "quotes": [
+                {
+                  "review_id": "59045c69-8803-4c33-a298-6dde7d0a6c6f",
+                  "quote": "Update 1: I can't use the app anymore, \"no internet connection\" is a really bad error message when I have an internet connection."
+                },
+                {
+                  "review_id": "6afb3b57-3d4d-453c-847f-4a13f4ea08d7",
+                  "quote": "But I'm disappointed now because as soon as I open the app it shows \"no internet connection\" even though the connection is there."
+                }
+              ]
+            },
+            {
+              "symptom_id": "songs-or-playlists-wont-load",
+              "name": "Songs or playlists fail to load",
+              "definition": "Playlists, liked songs or tracks never appear or load in the app, or loading hangs indefinitely; not a track that loads and then plays badly.",
+              "complaints": 1909,
+              "severity_sum": 6038,
+              "mean_severity": "3.162913",
+              "first6_complaints": 851,
+              "last6_complaints": 529,
+              "last6_severity_sum": 1619,
+              "paying_complaints": 263,
+              "likes_sum": 21690,
+              "top_trigger": "offline",
+              "top_trigger_share_pct": 13.0,
+              "version": {
+                "app_version": "8.7.48.1058",
+                "pct_of_this_versions_reviews": 1.377,
+                "pct_of_all_reviews": 0.332
+              },
+              "quotes": [
+                {
+                  "review_id": "87de6e42-8159-4ec1-9550-97693b3174ca",
+                  "quote": "Except Spotify , it doesn't load at all."
+                },
+                {
+                  "review_id": "a65432bc-fa28-412d-930e-f54d6aa71460",
+                  "quote": "When I go to more info about a song with multiple artists, and I click on artists, it just keeps loading in the submenu without opening up to it."
+                }
+              ]
+            },
+            {
+              "symptom_id": "audio-glitches-or-drops",
+              "name": "Audio glitches, distortion or quality drops",
+              "definition": "Sound stutters, fluctuates, drops out briefly or sounds worse than before while the track keeps playing; not a full stop.",
+              "complaints": 2003,
+              "severity_sum": 4848,
+              "mean_severity": "2.420369",
+              "first6_complaints": 641,
+              "last6_complaints": 741,
+              "last6_severity_sum": 1758,
+              "paying_complaints": 210,
+              "likes_sum": 10392,
+              "quotes": [
+                {
+                  "review_id": "d7db39c7-6d47-4cdc-9659-85782d0ac56e",
+                  "quote": "When I play a song, the music drops a beat and starts to fluctuate and the audio quality and sound drops automatically, even on Wi-Fi."
+                },
+                {
+                  "review_id": "b201c7e9-1fce-4d0c-8c1b-32fa2ecff5bf",
+                  "quote": "Each and every time the music gets disturb."
+                }
+              ]
+            }
+          ],
+          "concrete": {
+            "complaints": 24845,
+            "severity_sum": 77358,
+            "first6_complaints": 8622,
+            "first6_severity_sum": 27162,
+            "last6_complaints": 7577,
+            "last6_severity_sum": 23107,
+            "paying_complaints": 2885,
+            "paying_severity_sum": 9171,
+            "other_complaints": 8036,
+            "other_last6_complaints": 2812,
+            "plan_gated_complaints": 0,
+            "plan_gated_paying_complaints": 0,
+            "plan_gated_last6_complaints": 0
+          }
+        },
+        "billing/support": {
+          "diagnosed_complaints": 14386,
+          "other_share_pct": "38.2",
+          "customers": {
+            "complaints": 14386,
+            "long_time_users": 411,
+            "family_plan_mentions": 252,
+            "student_plan_mentions": 65,
+            "paid": 2489,
+            "free": 687,
+            "unstated": 11210
+          },
+          "symptoms": [
+            {
+              "symptom_id": "premium-price-too-high",
+              "name": "Premium costs too much",
+              "definition": "The user says the premium subscription price is too high or not worth it, without citing a locked feature or a billing error.",
+              "complaints": 3144,
+              "severity_sum": 6429,
+              "mean_severity": "2.044847",
+              "first6_complaints": 515,
+              "last6_complaints": 1801,
+              "last6_severity_sum": 3698,
+              "paying_complaints": 369,
+              "likes_sum": 2147,
+              "version": {
+                "app_version": "8.8.54.481",
+                "pct_of_this_versions_reviews": 2.31,
+                "pct_of_all_reviews": 0.513
+              },
+              "quotes": [
+                {
+                  "review_id": "15c02fde-71a4-4700-af15-4e2d90ddda45",
+                  "quote": "Lately paying for premium doesn't seem worth it."
+                },
+                {
+                  "review_id": "97e23042-6f9b-46b4-ac25-5c9be7558807",
+                  "quote": "Great features but too expensive Why do you guys not release the free membership with ads In Korea?"
+                }
+              ]
+            },
+            {
+              "symptom_id": "premium-purchase-fails",
+              "name": "Cannot buy or upgrade premium",
+              "definition": "Attempts to start or upgrade premium fail, freeze, redirect to the wrong screen or are refused as ineligible; not charges taken after a purchase.",
+              "complaints": 1628,
+              "severity_sum": 4875,
+              "mean_severity": "2.994472",
+              "first6_complaints": 524,
+              "last6_complaints": 575,
+              "last6_severity_sum": 1731,
+              "paying_complaints": 269,
+              "likes_sum": 2019,
+              "quotes": [
+                {
+                  "review_id": "1b6a484c-a2e3-4ea9-bb76-300d976f668d",
+                  "quote": "I tried to purchase the premium but it says my balance isn't eligible even though I have enough balance to buy a premium."
+                },
+                {
+                  "review_id": "12b097f2-1b50-4b79-bfcd-bca0604bd22d",
+                  "quote": "It's always \"payment declined."
+                }
+              ]
+            },
+            {
+              "symptom_id": "basic-features-locked-premium",
+              "name": "Basic features locked behind premium",
+              "definition": "Free users cannot use features they expect for free, such as skipping, lyrics, choosing songs, queue, seeking or downloads; not the price of premium and not a paying member being locked out.",
+              "complaints": 1713,
+              "severity_sum": 4063,
+              "mean_severity": "2.371862",
+              "first6_complaints": 99,
+              "last6_complaints": 1268,
+              "last6_severity_sum": 2993,
+              "paying_complaints": 86,
+              "likes_sum": 2613,
+              "top_trigger": "after-update",
+              "top_trigger_share_pct": 16.1,
+              "version": {
+                "app_version": "8.8.78.587",
+                "pct_of_this_versions_reviews": 1.223,
+                "pct_of_all_reviews": 0.259
+              },
+              "quotes": [
+                {
+                  "review_id": "7d43b2a3-d076-4364-92e3-341baf716513",
+                  "quote": "My music sometimes turns off even when my sleep timer isn't set, but not often."
+                },
+                {
+                  "review_id": "1b275221-6c43-4d46-9166-08b92d882849",
+                  "quote": "I was a premium subscription because I could listen to the music that I already own without transferring it to the phone or backing it up."
+                }
+              ],
+              "plan_gated": true
+            },
+            {
+              "symptom_id": "unexpected-charges-renewals",
+              "name": "Charged unexpectedly or after cancelling",
+              "definition": "The user is billed twice, billed after cancelling, or charged or renewed without prior notice; not a purchase that fails to complete.",
+              "complaints": 833,
+              "severity_sum": 3099,
+              "mean_severity": "3.720288",
+              "first6_complaints": 295,
+              "last6_complaints": 289,
+              "last6_severity_sum": 1056,
+              "paying_complaints": 182,
+              "likes_sum": 1203,
+              "version": {
+                "app_version": "8.7.36.905",
+                "pct_of_this_versions_reviews": 0.301,
+                "pct_of_all_reviews": 0.135
+              },
+              "quotes": [
+                {
+                  "review_id": "1be24878-5115-490a-bb7f-dad95d0630ab",
+                  "quote": "Today you have deducted the amount without any reminder beforehand."
+                },
+                {
+                  "review_id": "4e1d1e8d-e88f-4f24-95f9-9a88eca1fbfb",
+                  "quote": "They had me update my payment method and signed me up for a new plan without my knowing it - I thought i didnt have anything new selected, but apparently not."
+                }
+              ]
+            },
+            {
+              "symptom_id": "paid-member-cannot-use-premium",
+              "name": "Paying member cannot use premium features",
+              "definition": "A user with an active premium subscription finds premium features blocked or unavailable, including after account or login problems; not a free user facing a paywall.",
+              "complaints": 864,
+              "severity_sum": 2728,
+              "mean_severity": "3.157407",
+              "first6_complaints": 224,
+              "last6_complaints": 377,
+              "last6_severity_sum": 1190,
+              "paying_complaints": 683,
+              "likes_sum": 1852,
+              "version": {
+                "app_version": "8.8.62.491",
+                "pct_of_this_versions_reviews": 0.336,
+                "pct_of_all_reviews": 0.152
+              },
+              "quotes": [
+                {
+                  "review_id": "d13b1dba-4cec-4d83-8b0f-46b2bb22fe26",
+                  "quote": "Newest update prevents me from listening to any of the paid, premium versions of podcasts I subscribe to."
+                },
+                {
+                  "review_id": "27eb2920-d0a7-4d39-b082-1aa70af9c778",
+                  "quote": "Horrible! This app is awful, I've been using it for close to 7 years,last 3 years I've been paying and not being able to use my music when not in service or in internet, I have 1200 songs that I don't"
+                }
+              ]
+            },
+            {
+              "symptom_id": "support-unhelpful-or-silent",
+              "name": "Support gives no reply or scripted advice",
+              "definition": "A support request gets no response, or the reply is generic, repeats useless troubleshooting steps or is unhelpful; not a support page or form that fails to work.",
+              "complaints": 498,
+              "severity_sum": 1198,
+              "mean_severity": "2.405622",
+              "first6_complaints": 133,
+              "last6_complaints": 197,
+              "last6_severity_sum": 464,
+              "paying_complaints": 68,
+              "likes_sum": 1541,
+              "version": {
+                "app_version": "8.8.72.630",
+                "pct_of_this_versions_reviews": 0.223,
+                "pct_of_all_reviews": 0.088
+              },
+              "quotes": [
+                {
+                  "review_id": "4acddef7-3e90-4bdf-a0bf-30c7b58af0fb",
+                  "quote": "Like previous occasions guess what, the advice was the same, delete cache, file history, uninstall, reinstall then wait hours to download your music again and still have the same problem."
+                },
+                {
+                  "review_id": "c01f01a7-61c8-4c6b-aeee-7c3e9ebf823f",
+                  "quote": "I have emailed a help request twice now with no response."
+                }
+              ]
+            },
+            {
+              "symptom_id": "ads-shown-to-premium",
+              "name": "Ads play for premium subscribers",
+              "definition": "Premium members hear or see ads or sponsored content they paid to remove; not free users seeing ads.",
+              "complaints": 215,
+              "severity_sum": 545,
+              "mean_severity": "2.534884",
+              "first6_complaints": 62,
+              "last6_complaints": 84,
+              "last6_severity_sum": 210,
+              "paying_complaints": 177,
+              "likes_sum": 1139,
+              "version": {
+                "app_version": "8.8.68.565",
+                "pct_of_this_versions_reviews": 0.14,
+                "pct_of_all_reviews": 0.041
+              },
+              "quotes": [
+                {
+                  "review_id": "02ab45da-773e-42fd-93b5-6bc77ed11944",
+                  "quote": "Now the payed sponsors for the podcast I listen to because of accidentally clicking a rating, are being changed with spotify's forced ads that I PAYED TO REMOVE WITH MY MEMBERSHIP."
+                },
+                {
+                  "review_id": "07b8be94-6f61-407b-be63-a7ecd7d2f5df",
+                  "quote": "Now you can't even listen to 2 songs before you get 3 adverts."
+                }
+              ]
+            }
+          ],
+          "concrete": {
+            "complaints": 7182,
+            "severity_sum": 18874,
+            "first6_complaints": 1753,
+            "first6_severity_sum": 4919,
+            "last6_complaints": 3323,
+            "last6_severity_sum": 8349,
+            "paying_complaints": 1748,
+            "paying_severity_sum": 5059,
+            "other_complaints": 5491,
+            "other_last6_complaints": 3328,
+            "plan_gated_complaints": 1713,
+            "plan_gated_paying_complaints": 86,
+            "plan_gated_last6_complaints": 1268
+          }
+        }
+      }
+    }
+  },
+  "draft": {
+    "priority_area": "playback",
+    "headline": "Playback should get next quarter's effort: music stops, will not start, or the app crashes, and playback leads once vague and free-tier complaints are set aside.",
+    "memo_markdown": "## Recommendation\nMusic stops or will not start, and the app crashes while people listen.\n\nRecommend playback. The concrete-defect lens drives this: playback has the most fixable problems in both windows and among paying reviewers. The baseline only partly agrees: vague `other.general` leads with priority score 167110 [C1], which names no fix, while `playback.playback-stops-crashes` scores 35999 [C2].\n\n## What to fix first\nOrdered by severity and frequency.\n- **App crashes or freezes**: 6,052 complaints (2,103 in the first six full months, 1,769 in the last six), 721 from paying reviewers; 13.7% follow an update; 7.0% of reviews on version 8.7.34.1312 report it, against 1.1% across all versions. \"The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased.\" Next step: Reproduce crashes and freezes on 8.7.34.1312 during active use and after updates, then fix the failing path.\n- **Music pauses or stops on its own**: 6,005 complaints (1,890 in the first six full months, 1,845 in the last six), 874 from paying reviewers; 14.7% start in the background; 6.1% of reviews on version 8.7.90.544 report it, against 1.1% across all versions. \"From the past week, the songs have been abruptly cut, and there's no problem in connection.\" Next step: Reproduce music halting with the app open in the background on 8.7.90.544, then fix the background playback stop.\n- **Chosen music refuses to start playing**: 3,895 complaints (1,367 in the first six full months, 1,130 in the last six), 392 from paying reviewers; 14.6% follow an update; 3.3% of reviews on version 8.7.90.544 report it, against 0.7% across all versions. \"For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play\" Next step: Reproduce play presses that stay silent after an update on 8.7.90.544, then fix the start path for chosen tracks.\n- **Shows no internet when connected**: 1,956 complaints (698 in the first six full months, 600 in the last six), 167 from paying reviewers; 1.0% of reviews on version 8.8.2.434 report it, against 0.3% across all versions. Next step: Reproduce the no-connection message on 8.8.2.434 while data works, then fix the connectivity check.\n\n## Why\nPlayback has 24,845 concrete defects, against 15,204 for usability, 9,289 for access and 7,182 for billing/support. In the last six full months it still leads, 7,577 to 5,254 for usability, so the last six months agree with the full window and this recommendation follows both. Usability has the most raw complaints, but the segment totals overstate it because most of them are free-tier limits by design.\n\n## Free versus premium\nFree-tier limits are 62.6% of usability and 2.3% of playback. Without them, paying reviewers report 2,885 concrete playback defects against 1,471 for usability, and `playback.playback-stops-crashes` ranks third in that lens.\n\n## Alternatives\nUsability has 15,204 concrete defects and 5,254 in the last six months, behind playback in both. Access has 9,289 concrete defects, 4,984 of them in the last six months, and billing/support has 7,182. Downloads and catalog sit outside the question.\n\n## Limitations\nReviews are self-selected, historical and from one window, 2022-05-17 to 2023-11-15. There is no revenue, plan or churn data: the plan is only what reviewers say, and cancellation language is expressed intent, not observed churn. 55 rows were quarantined or unclassified and 58,730 texts need review. Verifier agreement was 0.798 on topic, 0.893 on intent, 0.753 on severity, 0.928 on free-tier and 0.944 on plan. Symptom labels are model-assigned from an approved catalog; blind symptom agreement was 0.7933 (n=300), and 32.55% of diagnosed complaints are other.",
+    "fixes": [
+      {
+        "symptom_id": "app-crashes-or-freezes",
+        "next_step": "Reproduce crashes and freezes on 8.7.34.1312 during active use and after updates, then fix the failing path."
+      },
+      {
+        "symptom_id": "pauses-stops-mid-song",
+        "next_step": "Reproduce music halting with the app open in the background on 8.7.90.544, then fix the background playback stop."
+      },
+      {
+        "symptom_id": "playback-wont-start",
+        "next_step": "Reproduce play presses that stay silent after an update on 8.7.90.544, then fix the start path for chosen tracks."
+      },
+      {
+        "symptom_id": "false-no-internet-message",
+        "next_step": "Reproduce the no-connection message on 8.8.2.434 while data works, then fix the connectivity check."
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "other.general",
+        "metric": "priority_score",
+        "value": "167110"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "playback.playback-stops-crashes",
+        "metric": "priority_score",
+        "value": "35999"
+      }
+    ],
+    "quotes": [
+      {
+        "issue_id": "app-crashes-or-freezes",
+        "quote": "The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased."
+      },
+      {
+        "issue_id": "pauses-stops-mid-song",
+        "quote": "From the past week, the songs have been abruptly cut, and there's no problem in connection."
+      },
+      {
+        "issue_id": "playback-wont-start",
+        "quote": "For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play"
+      }
+    ],
+    "model_markdown": "## Recommendation\nMusic stops or will not start, and the app crashes while people listen.\n\nRecommend playback. The concrete-defect lens drives this: playback has the most fixable problems in both windows and among paying reviewers. The baseline only partly agrees: vague `other.general` leads with priority score 167110 [C1], which names no fix, while `playback.playback-stops-crashes` scores 35999 [C2].\n\n## What to fix first\nOrdered by severity and frequency.\n\n## Why\nPlayback has 24,845 concrete defects, against 15,204 for usability, 9,289 for access and 7,182 for billing/support. In the last six full months it still leads, 7,577 to 5,254 for usability, so the last six months agree with the full window and this recommendation follows both. Usability has the most raw complaints, but the segment totals overstate it because most of them are free-tier limits by design.\n\n## Free versus premium\nFree-tier limits are 62.6% of usability and 2.3% of playback. Without them, paying reviewers report 2,885 concrete playback defects against 1,471 for usability, and `playback.playback-stops-crashes` ranks third in that lens.\n\n## Alternatives\nUsability has 15,204 concrete defects and 5,254 in the last six months, behind playback in both. Access has 9,289 concrete defects, 4,984 of them in the last six months, and billing/support has 7,182. Downloads and catalog sit outside the question.\n\n## Limitations\nReviews are self-selected, historical and from one window, 2022-05-17 to 2023-11-15. There is no revenue, plan or churn data: the plan is only what reviewers say, and cancellation language is expressed intent, not observed churn. 55 rows were quarantined or unclassified and 58,730 texts need review. Verifier agreement was 0.798 on topic, 0.893 on intent, 0.753 on severity, 0.928 on free-tier and 0.944 on plan. Symptom labels are model-assigned from an approved catalog; blind symptom agreement was 0.7933 (n=300), and 32.55% of diagnosed complaints are other."
+  },
+  "draft_problems": [],
+  "critique": {
+    "verdict": "revise",
+    "problems": [
+      "In the fixes list, audio-glitches-or-drops (2,003 complaints) is larger than the fourth chosen symptom, false-no-internet-message (1,956 complaints), and is omitted without any stated reason. Either swap it in or add a sentence in the prose explaining why it is left out.",
+      "The Free versus premium section does not say what leads once free-tier limits are set aside. The lens ranking shows other.general still ranks first without free-tier limits, with playback.general second. State that explicitly rather than mentioning only playback.playback-stops-crashes in third place.",
+      "The Free versus premium section says 'Without them, paying reviewers report 2,885 concrete playback defects against 1,471 for usability', but those are concrete (plan-gated-excluded) paying counts, not a without-free-tier-limits figure. Reword so the basis matches the source, and say what paying reviewers complain about, e.g. that playback.playback-stops-crashes leads the paying-reviewers-only ranking."
+    ]
+  },
+  "revised": true,
+  "revision": {
+    "priority_area": "playback",
+    "headline": "Playback should get next quarter's effort: music stops, will not start, or the app crashes while people listen, and playback leads on concrete defects in both windows.",
+    "memo_markdown": "## Recommendation\nMusic stops or will not start, and the app crashes while people listen.\n\nRecommend playback, driven by the concrete-defect lens. Vague `other.general` leads the baseline [C1] but names no fix, so it cannot direct the choice; `playback.playback-stops-crashes` scores [C2] in the baseline.\n\n## What to fix first\nThe four most severe concrete playback symptoms, in order; audio glitches ranks lower on severity.\n- **App crashes or freezes**: 6,052 complaints (2,103 in the first six full months, 1,769 in the last six), 721 from paying reviewers; 13.7% follow an update; 7.0% of reviews on version 8.7.34.1312 report it, against 1.1% across all versions. \"The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased.\" Next step: Reproduce crashes and freezes on 8.7.34.1312 during active use and after updates, then fix the failing path.\n- **Music pauses or stops on its own**: 6,005 complaints (1,890 in the first six full months, 1,845 in the last six), 874 from paying reviewers; 14.7% start in the background; 6.1% of reviews on version 8.7.90.544 report it, against 1.1% across all versions. \"From the past week, the songs have been abruptly cut, and there's no problem in connection.\" Next step: Reproduce music halting with the app open in the background on 8.7.90.544, then fix the background playback stop.\n- **Chosen music refuses to start playing**: 3,895 complaints (1,367 in the first six full months, 1,130 in the last six), 392 from paying reviewers; 14.6% follow an update; 3.3% of reviews on version 8.7.90.544 report it, against 0.7% across all versions. \"For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play\" Next step: Reproduce silent play presses after an update on 8.7.90.544, then fix the start path for chosen tracks.\n- **Shows no internet when connected**: 1,956 complaints (698 in the first six full months, 600 in the last six), 167 from paying reviewers; 1.0% of reviews on version 8.8.2.434 report it, against 0.3% across all versions. Next step: Reproduce the no-connection message on 8.8.2.434 while data works, then fix the connectivity check.\n\n## Why\nPlayback leads usability on concrete defects in the full window (24,845 vs 15,204) and in the last six full months (7,577 vs 5,254), so recent months agree and this recommendation follows both. Usability has the most raw complaints, but 44.1% of its diagnosed complaints name no symptom.\n\n## Free versus premium\nFree-tier limits by design, including plan-gated controls such as song choice, are 62.6% of usability but 2.3% of playback. Without them, other.general still leads, then playback.general, and among paying reviewers playback.playback-stops-crashes ranks first. Paying reviewers report 2,885 concrete playback defects against 1,471 for usability.\n\n## Alternatives\nAccess has 9,289 concrete defects and 4,984 in the last six months. Billing/support has 7,182 concrete defects, 3,323 in the last six months, and 1,748 among paying reviewers, the most after playback. Downloads and catalog sit outside the question.\n\n## Limitations\nSelf-selected historical reviews from one window, 2022-05-17 to 2023-11-15. No revenue, plan or churn data: the plan is only what reviewers state, and cancellation language is expressed intent, not observed churn. 55 rows were quarantined or unclassified; 58,730 texts need review. Verifier agreement: topic 0.798, intent 0.893, severity 0.753, free-tier 0.928, plan 0.944. Symptom labels are model-assigned from an approved catalog; blind symptom agreement was 0.7933 (n=300), and 32.55% of diagnosed complaints are other.",
+    "fixes": [
+      {
+        "symptom_id": "app-crashes-or-freezes",
+        "next_step": "Reproduce crashes and freezes on 8.7.34.1312 during active use and after updates, then fix the failing path."
+      },
+      {
+        "symptom_id": "pauses-stops-mid-song",
+        "next_step": "Reproduce music halting with the app open in the background on 8.7.90.544, then fix the background playback stop."
+      },
+      {
+        "symptom_id": "playback-wont-start",
+        "next_step": "Reproduce silent play presses after an update on 8.7.90.544, then fix the start path for chosen tracks."
+      },
+      {
+        "symptom_id": "false-no-internet-message",
+        "next_step": "Reproduce the no-connection message on 8.8.2.434 while data works, then fix the connectivity check."
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "other.general",
+        "metric": "priority_score",
+        "value": "167110"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "playback.playback-stops-crashes",
+        "metric": "priority_score",
+        "value": "35999"
+      }
+    ],
+    "quotes": [
+      {
+        "issue_id": "app-crashes-or-freezes",
+        "quote": "The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased."
+      },
+      {
+        "issue_id": "pauses-stops-mid-song",
+        "quote": "From the past week, the songs have been abruptly cut, and there's no problem in connection."
+      },
+      {
+        "issue_id": "playback-wont-start",
+        "quote": "For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play"
+      }
+    ],
+    "model_markdown": "## Recommendation\nMusic stops or will not start, and the app crashes while people listen.\n\nRecommend playback, driven by the concrete-defect lens. Vague `other.general` leads the baseline [C1] but names no fix, so it cannot direct the choice; `playback.playback-stops-crashes` scores [C2] in the baseline.\n\n## What to fix first\nThe four most severe concrete playback symptoms, in order; audio glitches ranks lower on severity.\n\n## Why\nPlayback leads usability on concrete defects in the full window (24,845 vs 15,204) and in the last six full months (7,577 vs 5,254), so recent months agree and this recommendation follows both. Usability has the most raw complaints, but 44.1% of its diagnosed complaints name no symptom.\n\n## Free versus premium\nFree-tier limits by design, including plan-gated controls such as song choice, are 62.6% of usability but 2.3% of playback. Without them, other.general still leads, then playback.general, and among paying reviewers playback.playback-stops-crashes ranks first. Paying reviewers report 2,885 concrete playback defects against 1,471 for usability.\n\n## Alternatives\nAccess has 9,289 concrete defects and 4,984 in the last six months. Billing/support has 7,182 concrete defects, 3,323 in the last six months, and 1,748 among paying reviewers, the most after playback. Downloads and catalog sit outside the question.\n\n## Limitations\nSelf-selected historical reviews from one window, 2022-05-17 to 2023-11-15. No revenue, plan or churn data: the plan is only what reviewers state, and cancellation language is expressed intent, not observed churn. 55 rows were quarantined or unclassified; 58,730 texts need review. Verifier agreement: topic 0.798, intent 0.893, severity 0.753, free-tier 0.928, plan 0.944. Symptom labels are model-assigned from an approved catalog; blind symptom agreement was 0.7933 (n=300), and 32.55% of diagnosed complaints are other."
+  },
+  "final": {
+    "priority_area": "playback",
+    "headline": "Playback should get next quarter's effort: music stops, will not start, or the app crashes while people listen, and playback leads on concrete defects in both windows.",
+    "memo_markdown": "## Recommendation\nMusic stops or will not start, and the app crashes while people listen.\n\nRecommend playback, driven by the concrete-defect lens. Vague `other.general` leads the baseline [C1] but names no fix, so it cannot direct the choice; `playback.playback-stops-crashes` scores [C2] in the baseline.\n\n## What to fix first\nThe four most severe concrete playback symptoms, in order; audio glitches ranks lower on severity.\n- **App crashes or freezes**: 6,052 complaints (2,103 in the first six full months, 1,769 in the last six), 721 from paying reviewers; 13.7% follow an update; 7.0% of reviews on version 8.7.34.1312 report it, against 1.1% across all versions. \"The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased.\" Next step: Reproduce crashes and freezes on 8.7.34.1312 during active use and after updates, then fix the failing path.\n- **Music pauses or stops on its own**: 6,005 complaints (1,890 in the first six full months, 1,845 in the last six), 874 from paying reviewers; 14.7% start in the background; 6.1% of reviews on version 8.7.90.544 report it, against 1.1% across all versions. \"From the past week, the songs have been abruptly cut, and there's no problem in connection.\" Next step: Reproduce music halting with the app open in the background on 8.7.90.544, then fix the background playback stop.\n- **Chosen music refuses to start playing**: 3,895 complaints (1,367 in the first six full months, 1,130 in the last six), 392 from paying reviewers; 14.6% follow an update; 3.3% of reviews on version 8.7.90.544 report it, against 0.7% across all versions. \"For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play\" Next step: Reproduce silent play presses after an update on 8.7.90.544, then fix the start path for chosen tracks.\n- **Shows no internet when connected**: 1,956 complaints (698 in the first six full months, 600 in the last six), 167 from paying reviewers; 1.0% of reviews on version 8.8.2.434 report it, against 0.3% across all versions. Next step: Reproduce the no-connection message on 8.8.2.434 while data works, then fix the connectivity check.\n\n## Why\nPlayback leads usability on concrete defects in the full window (24,845 vs 15,204) and in the last six full months (7,577 vs 5,254), so recent months agree and this recommendation follows both. Usability has the most raw complaints, but 44.1% of its diagnosed complaints name no symptom.\n\n## Free versus premium\nFree-tier limits by design, including plan-gated controls such as song choice, are 62.6% of usability but 2.3% of playback. Without them, other.general still leads, then playback.general, and among paying reviewers playback.playback-stops-crashes ranks first. Paying reviewers report 2,885 concrete playback defects against 1,471 for usability.\n\n## Alternatives\nAccess has 9,289 concrete defects and 4,984 in the last six months. Billing/support has 7,182 concrete defects, 3,323 in the last six months, and 1,748 among paying reviewers, the most after playback. Downloads and catalog sit outside the question.\n\n## Limitations\nSelf-selected historical reviews from one window, 2022-05-17 to 2023-11-15. No revenue, plan or churn data: the plan is only what reviewers state, and cancellation language is expressed intent, not observed churn. 55 rows were quarantined or unclassified; 58,730 texts need review. Verifier agreement: topic 0.798, intent 0.893, severity 0.753, free-tier 0.928, plan 0.944. Symptom labels are model-assigned from an approved catalog; blind symptom agreement was 0.7933 (n=300), and 32.55% of diagnosed complaints are other.",
+    "fixes": [
+      {
+        "symptom_id": "app-crashes-or-freezes",
+        "next_step": "Reproduce crashes and freezes on 8.7.34.1312 during active use and after updates, then fix the failing path."
+      },
+      {
+        "symptom_id": "pauses-stops-mid-song",
+        "next_step": "Reproduce music halting with the app open in the background on 8.7.90.544, then fix the background playback stop."
+      },
+      {
+        "symptom_id": "playback-wont-start",
+        "next_step": "Reproduce silent play presses after an update on 8.7.90.544, then fix the start path for chosen tracks."
+      },
+      {
+        "symptom_id": "false-no-internet-message",
+        "next_step": "Reproduce the no-connection message on 8.8.2.434 while data works, then fix the connectivity check."
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "C1",
+        "issue_id": "other.general",
+        "metric": "priority_score",
+        "value": "167110"
+      },
+      {
+        "claim_id": "C2",
+        "issue_id": "playback.playback-stops-crashes",
+        "metric": "priority_score",
+        "value": "35999"
+      }
+    ],
+    "quotes": [
+      {
+        "issue_id": "app-crashes-or-freezes",
+        "quote": "The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased."
+      },
+      {
+        "issue_id": "pauses-stops-mid-song",
+        "quote": "From the past week, the songs have been abruptly cut, and there's no problem in connection."
+      },
+      {
+        "issue_id": "playback-wont-start",
+        "quote": "For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play"
+      }
+    ],
+    "model_markdown": "## Recommendation\nMusic stops or will not start, and the app crashes while people listen.\n\nRecommend playback, driven by the concrete-defect lens. Vague `other.general` leads the baseline [C1] but names no fix, so it cannot direct the choice; `playback.playback-stops-crashes` scores [C2] in the baseline.\n\n## What to fix first\nThe four most severe concrete playback symptoms, in order; audio glitches ranks lower on severity.\n\n## Why\nPlayback leads usability on concrete defects in the full window (24,845 vs 15,204) and in the last six full months (7,577 vs 5,254), so recent months agree and this recommendation follows both. Usability has the most raw complaints, but 44.1% of its diagnosed complaints name no symptom.\n\n## Free versus premium\nFree-tier limits by design, including plan-gated controls such as song choice, are 62.6% of usability but 2.3% of playback. Without them, other.general still leads, then playback.general, and among paying reviewers playback.playback-stops-crashes ranks first. Paying reviewers report 2,885 concrete playback defects against 1,471 for usability.\n\n## Alternatives\nAccess has 9,289 concrete defects and 4,984 in the last six months. Billing/support has 7,182 concrete defects, 3,323 in the last six months, and 1,748 among paying reviewers, the most after playback. Downloads and catalog sit outside the question.\n\n## Limitations\nSelf-selected historical reviews from one window, 2022-05-17 to 2023-11-15. No revenue, plan or churn data: the plan is only what reviewers state, and cancellation language is expressed intent, not observed churn. 55 rows were quarantined or unclassified; 58,730 texts need review. Verifier agreement: topic 0.798, intent 0.893, severity 0.753, free-tier 0.928, plan 0.944. Symptom labels are model-assigned from an approved catalog; blind symptom agreement was 0.7933 (n=300), and 32.55% of diagnosed complaints are other."
+  },
+  "final_problems": [],
+  "final_critique": {
+    "verdict": "pass",
+    "problems": []
+  },
+  "final_quote_sources": [
+    {
+      "issue_id": "app-crashes-or-freezes",
+      "quote": "The app is frequently experiencing hangs, there's been an increase in ads, and the quality of songs has also decreased.",
+      "review_id": "205e4cbe-a19e-41ae-bff4-ef9a3804e2a4"
+    },
+    {
+      "issue_id": "pauses-stops-mid-song",
+      "quote": "From the past week, the songs have been abruptly cut, and there's no problem in connection.",
+      "review_id": "6c69cfac-4d7d-4756-a1b8-f0594a19b793"
+    },
+    {
+      "issue_id": "playback-wont-start",
+      "quote": "For example, when I try to play my personal playlist, it won't play no matter what I do UNLESS I play",
+      "review_id": "0f78176c-c1a7-4ed8-8a22-034f5ea9d9c3"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+ "access": [
+  "lcr",
+  "plc",
+  "loc",
+  "sss",
+  "oew",
+  "ccf",
+  "amb"
+ ],
+ "usability": [
+  "for",
+  "shn",
+  "psw",
+  "lef",
+  "csn",
+  "apt",
+  "smi",
+  "ncm"
+ ],
+ "playback": [
+  "psm",
+  "acf",
+  "pws",
+  "srw",
+  "agd",
+  "csr",
+  "spu",
+  "spw",
+  "fni"
+ ],
+ "billing/support": [
+  "bfl",
+  "pmc",
+  "asp",
+  "ppf",
+  "ucr",
+  "ppt",
+  "sus"
+ ]
+}

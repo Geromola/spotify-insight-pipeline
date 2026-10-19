@@ -1,0 +1,178 @@
+{
+  "version": "y1",
+  "note": "Approved from full-660k-s2",
+  "areas": {
+    "access": [
+      {
+        "id": "login-credentials-rejected",
+        "name": "Login shows an error and rejects valid details",
+        "definition": "Entering the correct password, email or Facebook login produces an error message or is refused; not a phone-number code problem and not a launch failure."
+      },
+      {
+        "id": "phone-login-code-fails",
+        "name": "Phone number login code never arrives",
+        "definition": "A phone-number login sends no verification code, or says to try a different number, so the user cannot sign in by phone; not a password or email login error."
+      },
+      {
+        "id": "logged-out-cannot-relogin",
+        "name": "Logged out and cannot sign back in",
+        "definition": "The app signs the user out by itself, often repeatedly, and then the user cannot log back in; not a signup or account-missing problem."
+      },
+      {
+        "id": "stalls-on-splash-screen",
+        "name": "App stalls on logo and never opens",
+        "definition": "After tapping the app, it stays on the Spotify logo or splash screen or hangs with 'not responding' and never reaches the home screen; not an offline message."
+      },
+      {
+        "id": "offline-error-while-connected",
+        "name": "Says offline while internet works",
+        "definition": "The app shows a no-internet or 'You're offline' message even though the device is connected and other apps work; not a login rejection."
+      },
+      {
+        "id": "cannot-create-or-finish-signup",
+        "name": "Cannot create account or finish signup",
+        "definition": "A new user cannot create an account, or cannot complete signup or trial activation, because the sign-up step fails; not an existing account that cannot log in."
+      },
+      {
+        "id": "account-missing-or-blocked",
+        "name": "Account deleted, blocked or forced to reset",
+        "definition": "The user's account disappears, is linked to a different account, or is locked and forces a password change for suspicious activity; not an error shown during a normal login attempt."
+      }
+    ],
+    "usability": [
+      {
+        "id": "familiar-option-removed",
+        "name": "Familiar option or feature is gone",
+        "definition": "A control, sort, button or feature the user used before no longer appears in the app; not a feature that exists but is locked behind a paid plan."
+      },
+      {
+        "id": "screens-hard-to-navigate",
+        "name": "Screens hard to navigate or scan",
+        "definition": "Users cannot find recently played items, things moved to new places, or cannot read a redesigned screen quickly; not a crash or a button that does nothing."
+      },
+      {
+        "id": "playlists-songs-wont-open",
+        "name": "Playlists or songs will not open",
+        "definition": "Tapping a playlist, album, liked-songs view or song does nothing or fails to open its contents; not a search that returns no results."
+      },
+      {
+        "id": "library-edits-fail",
+        "name": "Cannot edit or save library items",
+        "definition": "Users cannot add podcasts, change a playlist cover, sort or filter their library correctly, or see changes reflected; not playback itself."
+      },
+      {
+        "id": "chosen-song-not-played",
+        "name": "Chosen song or position not played",
+        "definition": "The app plays a different track than the one selected, forces shuffle or order, or ignores rewind and seek requests; not a song that stops by itself."
+      },
+      {
+        "id": "ads-play-too-often",
+        "name": "Ads play too often",
+        "definition": "Users report ads that repeat too frequently or interrupt listening; not complaints about the price of a paid plan."
+      },
+      {
+        "id": "suggestions-mixed-in",
+        "name": "Unwanted suggestions mixed into music",
+        "definition": "Recommended or autoplay tracks are inserted between the songs a user chose in a playlist or album; not paid-app ads."
+      },
+      {
+        "id": "notification-controls-missing",
+        "name": "Playback controls missing from notification",
+        "definition": "Play, pause, next and previous controls do not appear in the notification bar or in-app player; not a song that fails to play."
+      }
+    ],
+    "playback": [
+      {
+        "id": "pauses-stops-mid-song",
+        "name": "Music pauses or stops on its own",
+        "definition": "Playback halts by itself partway through a track or after seconds, with the app still open; not the app closing, which is a crash."
+      },
+      {
+        "id": "app-crashes-or-freezes",
+        "name": "App crashes or freezes",
+        "definition": "The app closes unexpectedly or hangs and stops responding while in use; not music that stops while the app keeps running."
+      },
+      {
+        "id": "playback-wont-start",
+        "name": "Chosen music refuses to start playing",
+        "definition": "Pressing play on a song or playlist does nothing or shows it playing while silent, until the user restarts or switches tracks; not a track that starts and then stops."
+      },
+      {
+        "id": "skips-or-replays-wrong-track",
+        "name": "Wrong track skips or repeats",
+        "definition": "Playback jumps to another song, restarts the current song, or repeats a track without repeat being on; not a pause or stop."
+      },
+      {
+        "id": "audio-glitches-or-drops",
+        "name": "Audio glitches, distortion or quality drops",
+        "definition": "Sound stutters, fluctuates, drops out briefly or sounds worse than before while the track keeps playing; not a full stop."
+      },
+      {
+        "id": "controls-stop-responding",
+        "name": "Playback controls stop responding",
+        "definition": "Pause, skip, back or stop buttons in the app fail to act, or audio keeps playing without any working controls."
+      },
+      {
+        "id": "starts-playing-unprompted",
+        "name": "Playback starts without being requested",
+        "definition": "Music or a podcast begins or resumes by itself with no user action, including when the app is not open; not a stop or pause."
+      },
+      {
+        "id": "songs-or-playlists-wont-load",
+        "name": "Songs or playlists fail to load",
+        "definition": "Playlists, liked songs or tracks never appear or load in the app, or loading hangs indefinitely; not a track that loads and then plays badly."
+      },
+      {
+        "id": "false-no-internet-message",
+        "name": "Shows no internet when connected",
+        "definition": "The app displays a no-connection or offline message while the phone has working internet or mobile data."
+      }
+    ],
+    "billing/support": [
+      {
+        "id": "basic-features-locked-premium",
+        "name": "Basic features locked behind premium",
+        "definition": "Free users cannot use features they expect for free, such as skipping, lyrics, choosing songs, queue, seeking or downloads; not the price of premium and not a paying member being locked out."
+      },
+      {
+        "id": "paid-member-cannot-use-premium",
+        "name": "Paying member cannot use premium features",
+        "definition": "A user with an active premium subscription finds premium features blocked or unavailable, including after account or login problems; not a free user facing a paywall."
+      },
+      {
+        "id": "ads-shown-to-premium",
+        "name": "Ads play for premium subscribers",
+        "definition": "Premium members hear or see ads or sponsored content they paid to remove; not free users seeing ads."
+      },
+      {
+        "id": "premium-purchase-fails",
+        "name": "Cannot buy or upgrade premium",
+        "definition": "Attempts to start or upgrade premium fail, freeze, redirect to the wrong screen or are refused as ineligible; not charges taken after a purchase."
+      },
+      {
+        "id": "unexpected-charges-renewals",
+        "name": "Charged unexpectedly or after cancelling",
+        "definition": "The user is billed twice, billed after cancelling, or charged or renewed without prior notice; not a purchase that fails to complete."
+      },
+      {
+        "id": "premium-price-too-high",
+        "name": "Premium costs too much",
+        "definition": "The user says the premium subscription price is too high or not worth it, without citing a locked feature or a billing error."
+      },
+      {
+        "id": "support-unhelpful-or-silent",
+        "name": "Support gives no reply or scripted advice",
+        "definition": "A support request gets no response, or the reply is generic, repeats useless troubleshooting steps or is unhelpful; not a support page or form that fails to work."
+      }
+    ]
+  },
+  "edits": [
+    "Gero approved the proposal from full-660k-s2 on 2026-10-18 and restored two usability symptoms that code had dropped only because their ids exceeded 30 characters: 'unrequested-suggestions-inserted' -> 'suggestions-mixed-in' and 'controls-missing-from-notification' -> 'notification-controls-missing'; names and definitions unchanged.",
+    "2026-10-18: Gero marked 'chosen-song-not-played' and 'basic-features-locked-premium' as plan-gated after the diagnosis showed that most of them describe free-tier restrictions the enricher had not flagged (only 4.5% of 'chosen-song-not-played' reviewers say they pay)."
+  ],
+  "plan_gated": [
+    "chosen-song-not-played",
+    "basic-features-locked-premium"
+  ],
+  "plan_gated_note": "Symptoms that describe controls the free tier restricts by design (choosing a song, playing in order, seeking, repeat, premium-locked features). They are counted as free-tier friction, not defects, except for reviewers who say they pay; areas are compared on concrete defects without them."
+}

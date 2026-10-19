@@ -1,0 +1,51 @@
+^D== 2026-10-17T06:28:14Z part 1: backlog before enrichment ==
+{
+  "run": "full-660k-t2",
+  "label_config": null,
+  "invocations": 0,
+  "backlog": {
+    "pending": 484189
+  },
+  "reviews": 660622,
+  "calls": 0,
+  "failed_calls": 0,
+  "batches_running": 0,
+  "spent_usd": 0,
+  "reserved_usd": 0
+}
+== 2026-10-17T06:28:14Z start enrichment ==
+{
+  "step": "primary",
+  "invocation": 1,
+  "ended": "interrupted",
+  "requests": 5359,
+  "stale_leases_released": 0,
+  "fallback_cap": null,
+  "backlog": {
+    "completed": 111212,
+    "fallback_pending": 39397,
+    "leased": 117050,
+    "pending": 216530
+  },
+  "spent_usd": 0.805715,
+  "checkpoint": "runs/full-660k-t2/checkpoints/inv1.json"
+}
+== 2026-10-17T06:33:59Z enrichment exited with code 0 ==
+{
+  "run": "full-660k-t2",
+  "label_config": "anthropic:claude-haiku-5-5|disabled/low>adaptive/low|prompt=633ed0cccb|tax=t2|schema=s1",
+  "invocations": 1,
+  "backlog": {
+    "completed": 111212,
+    "fallback_pending": 39397,
+    "leased": 117050,
+    "pending": 216530
+  },
+  "reviews": 660622,
+  "calls": 3018,
+  "failed_calls": 0,
+  "batches_running": 2,
+  "spent_usd": 0.805715,
+  "reserved_usd": 1.032059
+}
+note: part 1 printed the exit code of `date` (0); the enrichment itself ended as "interrupted", see its JSON above.

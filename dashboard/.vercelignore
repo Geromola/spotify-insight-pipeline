@@ -1,0 +1,4 @@
+# The data lives in Postgres; the bundle and its builder never ship with the deployment.
+db/
+**/node_modules
+**/dist

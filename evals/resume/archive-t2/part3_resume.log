@@ -1,0 +1,53 @@
+^D== 2026-10-17T22:00:53Z part 3: state after part 2 stopped on a network error ==
+{
+  "run": "full-660k-t2",
+  "label_config": "anthropic:claude-haiku-5-5|disabled/low>adaptive/low|prompt=633ed0cccb|tax=t2|schema=s1",
+  "invocations": 2,
+  "backlog": {
+    "completed": 213190,
+    "fallback_pending": 54753,
+    "leased": 100000,
+    "pending": 116239,
+    "quarantined": 7
+  },
+  "reviews": 660622,
+  "calls": 5413,
+  "failed_calls": 0,
+  "batches_running": 1,
+  "spent_usd": 1.468309,
+  "reserved_usd": 0.966524
+}
+checkpoint before: 263100 completed review ids, ended: interrupted
+== 2026-10-17T22:00:55Z resume enrichment ==
+{
+  "step": "primary",
+  "invocation": 3,
+  "ended": "finished",
+  "requests": 2701,
+  "stale_leases_released": 0,
+  "fallback_cap": null,
+  "backlog": {
+    "completed": 413658,
+    "fallback_pending": 70513,
+    "quarantined": 18
+  },
+  "spent_usd": 3.239889,
+  "checkpoint": "runs/full-660k-t2/checkpoints/inv3.json"
+}
+== 2026-10-17T22:13:43Z enrichment exited with code 0 ==
+{
+  "run": "full-660k-t2",
+  "label_config": "anthropic:claude-haiku-5-5|disabled/low>adaptive/low|prompt=633ed0cccb|tax=t2|schema=s1",
+  "invocations": 3,
+  "backlog": {
+    "completed": 413658,
+    "fallback_pending": 70513,
+    "quarantined": 18
+  },
+  "reviews": 660622,
+  "calls": 10114,
+  "failed_calls": 5,
+  "batches_running": 0,
+  "spent_usd": 3.239889,
+  "reserved_usd": 0
+}

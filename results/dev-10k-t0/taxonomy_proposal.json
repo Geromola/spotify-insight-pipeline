@@ -1,0 +1,344 @@
+{
+  "proposal": {
+    "version": "t1",
+    "topics": {
+      "access": [
+        {
+          "id": "general",
+          "name": "General access problems",
+          "definition": "Complaints that the user cannot get into the app or account with no clearer cause; not phone-number, password or launch errors.",
+          "example_review_ids": [
+            "6f926bd1-2110-4c51-ab35-db668a0c33c4",
+            "19468f16-241a-4910-925f-a0d6b3526a9a",
+            "35de0f96-c3dd-4dd1-afe0-e461f2f032fe"
+          ]
+        },
+        {
+          "id": "phone-number-login",
+          "name": "Phone number login errors",
+          "definition": "Login rejected with check-your-number or cannot-connect messages when using a phone number; not password or social login.",
+          "example_review_ids": [
+            "fc035212-738c-454e-8492-4ccc81e457ce",
+            "c52b4394-74af-4a88-9bd6-0d81dab33305",
+            "d9d439d0-ca3c-4b82-bb8d-74fdc4fce5d5"
+          ]
+        },
+        {
+          "id": "password-social-login",
+          "name": "Password and social login failures",
+          "definition": "Password, email or Facebook login that is rejected or errors; not phone-number login.",
+          "example_review_ids": [
+            "de0a9cdf-8974-48bc-802f-331228df4619",
+            "a1a52508-1b15-478f-8582-d39dfe0df66c",
+            "66161b18-0efa-4fcc-a5d9-5ed52b6627cf"
+          ]
+        },
+        {
+          "id": "account-session-signup",
+          "name": "Logouts and signup blocks",
+          "definition": "Being logged out unexpectedly, losing an account, or being unable to create or finish signing up; not repeated login errors.",
+          "example_review_ids": [
+            "7e65da4e-9ac7-4ea1-b525-68cbcd06ef13",
+            "84acb6b0-dd91-4330-944f-2686cbd15ce0",
+            "9e8f4310-9ed0-4565-966c-cb2e2a708133"
+          ]
+        },
+        {
+          "id": "app-wont-open",
+          "name": "App fails to open or connect",
+          "definition": "App stuck on the splash screen or showing connection or no-internet errors at launch; not playback errors after login.",
+          "example_review_ids": [
+            "fe53e9f0-39a3-4c51-b9ed-d185a6afe2bd",
+            "97982fee-a65f-4fed-9dd5-9ffb31efbee0",
+            "42da37cb-8bbf-4208-b9d1-5cde1a2c9dc4"
+          ]
+        }
+      ],
+      "usability": [
+        {
+          "id": "general",
+          "name": "General usability problems",
+          "definition": "Complaints about how the app works or feels that fit no other usability subtopic.",
+          "example_review_ids": [
+            "d477eeb7-3de2-479e-acd8-c4bfa5465e80",
+            "0b2ad82e-2cc4-4664-bd4d-bfda9d46024f",
+            "e9f95f0c-8a89-4b9c-8322-985ddb569520"
+          ]
+        },
+        {
+          "id": "ads-interruptions",
+          "name": "Ad frequency and placement",
+          "definition": "Too many ads, ads that play after an ad-free window, or ads interrupting listening; not paywall pricing.",
+          "example_review_ids": [
+            "f3e9bb79-ba2b-4622-a7e7-079bae38e316",
+            "6e106ad0-737c-4c9a-b2e4-d966142caeec",
+            "0a781f4f-718a-493c-b772-c0948984f02b"
+          ]
+        },
+        {
+          "id": "shuffle-playback-control",
+          "name": "Shuffle, order and seeking",
+          "definition": "Forced shuffle, inability to play songs in order, repeat or seek to a part of a track, when not caused by free-tier limits; controls locked to premium go to billing.",
+          "example_review_ids": [
+            "62a8a675-1293-4090-a775-2d48ca8cafdc",
+            "5387d8fe-d84f-46ca-874d-f385e6ef281a",
+            "d7130412-05b3-4705-87c6-4f55fb5f1a5f"
+          ]
+        },
+        {
+          "id": "recommendations-autoplay",
+          "name": "Recommended and suggested content",
+          "definition": "Recommended songs, suggested clips or autoplay replacing the playlist the user chose; not songs added to the user's own playlists.",
+          "example_review_ids": [
+            "729fb31c-340d-4f6d-b3d8-1adfb0dc94aa",
+            "2a153815-a17a-46fd-81ef-5bdfb220ac21",
+            "14e6daaf-a7fa-4f36-a0a4-37a7acd61ebf"
+          ]
+        },
+        {
+          "id": "interface-layout-changes",
+          "name": "Interface and layout changes",
+          "definition": "Redesigned screens, removed icons, or features moved or hidden after an update; not missing features locked by premium.",
+          "example_review_ids": [
+            "0873aaf1-c305-45c5-b901-2004866ea096",
+            "581640a2-5c72-4425-bc14-06fc2839ffe2",
+            "fb908616-42f8-44c2-a9f8-50dd1c457bd3"
+          ]
+        }
+      ],
+      "playback": [
+        {
+          "id": "general",
+          "name": "General playback problems",
+          "definition": "Complaints that audio does not play properly with no clearer pattern, including bad quality.",
+          "example_review_ids": [
+            "bc6444b2-926b-47a4-bd01-28b978746760",
+            "ad456291-841a-444d-b74f-766500baa2cf",
+            "a967ce40-276a-4e72-adcd-db4511f3b769"
+          ]
+        },
+        {
+          "id": "playback-stops-crashes",
+          "name": "Playback stops or app crashes",
+          "definition": "Music stops mid-track or after one song, or the app crashes while playing; not slow loading.",
+          "example_review_ids": [
+            "f4588016-2a2a-4e8f-b80e-8db997f3864a",
+            "3a7b9052-adde-44d8-8a43-0aa9ba9d4d6c",
+            "4da5242a-7964-4677-babc-7b3059f61624"
+          ]
+        },
+        {
+          "id": "buffering-slow-loading",
+          "name": "Buffering and slow loading",
+          "definition": "Long waits to load lists or start tracks, and buffering or glitching during playback.",
+          "example_review_ids": [
+            "569313eb-b432-416f-94b6-eca0a3d90d5f",
+            "36469882-fd58-4927-8c29-f04148e3a9d8",
+            "08c7611a-c6ba-47e7-83a3-5997fbc38b12"
+          ]
+        },
+        {
+          "id": "offline-false-errors",
+          "name": "False offline or no-internet errors",
+          "definition": "App reports no connection or offline status even though the internet works; not launch failures.",
+          "example_review_ids": [
+            "697eebb9-e157-40be-bf28-b3a2f4aef1db",
+            "61bb8435-0703-47c0-8b53-a8d877ef678e"
+          ]
+        },
+        {
+          "id": "bluetooth-device-control",
+          "name": "Bluetooth, car and watch control",
+          "definition": "Problems controlling or connecting playback through Bluetooth, car systems or smartwatches.",
+          "example_review_ids": [
+            "c8080f3a-2b8d-4f25-82bf-1ae3c5a1cdca",
+            "b0b81704-45ad-43f6-9e69-617ff33d5d7b",
+            "ee10177b-a6ad-4512-8c1f-330ad835c890"
+          ]
+        }
+      ],
+      "downloads": [
+        {
+          "id": "general",
+          "name": "General download problems",
+          "definition": "Download complaints that fit no other downloads subtopic.",
+          "example_review_ids": [
+            "aab09ba8-313d-4909-9dea-654acc2b1c39",
+            "8cc128df-aa23-4745-a7a1-36c473492545",
+            "4a1c23a7-1c6a-4ff7-ae40-1225b3e35f82"
+          ]
+        },
+        {
+          "id": "downloads-fail-to-save",
+          "name": "Downloads fail to start or save",
+          "definition": "Songs or podcasts cannot be downloaded at all or stall during download; not deleted after saving.",
+          "example_review_ids": [
+            "f2ce871e-e45b-4f17-bf0f-b09b6a0e9b79",
+            "dcff57c6-abd6-413b-b255-aec3dc34fcbd",
+            "cb3810a6-4b18-447d-a352-a7d8bdf39be1"
+          ]
+        },
+        {
+          "id": "downloads-deleted",
+          "name": "Downloads disappear or re-download",
+          "definition": "Saved downloads are deleted, lost after updates, or downloaded again repeatedly.",
+          "example_review_ids": [
+            "b845ff5f-3b14-4f40-bbb3-637618843569",
+            "885ac0e5-898f-444f-9f4b-34b05d9c62d2",
+            "80d73a7a-01d3-4f5c-a8c1-cb2c248806f7"
+          ]
+        },
+        {
+          "id": "offline-playback-needs-network",
+          "name": "Offline playback needs network",
+          "definition": "Downloaded content will not play offline or still needs a connection to start; not failure to download.",
+          "example_review_ids": [
+            "d29b3cbf-4d0b-4f79-9a51-036bd019cdd9",
+            "7c4ec78c-abda-4095-a707-ba9b9f3c5e63",
+            "ea7e7a97-98e0-48d6-8e3d-436b5f94aa81"
+          ]
+        }
+      ],
+      "catalog": [
+        {
+          "id": "general",
+          "name": "General catalog gaps",
+          "definition": "Complaints about the music library or content that fit no other catalog subtopic.",
+          "example_review_ids": [
+            "988406bb-d06a-43a8-a37c-f8d9dd3f8a14",
+            "243ddfb5-7249-44a1-933d-cf4c0addd066",
+            "aed1a8af-d7f8-499d-9772-bc7272db0e0c"
+          ]
+        },
+        {
+          "id": "lyrics-missing",
+          "name": "Lyrics missing or not loading",
+          "definition": "Lyrics not shown, failing to load, or lyric features missing; not lyrics locked behind premium.",
+          "example_review_ids": [
+            "e0127547-4edd-44a0-8d5e-e8398bc07086",
+            "caf4eb21-e9dc-4d5d-aa33-d91b3f64d83c",
+            "8f65ed5a-1fc0-4b66-8124-fa4f1cd4f56d"
+          ]
+        },
+        {
+          "id": "songs-missing-removed",
+          "name": "Songs or podcasts missing or removed",
+          "definition": "Specific songs, artists, shows or episodes are absent, unavailable or removed from the catalog.",
+          "example_review_ids": [
+            "be4ffc58-c9cc-4b37-83e8-aba9c63e8e51",
+            "0026e92b-3e23-46e6-8c45-99817c8cb888",
+            "33057ece-af15-4bab-9eca-792782a14293"
+          ]
+        },
+        {
+          "id": "unwanted-songs-added",
+          "name": "Unwanted songs added to playlists",
+          "definition": "The app adds songs to the user's own playlists without consent; not recommendations shown separately.",
+          "example_review_ids": [
+            "a25fad72-6dd9-40bd-a793-176836d8ddbc",
+            "b2b68a9f-ad0b-4ceb-9525-036ad7b09ff9"
+          ]
+        },
+        {
+          "id": "content-bias-policy",
+          "name": "Content bias and policy complaints",
+          "definition": "Complaints about artist favoritism, controversial hosts, or removal of content for political or policy reasons.",
+          "example_review_ids": [
+            "4ceaa4ff-d1c5-4f0d-984d-3e3224f4fa65",
+            "45a57a15-dfcc-4188-930c-0538d0379dbd",
+            "d27e9b26-a7af-469c-9a4e-8deea2db72ae"
+          ]
+        }
+      ],
+      "billing": [
+        {
+          "id": "general",
+          "name": "General billing complaints",
+          "definition": "Complaints about premium or payment that fit no other billing subtopic.",
+          "example_review_ids": [
+            "8c36690c-d0ac-4b7c-86f4-418391d8e604",
+            "1703bc6a-c342-4839-8603-f3ba55c47d8f",
+            "956a69f5-84d4-42f9-9325-ed215f5ba73d"
+          ]
+        },
+        {
+          "id": "premium-paywall-features",
+          "name": "Basic features locked behind premium",
+          "definition": "Features users expected for free, such as lyrics, skipping, choosing songs, queue, seeking or downloading, are locked to premium; not the subscription price itself.",
+          "example_review_ids": [
+            "28d56033-ab12-4e6a-b611-1ba91a2d8dca",
+            "1cd1634d-fb4d-44d0-bdb0-070ea83b32ba",
+            "e964d907-bd66-4fdd-bb86-a07b3f18afea"
+          ]
+        },
+        {
+          "id": "subscription-price",
+          "name": "Premium price too high",
+          "definition": "Complaints that the premium subscription costs too much for the value; not feature locks.",
+          "example_review_ids": [
+            "1a35b6bd-e60f-4d9b-9405-8aed4734aa9c",
+            "a41df73c-4199-44ee-909a-f0d1341cc5fb",
+            "084ad8d7-a9a3-4b9c-bbce-f1782cdbe843"
+          ]
+        },
+        {
+          "id": "charges-cancellation",
+          "name": "Charges, purchases and cancellation",
+          "definition": "Unexpected charges, cancellation not working, or purchase and region errors when buying premium.",
+          "example_review_ids": [
+            "70c10706-cb1c-4623-9c21-bf303e1e6ebe",
+            "634045c3-9a77-4a44-8f0e-8bf509426e38",
+            "398566f7-2519-40e6-a2f4-6676657a18a7"
+          ]
+        }
+      ],
+      "support": [
+        {
+          "id": "general",
+          "name": "General support complaints",
+          "definition": "Complaints about customer support that fit no other support subtopic.",
+          "example_review_ids": [
+            "946070c1-d690-4251-a550-07b0af85859c",
+            "51818ce6-4700-4f3d-99f8-5f6720f63187",
+            "2e643b07-9126-4fed-bb00-3c0102e62bde"
+          ]
+        },
+        {
+          "id": "support-response-quality",
+          "name": "Unhelpful or rude support replies",
+          "definition": "Support agents or replies that are unhelpful, scripted, rude or absent.",
+          "example_review_ids": [
+            "db9a3c3f-da8b-467f-9059-8f3557060a54",
+            "d7f0416d-849f-43d3-88b0-e821a1802383",
+            "c4a8d123-9254-4a2f-a0b5-e62d429b8436"
+          ]
+        },
+        {
+          "id": "support-channels-broken",
+          "name": "Support channels not working",
+          "definition": "Email, forms or support pages that glitch or cannot be found; not the quality of replies.",
+          "example_review_ids": [
+            "0f1d7211-cd8d-4264-a433-2a5511bba7a1",
+            "2fd0d227-3466-4f6f-ad32-a2d5e614a7ea"
+          ]
+        }
+      ],
+      "other": [
+        {
+          "id": "general",
+          "name": "Other",
+          "definition": "General criticism with no supported specific topic",
+          "example_review_ids": []
+        }
+      ]
+    }
+  },
+  "problems": [],
+  "sample_reviews": 251,
+  "edits": [
+    "Removed downloads.download-premium-lock: premium-only controls belong to billing (grading contract).",
+    "usability.shuffle-playback-control now excludes limits caused by the free tier.",
+    "billing.premium-paywall-features now names downloading explicitly."
+  ],
+  "approved_by": "Gero, 2026-10-16, with the two edits above"
+}
